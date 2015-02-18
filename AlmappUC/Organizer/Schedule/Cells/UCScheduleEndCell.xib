@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeueLTW1G-Lt.otf">
+            <string>HelveticaNeueLTW1G-Lt</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="T4h-1M-Vcm" customClass="UCScheduleEndCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T4h-1M-Vcm" id="XIY-Ge-Z0d">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkv-hM-2ZX">
+                        <rect key="frame" x="66" y="0.0" width="3" height="22"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="3" id="2kO-eV-YxY"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="3" id="C8z-cZ-cQG"/>
+                            <constraint firstAttribute="width" constant="3" id="IjH-OO-DWp"/>
+                            <constraint firstAttribute="height" constant="22" id="LcO-7c-L74"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="Y0H-e0-omy"/>
+                            <constraint firstAttribute="width" constant="3" id="ifx-sV-rX5"/>
+                            <constraint firstAttribute="height" constant="22" id="uQX-bx-gNZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2kO-eV-YxY"/>
+                                <exclude reference="C8z-cZ-cQG"/>
+                                <exclude reference="IjH-OO-DWp"/>
+                                <exclude reference="Y0H-e0-omy"/>
+                                <exclude reference="uQX-bx-gNZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="C8z-cZ-cQG"/>
+                                <include reference="uQX-bx-gNZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dot2" translatesAutoresizingMaskIntoConstraints="NO" id="QCr-O9-wFg">
+                        <rect key="frame" x="57" y="21" width="20" height="20"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="3jb-gw-MqC"/>
+                            <constraint firstAttribute="height" constant="20" id="wAv-b7-qF1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Libertad!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzr-ul-FZg">
+                        <rect key="frame" x="85" y="22" width="227" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Lt" family="Helvetica Neue LT W1G" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jkv-hM-2ZX" firstAttribute="leading" secondItem="XIY-Ge-Z0d" secondAttribute="leading" constant="66" id="1sm-Cq-pgx"/>
+                    <constraint firstAttribute="trailing" secondItem="xzr-ul-FZg" secondAttribute="trailing" constant="8" id="GGf-ve-WWb"/>
+                    <constraint firstItem="xzr-ul-FZg" firstAttribute="top" secondItem="XIY-Ge-Z0d" secondAttribute="top" constant="22" id="SNG-M8-6x0"/>
+                    <constraint firstItem="QCr-O9-wFg" firstAttribute="leading" secondItem="XIY-Ge-Z0d" secondAttribute="leading" constant="57" id="TQ3-Zm-vB8"/>
+                    <constraint firstItem="jkv-hM-2ZX" firstAttribute="top" secondItem="XIY-Ge-Z0d" secondAttribute="top" id="f3q-Fr-QOO"/>
+                    <constraint firstItem="jkv-hM-2ZX" firstAttribute="top" secondItem="XIY-Ge-Z0d" secondAttribute="top" id="km5-Vb-UQ1"/>
+                    <constraint firstItem="xzr-ul-FZg" firstAttribute="leading" secondItem="QCr-O9-wFg" secondAttribute="trailing" constant="8" id="lnB-ZN-0ox"/>
+                    <constraint firstItem="xzr-ul-FZg" firstAttribute="centerY" secondItem="QCr-O9-wFg" secondAttribute="centerY" constant="1.5" id="v0K-Cm-AfB"/>
+                    <constraint firstItem="QCr-O9-wFg" firstAttribute="top" secondItem="jkv-hM-2ZX" secondAttribute="bottom" constant="-1" id="v4p-gN-Gic"/>
+                    <constraint firstItem="jkv-hM-2ZX" firstAttribute="leading" secondItem="XIY-Ge-Z0d" secondAttribute="leading" constant="66" id="x41-4O-nb6"/>
+                    <constraint firstItem="QCr-O9-wFg" firstAttribute="top" secondItem="jkv-hM-2ZX" secondAttribute="bottom" constant="-1" id="yIf-xY-YJs"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="yIf-xY-YJs"/>
+                        <exclude reference="1sm-Cq-pgx"/>
+                        <exclude reference="f3q-Fr-QOO"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.078431372549019607" green="0.082352941176470587" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="dotImage" destination="QCr-O9-wFg" id="308-Vb-LZA"/>
+                <outlet property="upLineView" destination="jkv-hM-2ZX" id="mxB-ct-LuK"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="288"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Dot2" width="190" height="193"/>
+    </resources>
+</document>

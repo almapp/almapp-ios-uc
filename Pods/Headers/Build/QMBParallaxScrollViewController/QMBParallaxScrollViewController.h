@@ -1,0 +1,1 @@
+../../../QMBParallaxScrollViewController/QMBParallaxScrollViewController/QMBParallaxScrollViewController.h

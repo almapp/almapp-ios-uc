@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>21CB6681-E49B-42A8-9CAB-514F1948DA6A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AlmappUC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>00AE80BDB982967AA3DB8545B28FECA259FAB86D</key>
+		<string>https://github.com/almapp/almapp-ios-uc.git</string>
+		<key>7547EB6C75989D61E8DC16658C91FE4DEA0B6705</key>
+		<string>https://github.com/mrpatiwi/almapp-ios-uc2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AlmappUC.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>00AE80BDB982967AA3DB8545B28FECA259FAB86D</key>
+		<string>../../almapp-ios-uc</string>
+		<key>7547EB6C75989D61E8DC16658C91FE4DEA0B6705</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mrpatiwi/almapp-ios-uc2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7547EB6C75989D61E8DC16658C91FE4DEA0B6705</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>00AE80BDB982967AA3DB8545B28FECA259FAB86D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>almapp-ios-uc</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7547EB6C75989D61E8DC16658C91FE4DEA0B6705</string>
+			<key>IDESourceControlWCCName</key>
+			<string>almapp-ios-uc2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

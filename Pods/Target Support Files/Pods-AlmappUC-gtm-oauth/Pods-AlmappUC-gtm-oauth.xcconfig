@@ -1,0 +1,1 @@
+PODS_ALMAPPUC_GTM_OAUTH_OTHER_LDFLAGS = -framework "Security" -framework "SystemConfiguration"

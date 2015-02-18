@@ -1,0 +1,1 @@
+../../../AlmappCore/AlmappCore/Models/Base/Resource Subclasses/ALMSocialResource.h

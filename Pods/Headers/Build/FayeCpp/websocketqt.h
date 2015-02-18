@@ -1,0 +1,1 @@
+../../../FayeCpp/src/websocketqt.h

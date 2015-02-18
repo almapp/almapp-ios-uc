@@ -1,0 +1,1 @@
+../../../FayeCpp/src/REStringUtilsPrivate.h

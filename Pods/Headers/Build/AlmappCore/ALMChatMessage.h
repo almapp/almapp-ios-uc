@@ -1,0 +1,1 @@
+../../../AlmappCore/AlmappCore/Models/ALMChatMessage.h

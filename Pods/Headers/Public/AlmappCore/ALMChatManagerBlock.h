@@ -1,0 +1,1 @@
+../../../AlmappCore/AlmappCore/Chat/ALMChatManagerBlock.h

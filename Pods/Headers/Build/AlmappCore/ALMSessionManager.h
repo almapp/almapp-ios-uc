@@ -1,0 +1,1 @@
+../../../AlmappCore/AlmappCore/Session/ALMSessionManager.h
