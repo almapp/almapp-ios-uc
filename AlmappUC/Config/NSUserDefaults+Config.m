@@ -73,6 +73,7 @@ static BOOL developmentEnv = NO;
 
 + (void)setCurrentSession:(NSString *)email {
     [[self userDefaults] setObject:email forKey:kSessionKey];
+    [[self userDefaults] synchronize];
 }
 
 

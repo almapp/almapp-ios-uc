@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35C33CCF95715264F79A13AD"
+               BlueprintIdentifier = "41BFF3A7B9E8513E09654F9F"
                BuildableName = "libPods-AlmappUC-AFOAuth2Manager.a"
                BlueprintName = "Pods-AlmappUC-AFOAuth2Manager"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "35C33CCF95715264F79A13AD"
-            BuildableName = "libPods-AlmappUC-AFOAuth2Manager.a"
-            BlueprintName = "Pods-AlmappUC-AFOAuth2Manager"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

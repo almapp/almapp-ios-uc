@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C6282FBB1DFB2DFF3B89AFE"
+               BlueprintIdentifier = "88A0874D8D57D3556EABEFF0"
                BuildableName = "libPods-AlmappUC-BFPaperTabBarController.a"
                BlueprintName = "Pods-AlmappUC-BFPaperTabBarController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C6282FBB1DFB2DFF3B89AFE"
-            BuildableName = "libPods-AlmappUC-BFPaperTabBarController.a"
-            BlueprintName = "Pods-AlmappUC-BFPaperTabBarController"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

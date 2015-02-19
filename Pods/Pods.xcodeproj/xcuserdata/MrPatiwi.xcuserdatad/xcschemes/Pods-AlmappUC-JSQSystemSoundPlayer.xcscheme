@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E974AD551BA69733C593A1E8"
+               BlueprintIdentifier = "54E91941655A01C02233CA80"
                BuildableName = "libPods-AlmappUC-JSQSystemSoundPlayer.a"
                BlueprintName = "Pods-AlmappUC-JSQSystemSoundPlayer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E974AD551BA69733C593A1E8"
-            BuildableName = "libPods-AlmappUC-JSQSystemSoundPlayer.a"
-            BlueprintName = "Pods-AlmappUC-JSQSystemSoundPlayer"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

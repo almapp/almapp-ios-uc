@@ -42,8 +42,6 @@
     
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     [self.activityIndicator stopAnimating];
-    
-    [self setNeedsStatusBarAppearanceUpdate];
 
     self.loginButton.showsTouchWhenHighlighted = TRUE;
     
@@ -107,6 +105,7 @@
         
         [[ALMUserController controller] login:email password:password realm:[RLMRealm defaultRealm]].then(^(ALMSession *session) {
             [UCAppDelegate didLoginWithSession:session];
+            [self performSegueWithIdentifier:@"PostLoginSegue" sender:self];
             
         }).catch( ^(NSError *error) {
             [self onOperationEnd];
@@ -238,9 +237,7 @@
 
 
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
+
 
 /*
 - (void)viewDidDisappear:(BOOL)animated {

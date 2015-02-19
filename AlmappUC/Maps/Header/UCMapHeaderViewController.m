@@ -73,7 +73,7 @@ static CGFloat const kMapVerticalOffset = -10.0f;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:kSantiagoLatitude
                                                             longitude:kSantiagoLongitude
                                                                  zoom:kSantiagoZoom];
-    
+    /*
     CLLocationManager* locationManager;
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -84,7 +84,7 @@ static CGFloat const kMapVerticalOffset = -10.0f;
     }
     
     [locationManager startUpdatingLocation];
-    
+    */
     
     _mapView.camera = camera;
     _mapView.myLocationEnabled = YES;

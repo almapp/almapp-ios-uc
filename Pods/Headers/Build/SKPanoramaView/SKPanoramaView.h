@@ -1,0 +1,1 @@
+../../../SKPanoramaView/SKPanoramaView/SKPanoramaView.h

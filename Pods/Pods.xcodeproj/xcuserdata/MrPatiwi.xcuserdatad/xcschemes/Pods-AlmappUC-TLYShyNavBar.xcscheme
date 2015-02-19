@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A981B516A211E8DA68E39A45"
+               BlueprintIdentifier = "0411E5C410C1E28CB630748F"
                BuildableName = "libPods-AlmappUC-TLYShyNavBar.a"
                BlueprintName = "Pods-AlmappUC-TLYShyNavBar"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A981B516A211E8DA68E39A45"
-            BuildableName = "libPods-AlmappUC-TLYShyNavBar.a"
-            BlueprintName = "Pods-AlmappUC-TLYShyNavBar"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

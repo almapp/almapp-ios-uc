@@ -19,12 +19,14 @@
         return results;
         
     }).then( ^(NSArray *campuses) {
+        ALMController *controller = self.controller;
+        
         NSMutableArray *promises = [NSMutableArray array];
         
         for (ALMCampus *campus in campuses) {
             
-            PMKPromise *promise1 = [self.controller GETResources:[ALMFaculty class] on:campus parameters:nil];
-            PMKPromise *promise2 = [self.controller GETResources:[ALMBuilding class] on:campus parameters:nil];
+            PMKPromise *promise1 = [controller GETResources:[ALMFaculty class] on:campus parameters:nil];
+            PMKPromise *promise2 = [controller GETResources:[ALMBuilding class] on:campus parameters:nil];
             
             [promises addObject:promise1];
             [promises addObject:promise2];

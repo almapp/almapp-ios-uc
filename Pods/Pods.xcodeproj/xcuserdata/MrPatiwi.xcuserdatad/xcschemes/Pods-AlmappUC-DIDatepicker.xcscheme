@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "72EC4E9C9AC104F46CD05DF2"
+               BlueprintIdentifier = "2B07CAF790AEC224FA6DF9B1"
                BuildableName = "libPods-AlmappUC-DIDatepicker.a"
                BlueprintName = "Pods-AlmappUC-DIDatepicker"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "72EC4E9C9AC104F46CD05DF2"
-            BuildableName = "libPods-AlmappUC-DIDatepicker.a"
-            BlueprintName = "Pods-AlmappUC-DIDatepicker"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

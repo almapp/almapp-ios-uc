@@ -25,7 +25,7 @@
 
 // static short const kExpectedScheduleModulesCount = 48;
 static NSString * const kStoryboardName = @"Main";
-static NSString * const kLoginViewControllerName = @"LoginViewController";
+static NSString * const kLoginNavigationControllerName = @"LoginNavigationController";
 
 static int const kAPIVersion = 1;
 static NSString * const kAPIBaseUrl = @"https://almapp.me";
@@ -53,8 +53,7 @@ static NSString * const KOrganization = @"UC";
 }
 
 - (UIViewController *)loginView {
-    UIViewController* rootController = [self.currentStoryboard instantiateViewControllerWithIdentifier:kLoginViewControllerName];
-    return  [[UINavigationController alloc] initWithRootViewController:rootController];
+    return  [self.currentStoryboard instantiateViewControllerWithIdentifier:kLoginNavigationControllerName];
 }
 
 - (void)showInitialView {
@@ -74,8 +73,9 @@ static NSString * const KOrganization = @"UC";
 }
 
 - (void)didLoginWithSession:(ALMSession *)session {
-    self.currentSession = [ALMSession sessionWithEmail:session.email];
+    self.currentSession = session; //[ALMSession sessionWithEmail:session.email];
     
+    /*
     self.controllerSchedule.promiseLoaded.then( ^(NSArray *sections){
         
         // [UCScheduleNotifications setup];
@@ -95,6 +95,7 @@ static NSString * const KOrganization = @"UC";
         [self setupNotifications];
         [self showInitialView];
     });
+     */
 }
 
 + (void)didLoginWithSession:(ALMSession *)session {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A4B55E1774E58A1D0B21308"
+               BlueprintIdentifier = "F92C63D6A4A8AC2D9A2B8686"
                BuildableName = "libPods-AlmappUC-Realm+JSON.a"
                BlueprintName = "Pods-AlmappUC-Realm+JSON"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A4B55E1774E58A1D0B21308"
-            BuildableName = "libPods-AlmappUC-Realm+JSON.a"
-            BlueprintName = "Pods-AlmappUC-Realm+JSON"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

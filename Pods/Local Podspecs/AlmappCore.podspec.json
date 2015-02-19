@@ -1,0 +1,42 @@
+{
+  "name": "AlmappCore",
+  "version": "0.5",
+  "summary": "Mobile backend for Almapp REST API.",
+  "description": "                   A longer description of AlmappCore in Markdown format.\n\n                   * Think: Why did you write this? What is the focus? What does it do?\n                   * CocoaPods will be using this to generate tags, and improve search results.\n                   * Try to keep it short, snappy and to the point.\n                   * Finally, don't worry about the indent, CocoaPods strips it!\n",
+  "homepage": "https://github.com/almapp/AlmappCore-ios",
+  "license": "MIT (example)",
+  "authors": {
+    "Patricio Lopez": "lopezjuripatricio@gmail.com"
+  },
+  "social_media_url": "http://twitter.com/mrpatiwi",
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/almapp/AlmappCore-ios.git",
+    "tag": "0.5"
+  },
+  "source_files": [
+    "AlmappCore",
+    "AlmappCore/**/*.{h,m}"
+  ],
+  "public_header_files": "AlmappCore/**/*.h",
+  "requires_arc": true,
+  "dependencies": {
+    "AFNetworking": [
+      "~> 2.5"
+    ],
+    "FayeCpp": [
+      "~> 0.1.5"
+    ],
+    "UICKeyChainStore": [
+
+    ],
+    "PromiseKit-AFNetworking": [
+
+    ],
+    "PromiseKit": [
+      "~> 1.2.2"
+    ]
+  }
+}

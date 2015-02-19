@@ -96,12 +96,6 @@
 #define COCOAPODS_VERSION_MINOR_DateTools 5
 #define COCOAPODS_VERSION_PATCH_DateTools 0
 
-// FHSegmentedViewController
-#define COCOAPODS_POD_AVAILABLE_FHSegmentedViewController
-#define COCOAPODS_VERSION_MAJOR_FHSegmentedViewController 1
-#define COCOAPODS_VERSION_MINOR_FHSegmentedViewController 2
-#define COCOAPODS_VERSION_PATCH_FHSegmentedViewController 4
-
 // FayeCpp
 #define COCOAPODS_POD_AVAILABLE_FayeCpp
 #define COCOAPODS_VERSION_MAJOR_FayeCpp 0
@@ -112,13 +106,7 @@
 #define COCOAPODS_POD_AVAILABLE_Google_Maps_iOS_SDK
 #define COCOAPODS_VERSION_MAJOR_Google_Maps_iOS_SDK 1
 #define COCOAPODS_VERSION_MINOR_Google_Maps_iOS_SDK 9
-#define COCOAPODS_VERSION_PATCH_Google_Maps_iOS_SDK 1
-
-// ILTranslucentView
-#define COCOAPODS_POD_AVAILABLE_ILTranslucentView
-#define COCOAPODS_VERSION_MAJOR_ILTranslucentView 0
-#define COCOAPODS_VERSION_MINOR_ILTranslucentView 0
-#define COCOAPODS_VERSION_PATCH_ILTranslucentView 1
+#define COCOAPODS_VERSION_PATCH_Google_Maps_iOS_SDK 2
 
 // JSQMessagesViewController
 #define COCOAPODS_POD_AVAILABLE_JSQMessagesViewController
@@ -131,12 +119,6 @@
 #define COCOAPODS_VERSION_MAJOR_JSQSystemSoundPlayer 2
 #define COCOAPODS_VERSION_MINOR_JSQSystemSoundPlayer 0
 #define COCOAPODS_VERSION_PATCH_JSQSystemSoundPlayer 1
-
-// JVFloatLabeledTextField
-#define COCOAPODS_POD_AVAILABLE_JVFloatLabeledTextField
-#define COCOAPODS_VERSION_MAJOR_JVFloatLabeledTextField 1
-#define COCOAPODS_VERSION_MINOR_JVFloatLabeledTextField 0
-#define COCOAPODS_VERSION_PATCH_JVFloatLabeledTextField 2
 
 // KINWebBrowser
 #define COCOAPODS_POD_AVAILABLE_KINWebBrowser
@@ -245,12 +227,6 @@
 #define COCOAPODS_VERSION_MAJOR_OMGHTTPURLRQ_UserAgent 2
 #define COCOAPODS_VERSION_MINOR_OMGHTTPURLRQ_UserAgent 1
 #define COCOAPODS_VERSION_PATCH_OMGHTTPURLRQ_UserAgent 0
-
-// Onboard
-#define COCOAPODS_POD_AVAILABLE_Onboard
-#define COCOAPODS_VERSION_MAJOR_Onboard 1
-#define COCOAPODS_VERSION_MINOR_Onboard 1
-#define COCOAPODS_VERSION_PATCH_Onboard 0
 
 // Ono
 #define COCOAPODS_POD_AVAILABLE_Ono
@@ -372,6 +348,12 @@
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 90
 #define COCOAPODS_VERSION_PATCH_Realm_Headers 5
 
+// SKPanoramaView
+#define COCOAPODS_POD_AVAILABLE_SKPanoramaView
+#define COCOAPODS_VERSION_MAJOR_SKPanoramaView 0
+#define COCOAPODS_VERSION_MINOR_SKPanoramaView 1
+#define COCOAPODS_VERSION_PATCH_SKPanoramaView 1
+
 // SKTagView
 #define COCOAPODS_POD_AVAILABLE_SKTagView
 #define COCOAPODS_VERSION_MAJOR_SKTagView 0
@@ -413,24 +395,6 @@
 #define COCOAPODS_VERSION_MAJOR_UIColor_BFPaperColors 1
 #define COCOAPODS_VERSION_MINOR_UIColor_BFPaperColors 3
 #define COCOAPODS_VERSION_PATCH_UIColor_BFPaperColors 1
-
-// VBFPopFlatButton
-#define COCOAPODS_POD_AVAILABLE_VBFPopFlatButton
-#define COCOAPODS_VERSION_MAJOR_VBFPopFlatButton 0
-#define COCOAPODS_VERSION_MINOR_VBFPopFlatButton 0
-#define COCOAPODS_VERSION_PATCH_VBFPopFlatButton 6
-
-// gtm-oauth
-#define COCOAPODS_POD_AVAILABLE_gtm_oauth
-#define COCOAPODS_VERSION_MAJOR_gtm_oauth 0
-#define COCOAPODS_VERSION_MINOR_gtm_oauth 0
-#define COCOAPODS_VERSION_PATCH_gtm_oauth 1
-
-// gtm-oauth/nibs
-#define COCOAPODS_POD_AVAILABLE_gtm_oauth_nibs
-#define COCOAPODS_VERSION_MAJOR_gtm_oauth_nibs 0
-#define COCOAPODS_VERSION_MINOR_gtm_oauth_nibs 0
-#define COCOAPODS_VERSION_PATCH_gtm_oauth_nibs 1
 
 // pop
 #define COCOAPODS_POD_AVAILABLE_pop

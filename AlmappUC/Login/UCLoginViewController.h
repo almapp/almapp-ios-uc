@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UCLoginBaseViewController.h"
 
-@interface UCLoginViewController : UIViewController <UITextFieldDelegate>
+@interface UCLoginViewController : UCLoginBaseViewController <UITextFieldDelegate>
 
 @end

@@ -6,7 +6,7 @@ target 'AlmappUC' do
 	pod 'AlmappCore',
         :git => 'https://github.com/almapp/AlmappCore-ios.git',
         :branch => 'master',
-        :commit => 'e1560659fe65e778813da2d50343826074709ee1'
+        :commit => 'c59fd283adc272499fa687b3c956914d9963d61b'
     pod 'Realm+JSON',
         :git => 'https://github.com/mrpatiwi/Realm-JSON.git',
         :commit => '6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab'
@@ -38,38 +38,40 @@ target 'AlmappUC' do
     pod 'DZNSegmentedControl'
 	pod 'RKNotificationHub'
 	pod 'TLYShyNavBar'
-    pod 'FHSegmentedViewController'
+    # pod 'FHSegmentedViewController'
     
     # Label and text
-    pod 'JVFloatLabeledTextField'
+    # pod 'JVFloatLabeledTextField'
     pod 'THLabel', '~> 1.4.6'
     
 	# Google
-    pod 'gtm-oauth'
+    # pod 'gtm-oauth'
 	pod 'Google-Maps-iOS-SDK'
     
 	# Other
-    pod 'ILTranslucentView'
+    # pod 'ILTranslucentView'
+    pod 'SKPanoramaView'
     pod 'NGAParallaxMotion'
     pod 'DIDatepicker',
         :git => 'https://github.com/mrpatiwi/DIDatepicker.git',
         :branch => 'master',
         :commit => '5f3f586ff9250996097c7cefc13662063e45d1cb'
 	pod 'MRProgress'
-	pod 'VBFPopFlatButton'
+    # pod 'VBFPopFlatButton'
 	pod 'MRoundedButton',
         :git => 'https://github.com/mrpatiwi/MRoundedButton.git',
         :branch => 'no-example',
         :commit => '3cabf1e255a93ee9db77475971304e6480865e08'
     
+    pod 'pop', '~> 1.0'
 	pod 'Colours'
     
     # Cells
     pod 'TDBadgedCell'
 
     # Presentation
-    pod 'Onboard',
-        :git => 'https://github.com/mamaral/Onboard.git'
+    #pod 'Onboard',
+    #    :git => 'https://github.com/mamaral/Onboard.git'
 
     ## Tools
     pod 'DateTools'

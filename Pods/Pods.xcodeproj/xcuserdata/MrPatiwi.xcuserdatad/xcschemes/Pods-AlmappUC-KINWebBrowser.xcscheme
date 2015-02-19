@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5959AEA0FA2F79FEB67C5135"
+               BlueprintIdentifier = "B8FE6BDCAA097744DAEE4111"
                BuildableName = "libPods-AlmappUC-KINWebBrowser.a"
                BlueprintName = "Pods-AlmappUC-KINWebBrowser"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5959AEA0FA2F79FEB67C5135"
-            BuildableName = "libPods-AlmappUC-KINWebBrowser.a"
-            BlueprintName = "Pods-AlmappUC-KINWebBrowser"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

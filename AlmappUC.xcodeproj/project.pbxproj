@@ -55,6 +55,7 @@
 		F67F7FFF1A82C05900E20802 /* UCScheduleNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = F67F7FFE1A82C05900E20802 /* UCScheduleNotifications.m */; };
 		F67F80061A83204D00E20802 /* PoliticalWebPages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F67F80051A83204D00E20802 /* PoliticalWebPages.xcassets */; };
 		F67F80081A8322F000E20802 /* CommunityManager.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F67F80071A8322F000E20802 /* CommunityManager.xcassets */; };
+		F6807E7A1A94CE8700099C29 /* UCLoginNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6807E791A94CE8700099C29 /* UCLoginNavigationController.m */; };
 		F68529CA1A810F8700C9280B /* WebServices.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68529C91A810F8700C9280B /* WebServices.xcassets */; };
 		F68717881A8B735B002A4EC3 /* UCMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F68717861A8B735B002A4EC3 /* UCMenuCell.m */; };
 		F68717891A8B735B002A4EC3 /* UCMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68717871A8B735B002A4EC3 /* UCMenuCell.xib */; };
@@ -62,6 +63,10 @@
 		F687178E1A8B77C1002A4EC3 /* UCMenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F687178C1A8B77C1002A4EC3 /* UCMenuHeaderCell.xib */; };
 		F68C9C481A5273DF006BEA56 /* HelveticaNeueLTW1G-Lt.otf in Resources */ = {isa = PBXBuildFile; fileRef = F68C9C461A5273DF006BEA56 /* HelveticaNeueLTW1G-Lt.otf */; };
 		F68C9C491A5273DF006BEA56 /* HelveticaNeueLTW1G-Md.otf in Resources */ = {isa = PBXBuildFile; fileRef = F68C9C471A5273DF006BEA56 /* HelveticaNeueLTW1G-Md.otf */; };
+		F696C65F1A954B3C00916F6B /* OldStyleNavigationControllerAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F696C65E1A954B3C00916F6B /* OldStyleNavigationControllerAnimatedTransition.m */; };
+		F696C6621A954D9E00916F6B /* UCLoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F696C6611A954D9E00916F6B /* UCLoginBaseViewController.m */; };
+		F696C6651A95537100916F6B /* UCLoginMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F696C6641A95537100916F6B /* UCLoginMapViewController.m */; };
+		F696C6671A95648E00916F6B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F696C6661A95648E00916F6B /* MapKit.framework */; };
 		F6A0F4631A7FFA3500380EE1 /* UCScheduleConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A0F4621A7FFA3500380EE1 /* UCScheduleConstants.m */; };
 		F6A0F4661A7FFB9300380EE1 /* UCScheduleBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A0F4651A7FFB9300380EE1 /* UCScheduleBaseCell.m */; };
 		F6A0F4681A80058300380EE1 /* UCScheduleEndCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A0F4671A80058300380EE1 /* UCScheduleEndCell.xib */; };
@@ -209,6 +214,8 @@
 		F67F7FFE1A82C05900E20802 /* UCScheduleNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCScheduleNotifications.m; sourceTree = "<group>"; };
 		F67F80051A83204D00E20802 /* PoliticalWebPages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PoliticalWebPages.xcassets; sourceTree = "<group>"; };
 		F67F80071A8322F000E20802 /* CommunityManager.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommunityManager.xcassets; sourceTree = "<group>"; };
+		F6807E781A94CE8700099C29 /* UCLoginNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCLoginNavigationController.h; sourceTree = "<group>"; };
+		F6807E791A94CE8700099C29 /* UCLoginNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCLoginNavigationController.m; sourceTree = "<group>"; };
 		F68529C91A810F8700C9280B /* WebServices.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WebServices.xcassets; sourceTree = "<group>"; };
 		F68717851A8B735B002A4EC3 /* UCMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCMenuCell.h; sourceTree = "<group>"; };
 		F68717861A8B735B002A4EC3 /* UCMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCMenuCell.m; sourceTree = "<group>"; };
@@ -218,6 +225,13 @@
 		F687178C1A8B77C1002A4EC3 /* UCMenuHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCMenuHeaderCell.xib; sourceTree = "<group>"; };
 		F68C9C461A5273DF006BEA56 /* HelveticaNeueLTW1G-Lt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTW1G-Lt.otf"; sourceTree = "<group>"; };
 		F68C9C471A5273DF006BEA56 /* HelveticaNeueLTW1G-Md.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTW1G-Md.otf"; sourceTree = "<group>"; };
+		F696C65D1A954B3C00916F6B /* OldStyleNavigationControllerAnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldStyleNavigationControllerAnimatedTransition.h; sourceTree = "<group>"; };
+		F696C65E1A954B3C00916F6B /* OldStyleNavigationControllerAnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldStyleNavigationControllerAnimatedTransition.m; sourceTree = "<group>"; };
+		F696C6601A954D9E00916F6B /* UCLoginBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCLoginBaseViewController.h; sourceTree = "<group>"; };
+		F696C6611A954D9E00916F6B /* UCLoginBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCLoginBaseViewController.m; sourceTree = "<group>"; };
+		F696C6631A95537100916F6B /* UCLoginMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCLoginMapViewController.h; sourceTree = "<group>"; };
+		F696C6641A95537100916F6B /* UCLoginMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCLoginMapViewController.m; sourceTree = "<group>"; };
+		F696C6661A95648E00916F6B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F6A0F4611A7FFA3500380EE1 /* UCScheduleConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleConstants.h; sourceTree = "<group>"; };
 		F6A0F4621A7FFA3500380EE1 /* UCScheduleConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCScheduleConstants.m; sourceTree = "<group>"; };
 		F6A0F4641A7FFB9300380EE1 /* UCScheduleBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleBaseCell.h; sourceTree = "<group>"; };
@@ -316,6 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F696C6671A95648E00916F6B /* MapKit.framework in Frameworks */,
 				699DA18D8B8F5D2515B48DCC /* libPods-AlmappUC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +357,7 @@
 		B1511FEDAF42038968430CC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F696C6661A95648E00916F6B /* MapKit.framework */,
 				30D4E3D61623163A2E23398A /* libPods-AlmappUC.a */,
 			);
 			name = Frameworks;
@@ -494,8 +510,14 @@
 		F6568C3C1A8580B500BB7415 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F696C6601A954D9E00916F6B /* UCLoginBaseViewController.h */,
+				F696C6611A954D9E00916F6B /* UCLoginBaseViewController.m */,
+				F6807E781A94CE8700099C29 /* UCLoginNavigationController.h */,
+				F6807E791A94CE8700099C29 /* UCLoginNavigationController.m */,
 				F6568C3D1A8580CF00BB7415 /* UCLoginViewController.h */,
 				F6568C3E1A8580CF00BB7415 /* UCLoginViewController.m */,
+				F696C6631A95537100916F6B /* UCLoginMapViewController.h */,
+				F696C6641A95537100916F6B /* UCLoginMapViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -503,6 +525,8 @@
 		F66B934E1A641FAB0048DACD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F696C65D1A954B3C00916F6B /* OldStyleNavigationControllerAnimatedTransition.h */,
+				F696C65E1A954B3C00916F6B /* OldStyleNavigationControllerAnimatedTransition.m */,
 				F62B94A31A69AE4500C1F534 /* RWLabel.h */,
 				F62B94A41A69AE4500C1F534 /* RWLabel.m */,
 				F66B934F1A641FAB0048DACD /* TLSpringFlowLayout.h */,
@@ -966,7 +990,7 @@
 								enabled = 1;
 							};
 							com.apple.Maps.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -1093,14 +1117,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D947021A7F00050070B18B /* UIView+ProgressView.m in Sources */,
+				F6807E7A1A94CE8700099C29 /* UCLoginNavigationController.m in Sources */,
 				F6571FF71A52EF580008E991 /* UCImageHelper.m in Sources */,
 				F67F7FFF1A82C05900E20802 /* UCScheduleNotifications.m in Sources */,
+				F696C6621A954D9E00916F6B /* UCLoginBaseViewController.m in Sources */,
 				F6B726861A86C81D00461E17 /* NSUserDefaults+Config.m in Sources */,
 				F6D743721A83F97500073F9D /* UINavigationBar+Clear.m in Sources */,
 				F6568C501A85D6E300BB7415 /* UITableView+DUExtensions.m in Sources */,
 				F6D19C9D1A520FD900FD4715 /* UCEMailViewController.m in Sources */,
 				F66B93511A641FAB0048DACD /* TLSpringFlowLayout.m in Sources */,
 				F66E66591A865A3B002E06D5 /* UCFacultyManager.m in Sources */,
+				F696C6651A95537100916F6B /* UCLoginMapViewController.m in Sources */,
 				F6D743791A84090A00073F9D /* UCSocialBarView.m in Sources */,
 				F6A0F4721A801D8B00380EE1 /* UCChatTableViewController.m in Sources */,
 				F65720031A536AB00008E991 /* UIColor+Almapp.m in Sources */,
@@ -1148,6 +1175,7 @@
 				F6A0F4631A7FFA3500380EE1 /* UCScheduleConstants.m in Sources */,
 				F6568C4D1A85B6B500BB7415 /* UCCampusManager.m in Sources */,
 				F6D19C971A520B0F00FD4715 /* UCConstants.m in Sources */,
+				F696C65F1A954B3C00916F6B /* OldStyleNavigationControllerAnimatedTransition.m in Sources */,
 				F66E66541A865928002E06D5 /* UCBigLikeCell.m in Sources */,
 				F63485A81A524C60004A0122 /* UCTableViewController.m in Sources */,
 				F62B94B31A69FDE300C1F534 /* UCPostCell.m in Sources */,

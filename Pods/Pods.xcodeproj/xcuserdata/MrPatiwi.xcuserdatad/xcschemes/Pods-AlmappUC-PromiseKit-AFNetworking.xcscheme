@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "12C509FE7E5B423E4A4C4FD6"
+               BlueprintIdentifier = "225F74470C85991531D2E7ED"
                BuildableName = "libPods-AlmappUC-PromiseKit-AFNetworking.a"
                BlueprintName = "Pods-AlmappUC-PromiseKit-AFNetworking"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "12C509FE7E5B423E4A4C4FD6"
-            BuildableName = "libPods-AlmappUC-PromiseKit-AFNetworking.a"
-            BlueprintName = "Pods-AlmappUC-PromiseKit-AFNetworking"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
