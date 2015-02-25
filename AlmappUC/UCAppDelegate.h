@@ -10,6 +10,7 @@
 #import <AlmappCore/AlmappCore.h>
 
 #import "UCHTTP.h"
+#import "UCApiKey.h"
 #import "RESideMenu.h"
 #import "UIView+ProgressView.h"
 
@@ -57,6 +58,8 @@ extern NSString * const KOrganization;
 - (PMKPromise *)promiseLoggedToMainService;
 + (PMKPromise *)promiseLoggedToMainService;
 
+- (PMKPromise *)promiseLoggedToWebMail;
++ (PMKPromise *)promiseLoggedToWebMail;
 
 #pragma mark - Session
 

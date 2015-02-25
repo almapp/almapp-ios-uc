@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "UCApiKeys.h"
+#import "UCApiKey.h"
 
 @interface UCExternalApiTests : XCTestCase
 
@@ -31,7 +31,7 @@
 }
 
 - (void)testApiKeyFor:(NSString*)service {
-    NSString* key = [UCApiKeys apiKeyFor:service];
+    NSString* key = [UCApiKey apiKeyFor:service];
     NSString* message = [NSString stringWithFormat:@"If this is returning nil, you are missing %@.plist file.", API_KEYS_FILE];
     NSLog(@"Api key for %@: %@", service, key);
     XCTAssertNotNil(key, @"%@", message);

@@ -5,6 +5,18 @@
 	<key>GoogleMaps</key>
 	<string>AIzaSyBnd7KJ3X2GmoiRVHJ__d6rJI2rCmRF2no</string>
 	<key>Almapp</key>
-	<string>DevelopmentKey</string>
+	<dict>
+		<key>uid</key>
+		<string>0a6e77365356c94f322ebdc2819de92600dd821e48072a921e1f671276efac56</string>
+		<key>secret</key>
+		<string>c221f9d0df564a26bfda08196cc9cc221df856ee5ee71e51c348ad105deabd13</string>
+	</dict>
+	<key>GoogleApi</key>
+	<dict>
+		<key>uid</key>
+		<string>1053654147449-s381161juabk3s1ut7kadbh8tjaqa5o4.apps.googleusercontent.com</string>
+		<key>secret</key>
+		<string>WwKf9m_1eYl5ZMvDalNnvMGK</string>
+	</dict>
 </dict>
 </plist>

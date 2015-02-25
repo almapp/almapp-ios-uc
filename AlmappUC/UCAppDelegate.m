@@ -9,7 +9,6 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 #import "UCAppDelegate.h"
-#import "UCApiKeys.h"
 
 #import "UCNavigationController.h"
 #import "UCMenuViewController.h"
@@ -54,7 +53,7 @@ NSString * const KOrganization = @"UC";
 }
 
 - (UIViewController *)loginView {
-    return  [self.currentStoryboard instantiateViewControllerWithIdentifier:kLoginNavigationControllerName];
+    return [self.currentStoryboard instantiateViewControllerWithIdentifier:kLoginNavigationControllerName];
 }
 
 - (void)showInitialView {
@@ -309,6 +308,14 @@ NSString * const KOrganization = @"UC";
     return [[self delegate] promiseLoggedToMainService];
 }
 
+- (PMKPromise *)promiseLoggedToWebMail {
+    return [self.http loginToWebMail:self.credential];
+}
+
++ (PMKPromise *)promiseLoggedToWebMail {
+    return [[self delegate] promiseLoggedToWebMail];
+}
+
 
 #pragma mark - AppDelegate Methods
 
@@ -348,10 +355,12 @@ NSString * const KOrganization = @"UC";
 #pragma mark - Setup methods
 
 - (void)setupAlmapp {
+    UCApiKey *key = [UCApiKey OAuthApiKeyFor:kAlmappApiKey];
+
     _almappCore = [ALMCore coreWithDelegate:self
                                     baseURL:[NSURL URLWithString:kAPIBaseUrl]
                                  apiVersion:self.apiVersionNumber
-                                     apiKey:[UCApiKeys almappApiKey]
+                                     apiKey:[ALMApiKey apiKeyWithClient:key.uid secret:key.secret]
                                organization:KOrganization];
 }
 
@@ -386,7 +395,7 @@ NSString * const KOrganization = @"UC";
 }
 
 - (void)setupGoogleMaps {
-    [GMSServices provideAPIKey:[UCApiKeys apiKeyFor:kGoogleMapsApiKey]];
+    [GMSServices provideAPIKey:[UCApiKey apiKeyFor:kGoogleMapsApiKey]];
 }
 
 - (void)setupBackground {

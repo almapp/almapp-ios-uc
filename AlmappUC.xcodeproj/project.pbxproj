@@ -10,7 +10,7 @@
 		699DA18D8B8F5D2515B48DCC /* libPods-AlmappUC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D4E3D61623163A2E23398A /* libPods-AlmappUC.a */; };
 		F60356771A6354BC00E25731 /* UCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60356761A6354BC00E25731 /* UCRootViewController.m */; };
 		F603567B1A63766800E25731 /* UCWebPagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F603567A1A63766800E25731 /* UCWebPagesViewController.m */; };
-		F609D1B81A559BFE008417FA /* UCApiKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = F609D1B71A559BFE008417FA /* UCApiKeys.m */; };
+		F609D1B81A559BFE008417FA /* UCApiKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F609D1B71A559BFE008417FA /* UCApiKey.m */; };
 		F609D1BE1A55A0BC008417FA /* UCExternalApiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F609D1BD1A55A0BC008417FA /* UCExternalApiTests.m */; };
 		F62B94A21A69A5B800C1F534 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F62B94A11A69A5B800C1F534 /* ApiKeys.plist */; };
 		F62B94A51A69AE4500C1F534 /* RWLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F62B94A41A69AE4500C1F534 /* RWLabel.m */; };
@@ -84,6 +84,7 @@
 		F6B7268C1A86E12700461E17 /* UCTeachersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7268B1A86E12700461E17 /* UCTeachersTableViewController.m */; };
 		F6B726911A86E1E000461E17 /* UCTeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7268F1A86E1E000461E17 /* UCTeacherCell.m */; };
 		F6B726921A86E1E000461E17 /* UCTeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B726901A86E1E000461E17 /* UCTeacherCell.xib */; };
+		F6B726B01A9E4FF2009A339C /* UCGmailAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B726AF1A9E4FF2009A339C /* UCGmailAuth.m */; };
 		F6C463AF1A6B396300BFBFD1 /* UCMapHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463AE1A6B396300BFBFD1 /* UCMapHeaderViewController.m */; };
 		F6C463B31A6B40C000BFBFD1 /* UCScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463B21A6B40C000BFBFD1 /* UCScheduleTableViewController.m */; };
 		F6C463B61A6B414E00BFBFD1 /* UCScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463B51A6B414E00BFBFD1 /* UCScheduleViewController.m */; };
@@ -139,8 +140,8 @@
 		F60356761A6354BC00E25731 /* UCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCRootViewController.m; sourceTree = "<group>"; };
 		F60356791A63766800E25731 /* UCWebPagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCWebPagesViewController.h; sourceTree = "<group>"; };
 		F603567A1A63766800E25731 /* UCWebPagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCWebPagesViewController.m; sourceTree = "<group>"; };
-		F609D1B61A559BFE008417FA /* UCApiKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCApiKeys.h; sourceTree = "<group>"; };
-		F609D1B71A559BFE008417FA /* UCApiKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCApiKeys.m; sourceTree = "<group>"; };
+		F609D1B61A559BFE008417FA /* UCApiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCApiKey.h; sourceTree = "<group>"; };
+		F609D1B71A559BFE008417FA /* UCApiKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCApiKey.m; sourceTree = "<group>"; };
 		F609D1BD1A55A0BC008417FA /* UCExternalApiTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCExternalApiTests.m; sourceTree = "<group>"; };
 		F62B94A11A69A5B800C1F534 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		F62B94A31A69AE4500C1F534 /* RWLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLabel.h; sourceTree = "<group>"; };
@@ -262,6 +263,8 @@
 		F6B7268E1A86E1E000461E17 /* UCTeacherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCTeacherCell.h; sourceTree = "<group>"; };
 		F6B7268F1A86E1E000461E17 /* UCTeacherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCTeacherCell.m; sourceTree = "<group>"; };
 		F6B726901A86E1E000461E17 /* UCTeacherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCTeacherCell.xib; sourceTree = "<group>"; };
+		F6B726AE1A9E4FF2009A339C /* UCGmailAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCGmailAuth.h; sourceTree = "<group>"; };
+		F6B726AF1A9E4FF2009A339C /* UCGmailAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCGmailAuth.m; sourceTree = "<group>"; };
 		F6C463AD1A6B396300BFBFD1 /* UCMapHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCMapHeaderViewController.h; sourceTree = "<group>"; };
 		F6C463AE1A6B396300BFBFD1 /* UCMapHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCMapHeaderViewController.m; sourceTree = "<group>"; };
 		F6C463B11A6B40C000BFBFD1 /* UCScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleTableViewController.h; sourceTree = "<group>"; };
@@ -376,8 +379,8 @@
 		F609D1B51A559BE6008417FA /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				F609D1B61A559BFE008417FA /* UCApiKeys.h */,
-				F609D1B71A559BFE008417FA /* UCApiKeys.m */,
+				F609D1B61A559BFE008417FA /* UCApiKey.h */,
+				F609D1B71A559BFE008417FA /* UCApiKey.m */,
 				F62B94A11A69A5B800C1F534 /* ApiKeys.plist */,
 			);
 			path = Private;
@@ -697,6 +700,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F6B726AD1A9E4FE4009A339C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F6B726AE1A9E4FF2009A339C /* UCGmailAuth.h */,
+				F6B726AF1A9E4FF2009A339C /* UCGmailAuth.m */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		F6C463A01A6B1D1E00BFBFD1 /* Organizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -839,6 +851,7 @@
 			children = (
 				F6D19C9B1A520FD900FD4715 /* UCEMailViewController.h */,
 				F6D19C9C1A520FD900FD4715 /* UCEMailViewController.m */,
+				F6B726AD1A9E4FE4009A339C /* Auth */,
 			);
 			path = Email;
 			sourceTree = "<group>";
@@ -1171,6 +1184,7 @@
 				F6C463B61A6B414E00BFBFD1 /* UCScheduleViewController.m in Sources */,
 				F68717881A8B735B002A4EC3 /* UCMenuCell.m in Sources */,
 				F63485AA1A5256E5004A0122 /* UIImage+ImageEffects.m in Sources */,
+				F6B726B01A9E4FF2009A339C /* UCGmailAuth.m in Sources */,
 				F6D743A01A8473CB00073F9D /* UCCourseCell.m in Sources */,
 				F66E665C1A865CE5002E06D5 /* ALMPlace+Defaults.m in Sources */,
 				F65B24E51A9A58D600BD1813 /* UCAcademicUnityCell.m in Sources */,
@@ -1195,7 +1209,7 @@
 				F6C463AF1A6B396300BFBFD1 /* UCMapHeaderViewController.m in Sources */,
 				F6568C371A857FC500BB7415 /* UCHTTP.m in Sources */,
 				F6D7437E1A840A0500073F9D /* UCSocialBarButton.m in Sources */,
-				F609D1B81A559BFE008417FA /* UCApiKeys.m in Sources */,
+				F609D1B81A559BFE008417FA /* UCApiKey.m in Sources */,
 				F645D6CB1A65395B005EB060 /* UCWebBrowserViewController.m in Sources */,
 				F6568C4A1A85B1EF00BB7415 /* UCMapBottomManager.m in Sources */,
 				F6A0F46B1A8006A700380EE1 /* UCScheduleEndCell.m in Sources */,
