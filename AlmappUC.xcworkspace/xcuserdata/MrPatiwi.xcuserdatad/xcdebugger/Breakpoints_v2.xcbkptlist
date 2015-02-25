@@ -456,11 +456,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094678.119481"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "-SEARCH:ofType:on:"
             landmarkType = "5">
             <Locations>
@@ -786,11 +786,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094678.119481"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "@implementation ALMController"
             landmarkType = "3">
          </BreakpointContent>
@@ -802,11 +802,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094678.119481"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "-SEARCH:ofType:"
             landmarkType = "5">
          </BreakpointContent>
@@ -850,11 +850,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094678.119481"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-afterAuth"
             landmarkType = "5">
          </BreakpointContent>
@@ -866,11 +866,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094678.119481"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-afterAuth"
             landmarkType = "5">
          </BreakpointContent>
@@ -882,11 +882,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094678.119481"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "-afterAuth"
             landmarkType = "5">
          </BreakpointContent>
@@ -930,7 +930,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebBrowser/UCWebBrowserViewController.m"
-            timestampString = "444775124.916996"
+            timestampString = "446537339.812836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -1102,11 +1102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094678.119481"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "-AUTH"
             landmarkType = "5">
          </BreakpointContent>
@@ -1706,11 +1706,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094678.119481"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "-GETResource:id:parameters:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1722,11 +1722,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445094258.162081"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "@implementation ALMController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1738,11 +1738,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445283793.810363"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-AUTH"
             landmarkType = "5">
          </BreakpointContent>
@@ -1754,11 +1754,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445283796.600412"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "-afterAuth"
             landmarkType = "5">
          </BreakpointContent>
@@ -1770,11 +1770,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445283800.812609"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "-AUTH"
             landmarkType = "5">
          </BreakpointContent>
@@ -1930,11 +1930,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445795433.555609"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "-GETResource:parameters:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2166,11 +2166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445900981.642251"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
             landmarkName = "-GET:parameters:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2182,11 +2182,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445900982.819552"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "-GET:parameters:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2578,11 +2578,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445996950.274127"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-afterAuth"
             landmarkType = "5">
          </BreakpointContent>
@@ -2594,11 +2594,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445997103.249001"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "-GETResources:on:parameters:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2626,11 +2626,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445997429.145642"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
             landmarkName = "-GETResources:parameters:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2642,11 +2642,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "445997437.542935"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "-GETResources:parameters:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2754,11 +2754,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "446307933.868138"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-AUTH"
             landmarkType = "5">
          </BreakpointContent>
@@ -2770,11 +2770,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
-            timestampString = "446307937.084424"
+            timestampString = "446531943.975242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "-AUTH"
             landmarkType = "5">
          </BreakpointContent>
@@ -2888,6 +2888,134 @@
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "-setWebpageIcon:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlmappUC/Login/UCLoginViewController.m"
+            timestampString = "446530554.248541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-loginButtonTouch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/Custom Controllers/ALMUserController.m"
+            timestampString = "446530559.786849"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-login:password:realm:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/Custom Controllers/ALMUserController.m"
+            timestampString = "446530564.056494"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-login:password:realm:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
+            timestampString = "446531943.975242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-afterAuth"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
+            timestampString = "446531943.975242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "-AUTH"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
+            timestampString = "446531943.975242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "-AUTH"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
+            timestampString = "446531943.975242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-AUTH"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
+            timestampString = "446531943.975242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-AUTH"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68067B288BA6E53E22B4F098"
+               BlueprintIdentifier = "9CC3557C8E817FF9CB54398C"
                BuildableName = "libPods-AlmappUC-ARChromeActivity.a"
                BlueprintName = "Pods-AlmappUC-ARChromeActivity"
                ReferencedContainer = "container:Pods.xcodeproj">

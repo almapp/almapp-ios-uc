@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD067C1415A779810F20F833"
+               BlueprintIdentifier = "6F2F7F216D337137D4F20A3B"
                BuildableName = "libPods-AlmappUC-Realm+JSON.a"
                BlueprintName = "Pods-AlmappUC-Realm+JSON"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -6,7 +6,7 @@ target 'AlmappUC' do
 	pod 'AlmappCore',
         :git => 'https://github.com/almapp/AlmappCore-ios.git',
         :branch => 'master',
-        :commit => '949ae87248a7e99907ffa1fadb78509de7e1d67e'
+        :commit => 'a9936fab3d37d07dc407b26b2bd94754e182426f'
     pod 'Realm+JSON',
         :git => 'https://github.com/mrpatiwi/Realm-JSON.git',
         :commit => '6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab'
@@ -45,7 +45,7 @@ target 'AlmappUC' do
     pod 'THLabel', '~> 1.4.6'
     
 	# Google
-    # pod 'gtm-oauth'
+    pod 'gtm-oauth'
 	pod 'Google-Maps-iOS-SDK'
     
 	# Other

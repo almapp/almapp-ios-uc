@@ -23,11 +23,11 @@ NSString *const kGoogleMapsApiKey = @"GoogleMaps";
 }
 
 + (ALMApiKey *)almappApiKey {
-    //return [ALMApiKey apiKeyWithClient:@"c970e1f8282992baa673e3609753dc8bd746c4d7931b9a65ab1cab073be1f03e"
-    //                            secret:@"3d834a31a2a65a8a0aa5a7c46d25a149b4c7282fc7d6d04977375ad4ae469459"];
+    return [ALMApiKey apiKeyWithClient:@"0a6e77365356c94f322ebdc2819de92600dd821e48072a921e1f671276efac56"
+                                secret:@"c221f9d0df564a26bfda08196cc9cc221df856ee5ee71e51c348ad105deabd13"];
     
-    return [ALMApiKey apiKeyWithClient:@"102752c7272f1cd5da2535a08acc8145347eef1ac6332b8550bf1f079446879a"
-                                secret:@"14ff2ff1002f53f8b797efccf04bf3082f6eb854ac20f4af9b3563eb2072322e"];
+    //return [ALMApiKey apiKeyWithClient:@"102752c7272f1cd5da2535a08acc8145347eef1ac6332b8550bf1f079446879a"
+    //                            secret:@"14ff2ff1002f53f8b797efccf04bf3082f6eb854ac20f4af9b3563eb2072322e"];
 }
 
 @end

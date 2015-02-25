@@ -140,7 +140,7 @@ PODS:
 
 DEPENDENCIES:
   - AFOAuth2Manager (from `https://github.com/iamcam/AFOAuth2Manager`, commit `7470a389ea74034923999202eedfc04f036b3d37`)
-  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `949ae87248a7e99907ffa1fadb78509de7e1d67e`, branch `master`)
+  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `a9936fab3d37d07dc407b26b2bd94754e182426f`, branch `master`)
   - BFPaperTabBarController (~> 1.4.5)
   - Colours
   - DateTools
@@ -170,7 +170,7 @@ EXTERNAL SOURCES:
     :git: https://github.com/iamcam/AFOAuth2Manager
   AlmappCore:
     :branch: master
-    :commit: 949ae87248a7e99907ffa1fadb78509de7e1d67e
+    :commit: a9936fab3d37d07dc407b26b2bd94754e182426f
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -193,7 +193,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/iamcam/AFOAuth2Manager
   AlmappCore:
     :branch: master
-    :commit: 949ae87248a7e99907ffa1fadb78509de7e1d67e
+    :commit: a9936fab3d37d07dc407b26b2bd94754e182426f
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -221,7 +221,7 @@ SPEC CHECKSUMS:
   DIDatepicker: 5937543e2ad8c72d49b4ddd0c3a6d5f4fb087133
   DZNSegmentedControl: daa91d107904f7433e73852477f08450575be331
   FayeCpp: 77eac47338e90ed9c7099faa75458042f459eb3c
-  Google-Maps-iOS-SDK: 3b89f4c151f8fc3ddb0e70dece9bcab33dbec2ea
+  Google-Maps-iOS-SDK: 4c008abdb68e03ae125c7f674be841d369e2b3de
   JSQMessagesViewController: e93a288a9662d4519c95a28a8c0eec10beae1bfc
   JSQSystemSoundPlayer: 55528c699a283aae2220d3ae7b8b527d2ecef4b4
   KINWebBrowser: da1593b2d6e52d727221d7ffec1406bb45b66da0

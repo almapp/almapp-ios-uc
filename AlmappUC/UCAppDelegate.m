@@ -28,8 +28,8 @@ static NSString * const kStoryboardName = @"Main";
 static NSString * const kLoginNavigationControllerName = @"LoginNavigationController";
 
 int const kAPIVersion = 1;
-//NSString * const kAPIBaseUrl = @"http://patiwi-mcburger-pro.local:3000";
-NSString * const kAPIBaseUrl = @"https://almapp.me";
+NSString * const kAPIBaseUrl = @"http://patiwi-mcburger-pro.local:5000";
+//NSString * const kAPIBaseUrl = @"https://almapp.me";
 NSString * const KOrganization = @"UC";
 
 #pragma mark - Interface
@@ -375,6 +375,7 @@ NSString * const KOrganization = @"UC";
     if(![defaults boolForKey:@"USER_DEFAULTS_V1_FIRST_RUN"]) {
         NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
         [defaults removePersistentDomainForName:appDomain];
+        [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
         
         [defaults setBool:YES forKey:@"USER_DEFAULTS_V1_FIRST_RUN"];
     }

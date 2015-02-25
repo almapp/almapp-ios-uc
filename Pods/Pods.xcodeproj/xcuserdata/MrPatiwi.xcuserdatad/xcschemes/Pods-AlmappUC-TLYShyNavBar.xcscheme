@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F5C366E326D2D4759A728506"
+               BlueprintIdentifier = "C8C0F9E57139315410B451B7"
                BuildableName = "libPods-AlmappUC-TLYShyNavBar.a"
                BlueprintName = "Pods-AlmappUC-TLYShyNavBar"
                ReferencedContainer = "container:Pods.xcodeproj">

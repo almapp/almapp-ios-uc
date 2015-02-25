@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DE7CDD247370D66BB9983F1F"
+               BlueprintIdentifier = "01AEF94748C7E51E5E8DB04F"
                BuildableName = "libPods-AlmappUC-Colours.a"
                BlueprintName = "Pods-AlmappUC-Colours"
                ReferencedContainer = "container:Pods.xcodeproj">

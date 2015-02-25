@@ -105,6 +105,10 @@ static NSString *const kDefaultOAuthScope = @"";
 }
 
 
+#pragma mark - Error
+
+
+
 #pragma mark - Auth
 
 - (NSString *)OAuthPath {
