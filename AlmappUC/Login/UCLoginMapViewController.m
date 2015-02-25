@@ -53,6 +53,7 @@
     
     if ([self permissionEnabled] && self.didFetchMaps) {
         NSLog(@"NEXT!");
+        [UCAppDelegate showInitialView];
     }
 }
 

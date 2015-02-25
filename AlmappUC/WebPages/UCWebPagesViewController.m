@@ -82,7 +82,7 @@ static float const kWebPageCellMargin = 3.0f;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _webPages.count;
+    return self.webPages.count;
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,8 +91,7 @@ static float const kWebPageCellMargin = 3.0f;
                                     dequeueReusableCellWithReuseIdentifier:kWebPagesCellIdentifier
                                     forIndexPath:indexPath];
     
-    ALMWebPage* webPage = [_webPages objectAtIndex:indexPath.row];
-    [cell setWebPage:webPage];
+    cell.webpage = self.webPages[indexPath.row];
     
     return cell;
 }
@@ -142,7 +141,7 @@ static float const kWebPageCellMargin = 3.0f;
 
 - (void)loadWebPagesForSegmentIndex:(short)index {
     short i = (short)[self webPageTypeForIndex:index];
-    _webPages = [[ALMWebPage objectsWhere:[NSString stringWithFormat:@"%@ = %u", kRPageType, i]] sortedResultsUsingProperty:kRResourceID ascending:YES];
+    self.webPages = [[ALMWebPage objectsWhere:[NSString stringWithFormat:@"%@ = %u", kRPageType, i]] sortedResultsUsingProperty:kRResourceID ascending:YES];
     
     //[self.collectionView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.collectionView.numberOfSections)]];
     

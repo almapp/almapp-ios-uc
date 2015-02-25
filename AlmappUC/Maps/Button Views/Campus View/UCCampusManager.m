@@ -56,6 +56,19 @@
     }
 }
 
+- (Class)cellTypeForIndex:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 1:
+            return [UCFacultyCell class];
+
+        case 2:
+            return [UCBuildingCell class];
+            
+        default:
+            return NULL;
+    }
+}
+
 - (ALMArea *)areaAtIndex:(NSIndexPath *)indexPath {
     return [[self collectionForSection:indexPath.section] objectAtIndex:indexPath.row];
 }
@@ -79,13 +92,9 @@
     switch (indexPath.section) {
         case 0:
             return [super tableView:tableView cellForRowAtIndexPath:indexPath];
-        case 1: {
-            UCMapTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[UCMapTableViewCell nibNameFacultyCell] forIndexPath:indexPath];
-            [cell setArea:[[self collectionForSection:indexPath.section] objectAtIndex:indexPath.row]];
-            return cell;
-        }
-        case 2: {
-            UCMapTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[UCMapTableViewCell nibNameBuildingCell] forIndexPath:indexPath];
+            
+        case 1: case 2: {
+            UCAreaCell *cell = [tableView dequeueReusableCellWithIdentifier:[[self cellTypeForIndex:indexPath] nibName] forIndexPath:indexPath];
             [cell setArea:[[self collectionForSection:indexPath.section] objectAtIndex:indexPath.row]];
             return cell;
         }
@@ -132,12 +141,9 @@
         case 0:
             return [super tableView:tableView heightForRowAtIndexPath:indexPath];
             
-        case 1:
-            return [UCMapTableViewCell heightFacultyCell];
-            
-        case 2:
-            return [UCMapTableViewCell heightBuildingCell];
-            
+        case 1: case 2:
+            return [[self cellTypeForIndex:indexPath] height];
+         
         default:
             return 0.0f;
     }

@@ -10,7 +10,7 @@
 
 #import "UCMapsFirstTableViewController.h"
 #import "UCMapMainViewController.h"
-#import "UCMapTableViewCell.h"
+#import "UCCampusCell.h"
 
 #import "UCConstants.h"
 #import "ALMConstants.h"
@@ -37,14 +37,16 @@ static NSString *const kCampusSegueName = @"CampusSegue";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UINib *nib = [UINib nibWithNibName:[UCMapTableViewCell nibNameCampusCell] bundle:[NSBundle mainBundle]];
+    for (NSString* nibName in @[[UCCampusCell nibName]]) {
+        UINib *nib = [UINib nibWithNibName:nibName bundle:[NSBundle mainBundle]];
+        [self.tableView registerNib:nib forCellReuseIdentifier:nibName];
+    }
     
-    [self.tableView registerNib:nib forCellReuseIdentifier:[UCMapTableViewCell nibNameCampusCell]];
     self.clearsSelectionOnViewWillAppear = YES;
     
     self.campuses = [[ALMCampus allObjects] sortedResultsUsingProperty:kRResourceID ascending:YES];
     if ([NSUserDefaults shouldUpdateAreas]) {
-        [self fetch];
+        //[self fetch];
     }
     else {
         [self.tableView reloadData];
@@ -99,7 +101,7 @@ static NSString *const kCampusSegueName = @"CampusSegue";
             return kDefaultCellHeight;
             
         case 1:
-            return [UCMapTableViewCell heightCampusCell];
+            return [UCCampusCell height];
             
         case 2:
             return (_recentAreas && _recentAreas.count != 0) ? 44.0f : kDefaultCellHeight; // TODO place height
@@ -130,7 +132,7 @@ static NSString *const kCampusSegueName = @"CampusSegue";
             return cell;
         }
         case 1: {
-            UCMapTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:[UCMapTableViewCell nibNameCampusCell]];
+            UCCampusCell* cell = [tableView dequeueReusableCellWithIdentifier:[UCCampusCell nibName]];
             ALMArea* campus = [_campuses objectAtIndex:indexPath.row];
             [cell setArea:campus];
             return cell;

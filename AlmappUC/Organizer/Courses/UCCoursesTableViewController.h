@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UCCourseCell.h"
-#import "UCMapTableViewCell.h"
+#import "UCAcademicUnityCell.h"
 
 @interface UCCoursesTableViewController : UITableViewController <UISearchBarDelegate, UISearchControllerDelegate, UISearchDisplayDelegate>
 

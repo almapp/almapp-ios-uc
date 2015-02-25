@@ -6,7 +6,7 @@ target 'AlmappUC' do
 	pod 'AlmappCore',
         :git => 'https://github.com/almapp/AlmappCore-ios.git',
         :branch => 'master',
-        :commit => 'c59fd283adc272499fa687b3c956914d9963d61b'
+        :commit => '949ae87248a7e99907ffa1fadb78509de7e1d67e'
     pod 'Realm+JSON',
         :git => 'https://github.com/mrpatiwi/Realm-JSON.git',
         :commit => '6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab'

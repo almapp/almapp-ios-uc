@@ -17,6 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView* backgroundBlurred;
 @property (weak, nonatomic) IBOutlet UIView* backgroundLayer;
 
-- (void)setWebPage:(ALMWebPage*)webPage;
+@property (weak, nonatomic) ALMWebPage *webpage;
 
 @end

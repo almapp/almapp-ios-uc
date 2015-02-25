@@ -138,8 +138,8 @@ extern NSString *const kRPhone;
 extern NSString *const kAInformation;
 extern NSString *const kRInformation;
 
-extern NSString *const kAImagenMediumPath;
-extern NSString *const kRImagenMediumPath;
+extern NSString *const kAImagenOriginalPath;
+extern NSString *const kRImagenOriginalPath;
 
 extern NSString *const kAImagenThumbPath;
 extern NSString *const kRImagenThumbPath;
@@ -189,6 +189,12 @@ extern NSString *const kRLongitude;
 
 extern NSString *const kAFloor;
 extern NSString *const kRFloor;
+
+extern NSString *const kABannerOriginalPath;
+extern NSString *const kRBannerOriginalPath;
+
+extern NSString *const kABannerSmallPath;
+extern NSString *const kRBannerSmallPath;
 
 #pragma mark - Events
 
@@ -304,6 +310,12 @@ extern NSString *const kRLoginUrl;
 
 extern NSString *const kAHomeUrl;
 extern NSString *const kRHomeUrl;
+
+extern NSString *const kAIconOriginalPath;
+extern NSString *const kRIconOriginalPath;
+
+extern NSString *const kABackgroundOriginalPath;
+extern NSString *const kRBackgroundOriginalPath;
 
 #pragma mark - Posts
 

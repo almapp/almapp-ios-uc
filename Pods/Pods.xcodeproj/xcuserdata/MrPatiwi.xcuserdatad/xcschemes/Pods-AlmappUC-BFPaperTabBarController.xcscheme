@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88A0874D8D57D3556EABEFF0"
+               BlueprintIdentifier = "4F5E22024B08FFA9B1E1F5A6"
                BuildableName = "libPods-AlmappUC-BFPaperTabBarController.a"
                BlueprintName = "Pods-AlmappUC-BFPaperTabBarController"
                ReferencedContainer = "container:Pods.xcodeproj">

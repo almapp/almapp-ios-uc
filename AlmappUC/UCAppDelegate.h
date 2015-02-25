@@ -13,6 +13,9 @@
 #import "RESideMenu.h"
 #import "UIView+ProgressView.h"
 
+extern int const kAPIVersion;
+extern NSString * const kAPIBaseUrl;
+extern NSString * const KOrganization;
 
 @interface UCAppDelegate : UIResponder <UIApplicationDelegate, RESideMenuDelegate, ALMCoreDelegate>
 
@@ -74,14 +77,15 @@
 
 #pragma mark - AppDelegate Methods
 
-- (UIStoryboard*)currentStoryboard;
+- (UIStoryboard *)currentStoryboard;
 - (void)dropDatabase;
 - (void)deleteDatabase;
-- (NSString*)databasePath;
+- (NSString *)databasePath;
 
 - (int)apiVersionNumber;
-- (NSString*)apiVersion;
-- (NSString*)apiServerUrl;
+- (NSString *)apiVersion;
+- (NSURL *)apiServerUrl;
++ (NSURL *)apiServerUrl;
 
 @end
 

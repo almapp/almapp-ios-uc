@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5ECB2FD2A917939B74853D5F"
+               BlueprintIdentifier = "3AF40AE0929B73AFD561BFE2"
                BuildableName = "libPods-AlmappUC-THLabel.a"
                BlueprintName = "Pods-AlmappUC-THLabel"
                ReferencedContainer = "container:Pods.xcodeproj">

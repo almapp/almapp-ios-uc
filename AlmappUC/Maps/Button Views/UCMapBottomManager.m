@@ -20,8 +20,9 @@
 }
 
 - (void)start {
-    for (NSString* nibName in @[[UCMapTableViewCell nibNameBuildingCell],
-                                [UCMapTableViewCell nibNameFacultyCell],
+    for (NSString* nibName in @[[UCFacultyCell nibName],
+                                [UCBuildingCell nibName],
+                                [UCBuildingCell nibName],
                                 [UCPlaceCell nibName]]) {
         
         UINib *nib = [UINib nibWithNibName:nibName bundle:[NSBundle mainBundle]];

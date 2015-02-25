@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A1A2C4D27EDDF66D4B3470C"
+               BlueprintIdentifier = "8B1B3A594E9FC7E2AFF91FC3"
                BuildableName = "libPods-AlmappUC-DZNSegmentedControl.a"
                BlueprintName = "Pods-AlmappUC-DZNSegmentedControl"
                ReferencedContainer = "container:Pods.xcodeproj">

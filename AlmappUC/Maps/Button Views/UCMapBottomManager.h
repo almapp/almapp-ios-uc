@@ -11,7 +11,9 @@
 #import <AlmappCore/AlmappCore.h>
 
 #import "UITableView+DUExtensions.h"
-#import "UCMapTableViewCell.h"
+#import "UCFacultyCell.h"
+#import "UCAcademicUnityCell.h"
+#import "UCBuildingCell.h"
 #import "UCAppDelegate.h"
 #import "UCMapHeaderViewController.h"
 #import "UCPlaceCell.h"

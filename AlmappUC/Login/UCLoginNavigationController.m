@@ -8,6 +8,7 @@
 
 #import "UCLoginNavigationController.h"
 #import "OldStyleNavigationControllerAnimatedTransition.h"
+#import <SKPanoramaView/SKPanoramaView.h>
 
 @interface UCLoginNavigationController ()
 
@@ -18,12 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImageView *background = [[UIImageView alloc] initWithFrame:self.view.frame]; //CGRectMake(0, 0, 320, 460)];
-    background.image = [UIImage imageNamed:@"background5.jpg"];
-    background.clipsToBounds = YES;
-    //[self.view addSubview:background];
-    //[self.view sendSubviewToBack:background];
-    [self.view insertSubview:background atIndex:0];
+    SKPanoramaView *panoramaView = [[SKPanoramaView alloc] initWithFrame:self.view.frame image:[UIImage imageNamed:@"LoginBackground"]];
+    panoramaView.animationDuration = 20.0f;
+    [self.view insertSubview:panoramaView atIndex:0];
+    [panoramaView startAnimating];
     
     self.delegate = self;
     // Do any additional setup after loading the view.

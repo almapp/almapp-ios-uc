@@ -27,9 +27,10 @@
 static NSString * const kStoryboardName = @"Main";
 static NSString * const kLoginNavigationControllerName = @"LoginNavigationController";
 
-static int const kAPIVersion = 1;
-static NSString * const kAPIBaseUrl = @"https://almapp.me";
-static NSString * const KOrganization = @"UC";
+int const kAPIVersion = 1;
+//NSString * const kAPIBaseUrl = @"http://patiwi-mcburger-pro.local:3000";
+NSString * const kAPIBaseUrl = @"https://almapp.me";
+NSString * const KOrganization = @"UC";
 
 #pragma mark - Interface
 
@@ -134,7 +135,7 @@ static NSString * const KOrganization = @"UC";
     //    NSLog(@"%@", error);
     //});
     
-    BOOL isLoggedIn = self.currentSession != nil;  // from your server response
+    BOOL isLoggedIn = (self.currentSession != nil);  // from your server response
     
     //NSString *storyboardId = isLoggedIn ? @"RootController" : @"LoginController";
     //self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:storyboardId];
@@ -323,8 +324,12 @@ static NSString * const KOrganization = @"UC";
     return [NSString stringWithFormat:@"v%d", self.apiVersionNumber];
 }
 
-- (NSString *)apiServerUrl {
-    return kAPIBaseUrl;
+- (NSURL *)apiServerUrl {
+    return [NSURL URLWithString:kAPIBaseUrl];
+}
+
++ (NSURL *)apiServerUrl {
+    return [[self delegate] apiServerUrl];
 }
 
 - (void)dropDatabase {

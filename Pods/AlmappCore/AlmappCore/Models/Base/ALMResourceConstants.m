@@ -145,8 +145,8 @@ NSString *const kRPhone = @"phoneString";
 NSString *const kAInformation = @"information";
 NSString *const kRInformation = @"information";
 
-NSString *const kAImagenMediumPath = @"avatar.medium";
-NSString *const kRImagenMediumPath = @"imageMediumPath";
+NSString *const kAImagenOriginalPath = @"avatar.original";
+NSString *const kRImagenOriginalPath = @"imageOriginalPath";
 
 NSString *const kAImagenThumbPath = @"avatar.thumb";
 NSString *const kRImagenThumbPath = @"imageThumbPath";
@@ -196,6 +196,12 @@ NSString *const kRLongitude = @"longitude";
 
 NSString *const kAFloor = @"floor";
 NSString *const kRFloor = @"floor";
+
+NSString *const kABannerOriginalPath = @"banner.original";
+NSString *const kRBannerOriginalPath = @"bannerOriginalPath";
+
+NSString *const kABannerSmallPath = @"banner.small";
+NSString *const kRBannerSmallPath = @"bannerSmallPath";
 
 #pragma mark - Events
 
@@ -311,6 +317,12 @@ NSString *const kRLoginUrl = @"loginUrl";
 
 NSString *const kAHomeUrl = @"home_url";
 NSString *const kRHomeUrl = @"homeUrl";
+
+NSString *const kAIconOriginalPath = @"icon.original";
+NSString *const kRIconOriginalPath = @"iconOriginalPath";
+
+NSString *const kABackgroundOriginalPath = @"background.original";
+NSString *const kRBackgroundOriginalPath = @"backgroundOriginalPath";
 
 #pragma mark - Posts
 

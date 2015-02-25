@@ -42,7 +42,7 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    for (NSString *nibName in @[[UCCourseCell nibName], [UCMapTableViewCell nibNameAcademicUnityCell]]) {
+    for (NSString *nibName in @[[UCCourseCell nibName], [UCAcademicUnityCell nibName]]) {
         UINib *nib = [UINib nibWithNibName:nibName bundle:[NSBundle mainBundle]];
         [self.tableView registerNib:nib forCellReuseIdentifier:nibName];
     }
@@ -127,7 +127,7 @@
         return cell;
     }
     else {
-        UCMapTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:[UCMapTableViewCell nibNameAcademicUnityCell] forIndexPath:indexPath];
+        UCAcademicUnityCell *cell = [self.tableView dequeueReusableCellWithIdentifier:[UCAcademicUnityCell nibName] forIndexPath:indexPath];
         ALMAcademicUnity *unity = [[self collectionAtSection:indexPath.section] objectAtIndex:indexPath.row];
         cell.area = unity;
         return cell;
@@ -147,7 +147,7 @@
         return [UCCourseCell height];
     }
     else {
-        return [UCMapTableViewCell heightAcademicUnityCell];
+        return [UCAcademicUnityCell height];
     }
 }
 

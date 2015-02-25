@@ -100,7 +100,7 @@
 #define COCOAPODS_POD_AVAILABLE_FayeCpp
 #define COCOAPODS_VERSION_MAJOR_FayeCpp 0
 #define COCOAPODS_VERSION_MINOR_FayeCpp 1
-#define COCOAPODS_VERSION_PATCH_FayeCpp 8
+#define COCOAPODS_VERSION_PATCH_FayeCpp 9
 
 // Google-Maps-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Google_Maps_iOS_SDK
@@ -238,7 +238,7 @@
 #define COCOAPODS_POD_AVAILABLE_PromiseKit
 #define COCOAPODS_VERSION_MAJOR_PromiseKit 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit 5
 
 // PromiseKit-AFNetworking
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_AFNetworking
@@ -250,67 +250,67 @@
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_CALayer
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_CALayer 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_CALayer 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_CALayer 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_CALayer 5
 
 // PromiseKit/NSNotificationCenter
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_NSNotificationCenter
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_NSNotificationCenter 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_NSNotificationCenter 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_NSNotificationCenter 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_NSNotificationCenter 5
 
 // PromiseKit/NSURLConnection
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_NSURLConnection
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_NSURLConnection 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_NSURLConnection 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_NSURLConnection 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_NSURLConnection 5
 
 // PromiseKit/Pause
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Pause
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Pause 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_Pause 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Pause 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Pause 5
 
 // PromiseKit/Promise
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Promise
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Promise 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_Promise 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Promise 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Promise 5
 
 // PromiseKit/UIActionSheet
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIActionSheet
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIActionSheet 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_UIActionSheet 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIActionSheet 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIActionSheet 5
 
 // PromiseKit/UIAlertView
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIAlertView
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIAlertView 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_UIAlertView 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIAlertView 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIAlertView 5
 
 // PromiseKit/UIView
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIView
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIView 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_UIView 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIView 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIView 5
 
 // PromiseKit/UIViewController
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIViewController
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIViewController 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_UIViewController 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIViewController 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIViewController 5
 
 // PromiseKit/Until
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Until
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Until 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_Until 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Until 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Until 5
 
 // PromiseKit/When
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_When
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_When 1
 #define COCOAPODS_VERSION_MINOR_PromiseKit_When 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_When 4
+#define COCOAPODS_VERSION_PATCH_PromiseKit_When 5
 
 // QMBParallaxScrollViewController
 #define COCOAPODS_POD_AVAILABLE_QMBParallaxScrollViewController

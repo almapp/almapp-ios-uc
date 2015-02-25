@@ -44,7 +44,7 @@ static NSString * const kSlidingMenuStoryboardID = @"menuController";
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self presentLeftMenuViewController];
+    //[self presentLeftMenuViewController];
 }
 
 - (void)didReceiveMemoryWarning {

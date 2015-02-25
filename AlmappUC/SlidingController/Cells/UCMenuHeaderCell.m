@@ -10,6 +10,7 @@
 
 #import "UCMenuHeaderCell.h"
 #import "UCButtonHelper.h"
+#import "UCAppDelegate.h"
 #import "UIColor+Almapp.h"
 
 @implementation UCMenuHeaderCell
@@ -57,7 +58,8 @@
         self.careerLabel.text = @"";
     }
     
-    NSURL *url = [NSURL URLWithString:@"https://scontent-b-gru.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/p720x720/68262_473804596035478_636341968_n.jpg?oh=08953e78926012fb05ca2ec9cca547d8&oe=554ED391"];
+    
+    NSURL *url = [NSURL URLWithString:user.imageOriginalPath];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     //UIImage *placeholderImage = [UIImage imageNamed:@"campus_placeholder.png"];
