@@ -82,6 +82,7 @@ install_resource()
                     install_resource "KINWebBrowser/Assets/forwardbutton.png"
                     install_resource "KINWebBrowser/Assets/forwardbutton@2x.png"
                     install_resource "KINWebBrowser/Assets/forwardbutton@3x.png"
+                    install_resource "gtm-oauth2/Source/Touch/GTMOAuth2ViewTouch.xib"
                     install_resource "${BUILT_PRODUCTS_DIR}/TUSafariActivity.bundle"
           
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

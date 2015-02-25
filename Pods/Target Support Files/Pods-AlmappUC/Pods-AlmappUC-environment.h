@@ -334,7 +334,7 @@
 #define COCOAPODS_POD_AVAILABLE_Realm
 #define COCOAPODS_VERSION_MAJOR_Realm 0
 #define COCOAPODS_VERSION_MINOR_Realm 90
-#define COCOAPODS_VERSION_PATCH_Realm 5
+#define COCOAPODS_VERSION_PATCH_Realm 6
 
 // Realm+JSON
 #define COCOAPODS_POD_AVAILABLE_Realm_JSON
@@ -346,7 +346,7 @@
 #define COCOAPODS_POD_AVAILABLE_Realm_Headers
 #define COCOAPODS_VERSION_MAJOR_Realm_Headers 0
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 90
-#define COCOAPODS_VERSION_PATCH_Realm_Headers 5
+#define COCOAPODS_VERSION_PATCH_Realm_Headers 6
 
 // SKPanoramaView
 #define COCOAPODS_POD_AVAILABLE_SKPanoramaView
@@ -395,6 +395,18 @@
 #define COCOAPODS_VERSION_MAJOR_UIColor_BFPaperColors 1
 #define COCOAPODS_VERSION_MINOR_UIColor_BFPaperColors 3
 #define COCOAPODS_VERSION_PATCH_UIColor_BFPaperColors 1
+
+// gtm-http-fetcher
+#define COCOAPODS_POD_AVAILABLE_gtm_http_fetcher
+#define COCOAPODS_VERSION_MAJOR_gtm_http_fetcher 1
+#define COCOAPODS_VERSION_MINOR_gtm_http_fetcher 0
+#define COCOAPODS_VERSION_PATCH_gtm_http_fetcher 141
+
+// gtm-oauth2
+#define COCOAPODS_POD_AVAILABLE_gtm_oauth2
+#define COCOAPODS_VERSION_MAJOR_gtm_oauth2 1
+#define COCOAPODS_VERSION_MINOR_gtm_oauth2 0
+#define COCOAPODS_VERSION_PATCH_gtm_oauth2 125
 
 // pop
 #define COCOAPODS_POD_AVAILABLE_pop

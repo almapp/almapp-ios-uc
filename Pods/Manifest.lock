@@ -37,6 +37,9 @@ PODS:
   - DZNSegmentedControl (1.2.2)
   - FayeCpp (0.1.9)
   - Google-Maps-iOS-SDK (1.9.2)
+  - gtm-http-fetcher (1.0.141)
+  - gtm-oauth2 (1.0.125):
+    - gtm-http-fetcher (~> 1.0.141)
   - JSQMessagesViewController (6.1.3):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -121,11 +124,11 @@ PODS:
   - PromiseKit/When (1.2.5):
     - PromiseKit/Promise
   - QMBParallaxScrollViewController (HEAD based on 0.1)
-  - Realm (0.90.5):
-    - Realm/Headers (= 0.90.5)
+  - Realm (0.90.6):
+    - Realm/Headers (= 0.90.6)
   - Realm+JSON (0.2.5):
     - Realm (~> 0.90)
-  - Realm/Headers (0.90.5)
+  - Realm/Headers (0.90.6)
   - RESideMenu (4.0.7)
   - RKNotificationHub (1.0.4)
   - SKPanoramaView (0.1.1)
@@ -147,6 +150,7 @@ DEPENDENCIES:
   - DIDatepicker (from `https://github.com/mrpatiwi/DIDatepicker.git`, commit `5f3f586ff9250996097c7cefc13662063e45d1cb`, branch `master`)
   - DZNSegmentedControl
   - Google-Maps-iOS-SDK
+  - gtm-oauth2
   - JSQMessagesViewController
   - KINWebBrowser (from `https://github.com/mrpatiwi/KINWebBrowser.git`, commit `4aa1aca37e9771c985e9e7fbeb4a79d3d8157946`)
   - MRoundedButton (from `https://github.com/mrpatiwi/MRoundedButton.git`, commit `3cabf1e255a93ee9db77475971304e6480865e08`, branch `no-example`)
@@ -222,6 +226,8 @@ SPEC CHECKSUMS:
   DZNSegmentedControl: daa91d107904f7433e73852477f08450575be331
   FayeCpp: 77eac47338e90ed9c7099faa75458042f459eb3c
   Google-Maps-iOS-SDK: 4c008abdb68e03ae125c7f674be841d369e2b3de
+  gtm-http-fetcher: 6d4617e7d343b6e4c082b777541c334eb6f5d81e
+  gtm-oauth2: 3f97d22a6066a80df0b1f878c1ce41176472daad
   JSQMessagesViewController: e93a288a9662d4519c95a28a8c0eec10beae1bfc
   JSQSystemSoundPlayer: 55528c699a283aae2220d3ae7b8b527d2ecef4b4
   KINWebBrowser: da1593b2d6e52d727221d7ffec1406bb45b66da0
@@ -235,7 +241,7 @@ SPEC CHECKSUMS:
   PromiseKit: 27e79737441ad8b9602c769ae7731ee963269837
   PromiseKit-AFNetworking: 16db750b394dcd12aa8527eb1bb9f209a36a49f7
   QMBParallaxScrollViewController: 81bb3a89d36f908712fe7c870cc0ebeb96a06edc
-  Realm: aea25534b97be77995650c2339aa6ed010dfcc8a
+  Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   Realm+JSON: 0d26baf985e03db0c9e9d102887be5b9b4491e8a
   RESideMenu: a9c1cd2e64e60e1d3166ddac01a83e215a0e4d30
   RKNotificationHub: 04a08446faa30b801b7f227392e0ade6d4b9b9d0

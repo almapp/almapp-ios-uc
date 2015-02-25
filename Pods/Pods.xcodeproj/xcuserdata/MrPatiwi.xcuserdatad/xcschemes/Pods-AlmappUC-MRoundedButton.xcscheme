@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06C0F836A8D4D4A4A1F56129"
+               BlueprintIdentifier = "065D910A634699F205269FAC"
                BuildableName = "libPods-AlmappUC-MRoundedButton.a"
                BlueprintName = "Pods-AlmappUC-MRoundedButton"
                ReferencedContainer = "container:Pods.xcodeproj">

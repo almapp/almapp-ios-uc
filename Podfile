@@ -45,7 +45,7 @@ target 'AlmappUC' do
     pod 'THLabel', '~> 1.4.6'
     
 	# Google
-    pod 'gtm-oauth'
+    pod 'gtm-oauth2'
 	pod 'Google-Maps-iOS-SDK'
     
 	# Other
