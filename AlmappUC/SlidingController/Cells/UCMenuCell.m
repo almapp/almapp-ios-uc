@@ -7,7 +7,7 @@
 //
 
 #import "UCMenuCell.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 
 @implementation UCMenuCell
 

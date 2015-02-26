@@ -14,8 +14,7 @@
 #import "UCMenuViewController.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
-#import "UIImage+ImageEffects.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 #import "NSUserDefaults+Config.h"
 #import "UCScheduleNotifications.h"
 
@@ -402,7 +401,7 @@ NSString * const KOrganization = @"UC";
     UIImageView *iv = [[UIImageView alloc] initWithFrame:self.window.frame];
     //iv.image = [[UIImage imageNamed:@"background1.jpg"] applyBlurWithRadius:1 tintColor:[UIColor clearColor] saturationDeltaFactor:2 maskImage:nil];
     //iv.image = [[UIImage imageNamed:@"background1.jpg"] applyDarkEffect];
-    iv.image = [UIImage imageNamed:@"background4.png"];
+    iv.image = [UCStyle mainBackgroundImage];
     [self.window addSubview:iv];
     [self.window sendSubviewToBack: iv];
     

@@ -19,7 +19,7 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar.jpg"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UCStyle bannerBackgroundImage] forBarMetrics:UIBarMetricsDefault];
     
     UIImage *menu = [UIImage imageNamed:@"Menu"];
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:menu style:UIBarButtonItemStyleDone target:self action:@selector(menuButtonPressed:)];

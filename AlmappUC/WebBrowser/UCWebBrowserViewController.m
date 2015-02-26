@@ -31,7 +31,7 @@ NSString *const kWebBrowserDefaultURL = @"http://www.google.cl";
     /*
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 44.f)];
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
-    [_searchBar setBackgroundImage:[UIImage imageNamed:@"navbar.jpg"]];
+    [_searchBar setBackgroundImage:[UCStyle bannerBackgroundImage]];
     
     [self.shyNavBarManager setExtensionView:_searchBar];
      */

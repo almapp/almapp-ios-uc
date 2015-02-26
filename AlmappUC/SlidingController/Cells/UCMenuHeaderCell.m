@@ -11,7 +11,7 @@
 #import "UCMenuHeaderCell.h"
 #import "UCButtonHelper.h"
 #import "UCAppDelegate.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 
 @implementation UCMenuHeaderCell
 
@@ -62,7 +62,6 @@
     NSURL *url = [NSURL URLWithString:user.imageOriginalPath];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    //UIImage *placeholderImage = [UIImage imageNamed:@"campus_placeholder.png"];
     
     __weak UCMenuHeaderCell *weakCell = self;
     [self.profileImage setImageWithURLRequest:request

@@ -10,7 +10,7 @@
 
 #import "UCTeacherCell.h"
 #import "UCScheduleConstants.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 
 @implementation UCTeacherCell
 
@@ -49,7 +49,6 @@
     NSURL *url = [NSURL URLWithString:@"http://www.ing.puc.cl/cuerpo-docente/wp-content/uploads/2013/04/amador-guzmn-134x150.jpg"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    //UIImage *placeholderImage = [UIImage imageNamed:@"campus_placeholder.png"];
     
     __weak UCTeacherCell *weakCell = self;
     [self.profileImage setImageWithURLRequest:request

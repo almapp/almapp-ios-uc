@@ -7,7 +7,7 @@
 //
 
 #import "UCPlaceCell.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 
 @implementation UCPlaceCell
 

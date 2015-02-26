@@ -9,7 +9,7 @@
 #import "UCCoursesTableViewController.h"
 #import "UCScheduleConstants.h"
 #import "UCAppDelegate.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 
 #import <AlmappCore/ALMResourceConstants.h>
 

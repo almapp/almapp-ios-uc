@@ -7,7 +7,7 @@
 //
 
 #import "UCEmailCell.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 #import <DateTools/NSDate+DateTools.h>
 
 @implementation UCEmailCell

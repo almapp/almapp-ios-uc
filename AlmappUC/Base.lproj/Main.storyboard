@@ -346,7 +346,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfC-t0-x1K">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="zIl-vp-zSY"/>
+                                    <barButtonItem style="done" systemItem="edit" id="zIl-vp-zSY"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rFv-Yl-QfW"/>
                                     <barButtonItem style="done" systemItem="compose" id="UCW-L7-maz"/>
                                 </items>

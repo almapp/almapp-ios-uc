@@ -8,6 +8,7 @@
 
 #import "UCRootViewController.h"
 #import "UCMenuViewController.h"
+#import "UCStyle.h"
 
 static NSString * const kSlidingMenuStoryboardID = @"menuController";
 
@@ -32,7 +33,7 @@ static NSString * const kSlidingMenuStoryboardID = @"menuController";
     
     // self.rightMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"rightMenuViewController"];
     
-    self.backgroundImage = [UIImage imageNamed:@"background4.png"];
+    self.backgroundImage = [UCStyle mainBackgroundImage];
     self.delegate = self;
 }
 

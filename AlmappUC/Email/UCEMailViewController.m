@@ -18,7 +18,8 @@
 #import "UCGoogleOAuthViewController.h"
 #import "UITableView+Nib.h"
 #import "UCEmailCell.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
+
 
 
 @interface UCEMailViewController () 
@@ -65,31 +66,31 @@
     
     self.inboxItem = [[REMenuItem alloc] initWithTitle:@"Inbox"
                                                     subtitle:@"Bandeja de entrada"
-                                                       image:[UIImage imageNamed:@"Email"]
+                                                 image:[UIImage imageNamed:@"Inbox" tint:[UIColor whiteColor]]
                                             highlightedImage:nil
                                                        action:buttonAction];
     
     self.sentItem = [[REMenuItem alloc] initWithTitle:@"Enviados"
                                                        subtitle:@"Bandeja de mensajes enviados"
-                                                          image:[UIImage imageNamed:@"Email"]
+                                                          image:[UIImage imageNamed:@"Outbox" tint:[UIColor whiteColor]]
                                                highlightedImage:nil
                                                       action:buttonAction];
     
     self.starredItem = [[REMenuItem alloc] initWithTitle:@"Marcados"
                                                         subtitle:@"Bandeja de mensajes con estrella"
-                                                           image:[UIImage imageNamed:@"Email"]
+                                                           image:[UIImage imageNamed:@"Star" tint:[UIColor whiteColor]]
                                                 highlightedImage:nil
                                                          action:buttonAction];
     
     self.spamItem = [[REMenuItem alloc] initWithTitle:@"Spam"
                                              subtitle:@"Bandeja de mensajes spam"
-                                                image:[UIImage imageNamed:@"Email"]
+                                                image:[UIImage imageNamed:@"Warning" tint:[UIColor whiteColor]]
                                      highlightedImage:nil
                                                action:buttonAction];
     
     self.trashItem = [[REMenuItem alloc] initWithTitle:@"Borrados"
                                               subtitle:@"Bandeja de mensajes borrados"
-                                                 image:[UIImage imageNamed:@"Email"]
+                                                 image:[UIImage imageNamed:@"Trash" tint:[UIColor whiteColor]]
                                       highlightedImage:nil
                                                 action:buttonAction];
     
@@ -111,7 +112,7 @@
 - (void)setupSearchBar {
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 44.f)];
     self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
-    [self.searchBar setBackgroundImage:[UIImage imageNamed:@"navbar.jpg"]];
+    [self.searchBar setBackgroundImage:[UCStyle bannerBackgroundImage]];
 }
 
 - (void)setupShyNavBar {

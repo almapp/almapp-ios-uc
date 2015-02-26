@@ -8,10 +8,10 @@
 
 #import "UCMenuViewController.h"
 #import "UCAppDelegate.h"
-#import "UIImage+ImageEffects.h"
+#import "UCStyle.h"
 #import "UCImageHelper.h"
 #import "UCButtonHelper.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 #import "UITableView+Nib.h"
 
 #import "UCMenuCell.h"

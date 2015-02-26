@@ -8,7 +8,7 @@
 
 #import "UCMapBottomViewController.h"
 #import "UCMapMainViewController.h"
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 #import <PromiseKit.h>
 
 #import "UCCampusManager.h"

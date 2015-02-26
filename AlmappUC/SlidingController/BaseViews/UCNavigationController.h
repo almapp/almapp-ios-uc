@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <RESideMenu/RESideMenu.h>
-#import "UIColor+Almapp.h"
+#import "UCStyle.h"
 
 @interface UCNavigationController : UINavigationController
 

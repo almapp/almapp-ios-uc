@@ -39,7 +39,6 @@
     NSURL *url = [NSURL URLWithString:@"http://www.ing.puc.cl/cuerpo-docente/wp-content/uploads/2013/04/amador-guzmn-134x150.jpg"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    //UIImage *placeholderImage = [UIImage imageNamed:@"campus_placeholder.png"];
     
     __weak UCChatCell *weakCell = self;
     [self.chatImage setImageWithURLRequest:request
