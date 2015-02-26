@@ -9,6 +9,7 @@
 #import "UCPostsTableViewController.h"
 #import "UCPostCell.h"
 #import "UCAppDelegate.h"
+#import "UITableView+Nib.h"
 
 
 @interface UCPostsTableViewController ()
@@ -42,8 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UINib *nib = [UINib nibWithNibName:[UCPostCell nibName] bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:nib forCellReuseIdentifier:[UCPostCell nibName]];
+    [self.tableView registerClassesNib:[UCPostCell nibName]];
     
     [self fetch];
     

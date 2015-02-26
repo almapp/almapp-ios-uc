@@ -15,7 +15,8 @@
 #import "TLYShyNavBarManager.h"
 #import "UCAppDelegate.h"
 #import "UCGoogleOAuthViewController.h"
-
+#import "UITableView+Nib.h"
+#import "UCEmailCell.h"
 
 
 @interface UCEMailViewController ()
@@ -33,6 +34,8 @@
 
     //[self.view setBackgroundColor:[UIColor clearColor]];
     [_tableView setBackgroundColor:[UIColor clearColor]];
+    
+    [self.tableView registerClassesNib:@[[UCEmailCell nibName]]];
     
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 44.f)];
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
@@ -69,11 +72,7 @@
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"EmailCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    UCEmailCell* cell = [self.tableView dequeueReusableCellWithIdentifier:[UCEmailCell nibName]];
     
     if(indexPath.row % 2 == 0) {
         cell.backgroundColor = [UIColor colorWithRed:247/255.0 green:249/255.0 blue:249/255.0 alpha:1.0f];
@@ -83,6 +82,18 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UCEmailCell height];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UCEmailCell height];
 }
 
 /*

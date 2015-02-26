@@ -12,6 +12,7 @@
 #import "UCImageHelper.h"
 #import "UCButtonHelper.h"
 #import "UIColor+Almapp.h"
+#import "UITableView+Nib.h"
 
 #import "UCMenuCell.h"
 #import "UCMenuHeaderCell.h"
@@ -135,12 +136,8 @@ static NSString *const kControllerStoryboardIDForUtilities = @"";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    for (NSString* nibName in @[[UCMenuCell nibName], [UCMenuHeaderCell nibName]]) {
-        UINib *nib = [UINib nibWithNibName:nibName bundle:[NSBundle mainBundle]];
-        [self.tableView registerNib:nib forCellReuseIdentifier:nibName];
-    }
-    
+    [self.tableView registerClassesNib:@[[UCMenuCell nibName], [UCMenuHeaderCell nibName]]];
+
     [self setupApparence];
     [self.tableView reloadData];
     

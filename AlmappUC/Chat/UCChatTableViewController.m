@@ -8,6 +8,7 @@
 
 #import "UCChatTableViewController.h"
 #import "UCMessagesViewController.h"
+#import "UITableView+Nib.h"
 
 static NSString *const kMessageViewSegueName = @"MessageSegue";
 
@@ -22,8 +23,7 @@ static NSString *const kMessageViewSegueName = @"MessageSegue";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UINib *nib = [UINib nibWithNibName:[UCChatCell nibName] bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:nib forCellReuseIdentifier:[UCChatCell nibName]];
+    [self.tableView registerClassesNib:[UCChatCell nibName]];
     
     self.clearsSelectionOnViewWillAppear = YES;
     

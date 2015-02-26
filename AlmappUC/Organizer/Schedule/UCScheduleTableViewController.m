@@ -9,6 +9,7 @@
 #import "UCScheduleTableViewController.h"
 #import "UCScheduleConstants.h"
 #import "UCAppDelegate.h"
+#import "UITableView+Nib.h"
 
 static float const kDatePickerHeight = 50.0f;
 
@@ -23,10 +24,7 @@ static float const kDatePickerHeight = 50.0f;
     
     _scheduleItems = [NSArray array];
     
-    for (NSString *nibName in @[[UCScheduleCell nibName], [UCScheduleEndCell nibName]]) {
-        UINib *nib = [UINib nibWithNibName:nibName bundle:[NSBundle mainBundle]];
-        [self.tableView registerNib:nib forCellReuseIdentifier:nibName];
-    }
+    [self.tableView registerClassesNib:@[[UCScheduleCell nibName], [UCScheduleEndCell nibName]]];
     
     self.clearsSelectionOnViewWillAppear = YES;
     

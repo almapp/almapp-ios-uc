@@ -121,6 +121,9 @@
 		F6D947071A7F20A30070B18B /* UCScheduleEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D947061A7F20A30070B18B /* UCScheduleEventCell.xib */; };
 		F6D947091A7F20B10070B18B /* UCScheduleAllDayEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D947081A7F20B10070B18B /* UCScheduleAllDayEventCell.xib */; };
 		F6D9470C1A7F21060070B18B /* UCScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D9470B1A7F21060070B18B /* UCScheduleCell.m */; };
+		F6FEEDD11A9F75BB0033464A /* UCEmailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FEEDCF1A9F75BB0033464A /* UCEmailCell.m */; };
+		F6FEEDD21A9F75BB0033464A /* UCEmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6FEEDD01A9F75BB0033464A /* UCEmailCell.xib */; };
+		F6FEEDD51A9F7A0D0033464A /* UITableView+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FEEDD41A9F7A0D0033464A /* UITableView+Nib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,6 +331,11 @@
 		F6D9470A1A7F21060070B18B /* UCScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleCell.h; sourceTree = "<group>"; };
 		F6D9470B1A7F21060070B18B /* UCScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCScheduleCell.m; sourceTree = "<group>"; };
 		F6D9470D1A7F21690070B18B /* UCScheduleCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleCellProtocol.h; sourceTree = "<group>"; };
+		F6FEEDCE1A9F75BB0033464A /* UCEmailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCEmailCell.h; sourceTree = "<group>"; };
+		F6FEEDCF1A9F75BB0033464A /* UCEmailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCEmailCell.m; sourceTree = "<group>"; };
+		F6FEEDD01A9F75BB0033464A /* UCEmailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCEmailCell.xib; sourceTree = "<group>"; };
+		F6FEEDD31A9F7A0D0033464A /* UITableView+Nib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Nib.h"; sourceTree = "<group>"; };
+		F6FEEDD41A9F7A0D0033464A /* UITableView+Nib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Nib.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,6 +589,8 @@
 				F6568C4F1A85D6E300BB7415 /* UITableView+DUExtensions.m */,
 				F6B726871A86DD8A00461E17 /* UIViewController+BackButtonHandler.h */,
 				F6B726881A86DD8A00461E17 /* UIViewController+BackButtonHandler.m */,
+				F6FEEDD31A9F7A0D0033464A /* UITableView+Nib.h */,
+				F6FEEDD41A9F7A0D0033464A /* UITableView+Nib.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -857,6 +867,7 @@
 				F6D19C9B1A520FD900FD4715 /* UCEMailViewController.h */,
 				F6D19C9C1A520FD900FD4715 /* UCEMailViewController.m */,
 				F6B726AD1A9E4FE4009A339C /* Auth */,
+				F6FEEDCD1A9F75970033464A /* Cells */,
 			);
 			path = Email;
 			sourceTree = "<group>";
@@ -978,6 +989,16 @@
 				F6D9470B1A7F21060070B18B /* UCScheduleCell.m */,
 				F6A0F4691A8006A700380EE1 /* UCScheduleEndCell.h */,
 				F6A0F46A1A8006A700380EE1 /* UCScheduleEndCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6FEEDCD1A9F75970033464A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6FEEDD01A9F75BB0033464A /* UCEmailCell.xib */,
+				F6FEEDCE1A9F75BB0033464A /* UCEmailCell.h */,
+				F6FEEDCF1A9F75BB0033464A /* UCEmailCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1110,6 +1131,7 @@
 				F6D947051A7F205F0070B18B /* UCScheduleCell.xib in Resources */,
 				F6D7436D1A83F6FA00073F9D /* background4.png in Resources */,
 				F65B24E21A9A58BD00BD1813 /* UCFacultyCell.xib in Resources */,
+				F6FEEDD21A9F75BB0033464A /* UCEmailCell.xib in Resources */,
 				F6D19C6F1A51F04700FD4715 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1220,6 +1242,7 @@
 				F6A0F46B1A8006A700380EE1 /* UCScheduleEndCell.m in Sources */,
 				F6571FFD1A53465E0008E991 /* UCButtonHelper.m in Sources */,
 				F66B934D1A6419840048DACD /* UCWebPagesCollectionViewCell.m in Sources */,
+				F6FEEDD51A9F7A0D0033464A /* UITableView+Nib.m in Sources */,
 				F6568C3B1A85804100BB7415 /* UCPresentationManager.m in Sources */,
 				F6A0F4631A7FFA3500380EE1 /* UCScheduleConstants.m in Sources */,
 				F6568C4D1A85B6B500BB7415 /* UCCampusManager.m in Sources */,
@@ -1233,6 +1256,7 @@
 				F6A0F4661A7FFB9300380EE1 /* UCScheduleBaseCell.m in Sources */,
 				F6D19C931A52061700FD4715 /* UCMenuViewController.m in Sources */,
 				F6D743961A845E5A00073F9D /* UCMapBottomViewController.m in Sources */,
+				F6FEEDD11A9F75BB0033464A /* UCEmailCell.m in Sources */,
 				F6D19C641A51F04700FD4715 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

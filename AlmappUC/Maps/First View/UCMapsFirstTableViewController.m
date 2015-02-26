@@ -16,6 +16,7 @@
 #import "ALMConstants.h"
 
 #import "UCAppDelegate.h"
+#import "UITableView+Nib.h"
 
 static NSString *const kCampusSegueName = @"CampusSegue";
 
@@ -37,11 +38,8 @@ static NSString *const kCampusSegueName = @"CampusSegue";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    for (NSString* nibName in @[[UCCampusCell nibName]]) {
-        UINib *nib = [UINib nibWithNibName:nibName bundle:[NSBundle mainBundle]];
-        [self.tableView registerNib:nib forCellReuseIdentifier:nibName];
-    }
-    
+    [self.tableView registerClassesNib:@[[UCCampusCell nibName]]];
+
     self.clearsSelectionOnViewWillAppear = YES;
     
     self.campuses = [[ALMCampus allObjects] sortedResultsUsingProperty:kRResourceID ascending:YES];

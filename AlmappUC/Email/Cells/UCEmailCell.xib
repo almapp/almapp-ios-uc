@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeueLTW1G-Lt.otf">
+            <string>HelveticaNeueLTW1G-Lt</string>
+            <string>HelveticaNeueLTW1G-Lt</string>
+            <string>HelveticaNeueLTW1G-Lt</string>
+        </mutableArray>
+        <mutableArray key="HelveticaNeueLTW1G-Md.otf">
+            <string>HelveticaNeueLTW1G-Md</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UCEmailCell" rowHeight="80" id="KGk-i7-Jjw" customClass="UCEmailCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dot" translatesAutoresizingMaskIntoConstraints="NO" id="xSu-u2-cxi">
+                        <rect key="frame" x="8" y="19" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="5e5-Qo-jN6"/>
+                            <constraint firstAttribute="width" constant="14" id="e2d-cH-oY1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorena Impsum darem harto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOG-Iw-6ks">
+                        <rect key="frame" x="30" y="43" width="260" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Lt" family="Helvetica Neue LT W1G" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-ya-gyu">
+                        <rect key="frame" x="30" y="61" width="260" height="41"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Lt" family="Helvetica Neue LT W1G" pointSize="16"/>
+                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="QLm-on-Or2">
+                        <rect key="frame" x="292" y="16" width="20" height="20"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="6YK-vQ-utQ"/>
+                            <constraint firstAttribute="height" constant="20" id="cdh-Qo-81a"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorena Impsum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX9-mQ-enA">
+                        <rect key="frame" x="30" y="19" width="130" height="18"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Md" family="Helvetica Neue LT W1G" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miercoles" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-HC-zwD">
+                        <rect key="frame" x="228" y="19" width="62" height="15"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Lt" family="Helvetica Neue LT W1G" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uOG-Iw-6ks" secondAttribute="trailing" constant="30" id="091-d1-vOV"/>
+                    <constraint firstItem="F2q-ya-gyu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="61" id="262-eW-kim"/>
+                    <constraint firstItem="xSu-u2-cxi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7FQ-Sg-eBd"/>
+                    <constraint firstItem="xSu-u2-cxi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="7eD-D1-8mn"/>
+                    <constraint firstItem="gX9-mQ-enA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="8Rw-gD-uFz"/>
+                    <constraint firstAttribute="trailing" secondItem="F2q-ya-gyu" secondAttribute="trailing" constant="30" id="AOQ-4u-JyX"/>
+                    <constraint firstItem="uOG-Iw-6ks" firstAttribute="top" secondItem="gX9-mQ-enA" secondAttribute="bottom" constant="6" id="CGc-Mr-1CJ"/>
+                    <constraint firstItem="uOG-Iw-6ks" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="43" id="GeZ-IH-Web"/>
+                    <constraint firstItem="F2q-ya-gyu" firstAttribute="leading" secondItem="gX9-mQ-enA" secondAttribute="leading" id="Shj-mt-mNJ"/>
+                    <constraint firstItem="gX9-mQ-enA" firstAttribute="leading" secondItem="uOG-Iw-6ks" secondAttribute="leading" id="YRP-lx-5Ia"/>
+                    <constraint firstItem="gX9-mQ-enA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="Yv2-Ih-rhI"/>
+                    <constraint firstItem="4Sh-HC-zwD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="coJ-BA-tx8"/>
+                    <constraint firstAttribute="trailing" secondItem="4Sh-HC-zwD" secondAttribute="trailing" constant="30" id="ft8-If-Ci0"/>
+                    <constraint firstAttribute="trailing" secondItem="QLm-on-Or2" secondAttribute="trailing" constant="8" id="k9C-ZX-AH5"/>
+                    <constraint firstItem="QLm-on-Or2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="rYb-Y0-U9D"/>
+                    <constraint firstItem="F2q-ya-gyu" firstAttribute="top" secondItem="gX9-mQ-enA" secondAttribute="bottom" constant="24" id="t0S-Ht-unX"/>
+                    <constraint firstAttribute="bottom" secondItem="F2q-ya-gyu" secondAttribute="bottom" constant="13" id="tfP-HV-Gu1"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="CGc-Mr-1CJ"/>
+                        <exclude reference="t0S-Ht-unX"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="arrowImageView" destination="QLm-on-Or2" id="lID-xO-tKh"/>
+                <outlet property="bodyLabel" destination="F2q-ya-gyu" id="Xke-u4-MxK"/>
+                <outlet property="dateLabel" destination="4Sh-HC-zwD" id="SLn-UJ-c1f"/>
+                <outlet property="dotImageView" destination="xSu-u2-cxi" id="sMr-ta-meo"/>
+                <outlet property="senderLabel" destination="gX9-mQ-enA" id="fog-4S-tPx"/>
+                <outlet property="subjectLabel" destination="uOG-Iw-6ks" id="mjW-ie-nHF"/>
+            </connections>
+            <point key="canvasLocation" x="434" y="377.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ArrowRight" width="30" height="30"/>
+        <image name="Dot" width="17" height="17"/>
+    </resources>
+</document>

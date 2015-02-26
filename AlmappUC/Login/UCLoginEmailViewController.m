@@ -7,14 +7,11 @@
 //
 
 #import "UCLoginEmailViewController.h"
-#import "UCGmailAuth.h"
-
 
 #import <gtm-oauth2/GTMOAuth2Authentication.h>
 #import <gtm-oauth2/GTMOAuth2ViewControllerTouch.h>
 #import <gtm-oauth2/GTMOAuth2SignIn.h>
 
-#import "UCGmailAuth.h"
 #import "UCAppDelegate.h"
 
 @interface UCLoginEmailViewController ()
