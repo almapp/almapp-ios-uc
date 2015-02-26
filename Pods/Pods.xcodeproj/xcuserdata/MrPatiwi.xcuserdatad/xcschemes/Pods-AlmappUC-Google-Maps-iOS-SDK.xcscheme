@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E7BC5151E5181CFC0BD62A6C"
+               BlueprintIdentifier = "840384CC1B78AE9D73F86A82"
                BuildableName = "libPods-AlmappUC-Google-Maps-iOS-SDK.a"
                BlueprintName = "Pods-AlmappUC-Google-Maps-iOS-SDK"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E7BC5151E5181CFC0BD62A6C"
-            BuildableName = "libPods-AlmappUC-Google-Maps-iOS-SDK.a"
-            BlueprintName = "Pods-AlmappUC-Google-Maps-iOS-SDK"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2A115BEDB22EF4B0CD4CB593"
+               BlueprintIdentifier = "5D63F83F7D5927A4AF05EF75"
                BuildableName = "libPods-AlmappUC-MRoundedButton.a"
                BlueprintName = "Pods-AlmappUC-MRoundedButton"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2A115BEDB22EF4B0CD4CB593"
-            BuildableName = "libPods-AlmappUC-MRoundedButton.a"
-            BlueprintName = "Pods-AlmappUC-MRoundedButton"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

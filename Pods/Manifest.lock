@@ -129,6 +129,7 @@ PODS:
   - Realm+JSON (0.2.5):
     - Realm (~> 0.90)
   - Realm/Headers (0.90.6)
+  - REMenu (1.10)
   - RESideMenu (4.0.7)
   - RKNotificationHub (1.0.4)
   - SKPanoramaView (0.1.1)
@@ -160,6 +161,7 @@ DEPENDENCIES:
   - pop (~> 1.0)
   - QMBParallaxScrollViewController (HEAD)
   - Realm+JSON (from `https://github.com/mrpatiwi/Realm-JSON.git`, commit `6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab`)
+  - REMenu (~> 1.10)
   - RESideMenu (~> 4.0.7)
   - RKNotificationHub
   - SKPanoramaView
@@ -243,6 +245,7 @@ SPEC CHECKSUMS:
   QMBParallaxScrollViewController: 81bb3a89d36f908712fe7c870cc0ebeb96a06edc
   Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   Realm+JSON: 0d26baf985e03db0c9e9d102887be5b9b4491e8a
+  REMenu: e3988747d83f9e8f49f244bd3f1fb8b0900e8741
   RESideMenu: a9c1cd2e64e60e1d3166ddac01a83e215a0e4d30
   RKNotificationHub: 04a08446faa30b801b7f227392e0ade6d4b9b9d0
   SKPanoramaView: ff41c7051c34b854ee4aeb352fa4c6d5570ac57f

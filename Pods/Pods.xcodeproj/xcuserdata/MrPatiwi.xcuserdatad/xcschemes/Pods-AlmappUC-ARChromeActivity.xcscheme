@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "488EBB216652B33FE7001AB1"
+               BlueprintIdentifier = "32E814178D14B7C3716AB90E"
                BuildableName = "libPods-AlmappUC-ARChromeActivity.a"
                BlueprintName = "Pods-AlmappUC-ARChromeActivity"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "488EBB216652B33FE7001AB1"
-            BuildableName = "libPods-AlmappUC-ARChromeActivity.a"
-            BlueprintName = "Pods-AlmappUC-ARChromeActivity"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

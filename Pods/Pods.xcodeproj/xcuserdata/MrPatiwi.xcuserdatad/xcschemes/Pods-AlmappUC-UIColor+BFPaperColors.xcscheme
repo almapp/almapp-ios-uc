@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A3834FBF23D8CF598BF28D4"
+               BlueprintIdentifier = "FBA06BE3C6749C581CBAD7D0"
                BuildableName = "libPods-AlmappUC-UIColor+BFPaperColors.a"
                BlueprintName = "Pods-AlmappUC-UIColor+BFPaperColors"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1A3834FBF23D8CF598BF28D4"
-            BuildableName = "libPods-AlmappUC-UIColor+BFPaperColors.a"
-            BlueprintName = "Pods-AlmappUC-UIColor+BFPaperColors"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

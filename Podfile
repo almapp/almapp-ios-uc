@@ -38,6 +38,7 @@ target 'AlmappUC' do
     pod 'DZNSegmentedControl'
 	pod 'RKNotificationHub'
 	pod 'TLYShyNavBar'
+    pod 'REMenu', '~> 1.10'
     # pod 'FHSegmentedViewController'
     
     # Label and text

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "954E8F303FBDBE2CC6421571"
+               BlueprintIdentifier = "19D910C712BAC0FB7AAACF8E"
                BuildableName = "libPods-AlmappUC-gtm-oauth2.a"
                BlueprintName = "Pods-AlmappUC-gtm-oauth2"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "954E8F303FBDBE2CC6421571"
-            BuildableName = "libPods-AlmappUC-gtm-oauth2.a"
-            BlueprintName = "Pods-AlmappUC-gtm-oauth2"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

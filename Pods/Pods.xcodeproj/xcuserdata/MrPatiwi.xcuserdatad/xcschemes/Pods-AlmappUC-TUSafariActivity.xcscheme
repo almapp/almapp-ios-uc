@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F5D25C7B449E8C61287F9409"
+               BlueprintIdentifier = "63384CADDC62CF274F7E642A"
                BuildableName = "libPods-AlmappUC-TUSafariActivity.a"
                BlueprintName = "Pods-AlmappUC-TUSafariActivity"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F5D25C7B449E8C61287F9409"
-            BuildableName = "libPods-AlmappUC-TUSafariActivity.a"
-            BlueprintName = "Pods-AlmappUC-TUSafariActivity"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
