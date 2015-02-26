@@ -406,7 +406,7 @@
 #define COCOAPODS_POD_AVAILABLE_gtm_oauth2
 #define COCOAPODS_VERSION_MAJOR_gtm_oauth2 1
 #define COCOAPODS_VERSION_MINOR_gtm_oauth2 0
-#define COCOAPODS_VERSION_PATCH_gtm_oauth2 125
+#define COCOAPODS_VERSION_PATCH_gtm_oauth2 126
 
 // pop
 #define COCOAPODS_POD_AVAILABLE_pop

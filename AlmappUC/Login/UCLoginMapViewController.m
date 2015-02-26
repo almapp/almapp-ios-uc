@@ -52,8 +52,8 @@
 - (void)tryToPass {
     
     if ([self permissionEnabled] && self.didFetchMaps) {
-        NSLog(@"NEXT!");
         [UCAppDelegate showInitialView];
+        [self performSegueWithIdentifier:@"PostMapSegue" sender:self];
     }
 }
 

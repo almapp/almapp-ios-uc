@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A72756C2EC4FE72E325B015C"
+               BlueprintIdentifier = "1532F96108CEB78B1ABCEC87"
                BuildableName = "libPods-AlmappUC-JSQMessagesViewController.a"
                BlueprintName = "Pods-AlmappUC-JSQMessagesViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A72756C2EC4FE72E325B015C"
+            BlueprintIdentifier = "1532F96108CEB78B1ABCEC87"
             BuildableName = "libPods-AlmappUC-JSQMessagesViewController.a"
             BlueprintName = "Pods-AlmappUC-JSQMessagesViewController"
             ReferencedContainer = "container:Pods.xcodeproj">

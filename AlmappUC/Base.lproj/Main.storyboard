@@ -21,6 +21,7 @@
             <string>Montserrat-Bold</string>
             <string>Montserrat-Bold</string>
             <string>Montserrat-Bold</string>
+            <string>Montserrat-Bold</string>
         </mutableArray>
         <mutableArray key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
@@ -106,6 +107,7 @@
             <objects>
                 <tableViewController id="vMp-cd-Vbp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jra-fk-AxF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -709,7 +711,7 @@
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descargando..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsI-j1-YYN">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -816,16 +818,17 @@
                         <outlet property="activityIndicator" destination="KjG-6H-bHb" id="yTY-2m-e33"/>
                         <outlet property="loadingLabel" destination="jsI-j1-YYN" id="QWm-xa-EWs"/>
                         <outlet property="permissionButton" destination="SxU-bl-8Mb" id="pxR-AX-q7T"/>
+                        <segue destination="Gmw-oQ-8yb" kind="show" identifier="PostMapSegue" id="DxZ-tO-4aU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prJ-gB-wMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2349" y="-1380"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Email View Controller-->
         <scene sceneID="OxF-U1-YYB">
             <objects>
-                <viewController id="Gmw-oQ-8yb" sceneMemberID="viewController">
+                <viewController id="Gmw-oQ-8yb" customClass="UCLoginEmailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N3q-ui-W1v"/>
                         <viewControllerLayoutGuide type="bottom" id="fvg-F8-wPF"/>
@@ -833,12 +836,74 @@
                     <view key="view" contentMode="scaleToFill" id="W8L-ip-Spz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uic-RP-W7C">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="Uae-De-qCX"/>
+                                    <constraint firstAttribute="height" constant="39" id="a61-Ft-2ot"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                <state key="normal" title="Activar Email">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="a61-Ft-2ot"/>
+                                        <exclude reference="Uae-De-qCX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="a61-Ft-2ot"/>
+                                        <include reference="Uae-De-qCX"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="activateButtonClick:" destination="Gmw-oQ-8yb" eventType="touchUpInside" id="Plv-vj-zla"/>
+                                    <action selector="loginButtonTouch:" destination="f9Z-X5-lnb" eventType="touchUpInside" id="Kcy-pN-NoU"/>
+                                    <action selector="permisionButtonTouch:" destination="18Q-wR-Hvz" eventType="touchUpInside" id="NzU-e1-fBy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fvg-F8-wPF" firstAttribute="top" secondItem="uic-RP-W7C" secondAttribute="bottom" constant="20" id="M2q-hF-x4G"/>
+                            <constraint firstAttribute="centerX" secondItem="uic-RP-W7C" secondAttribute="centerX" id="U4t-yw-tPL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uic-RP-W7C"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="U4t-yw-tPL"/>
+                                <exclude reference="M2q-hF-x4G"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uic-RP-W7C"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="U4t-yw-tPL"/>
+                                <include reference="M2q-hF-x4G"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="activateButton" destination="uic-RP-W7C" id="bUO-6r-08G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THw-9X-bke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383" y="-1341"/>
+            <point key="canvasLocation" x="-1542" y="-1380"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="aPF-bD-5Tr">
@@ -1852,7 +1917,8 @@
                                                         <exclude reference="npg-ve-wMa"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="widthClass=compact">
+                                                <variation key="widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="56" y="172.5" width="288" height="29.5"/>
                                                     <mask key="constraints">
                                                         <include reference="npg-ve-wMa"/>
                                                     </mask>

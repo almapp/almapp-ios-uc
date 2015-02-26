@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "54D74D5AD6412F1D57CEFC08"
+               BlueprintIdentifier = "DC6007F77E21742F184081B9"
                BuildableName = "libPods-AlmappUC-DIDatepicker.a"
                BlueprintName = "Pods-AlmappUC-DIDatepicker"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "54D74D5AD6412F1D57CEFC08"
+            BlueprintIdentifier = "DC6007F77E21742F184081B9"
             BuildableName = "libPods-AlmappUC-DIDatepicker.a"
             BlueprintName = "Pods-AlmappUC-DIDatepicker"
             ReferencedContainer = "container:Pods.xcodeproj">

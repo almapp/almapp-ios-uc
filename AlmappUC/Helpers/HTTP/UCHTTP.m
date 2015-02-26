@@ -71,8 +71,8 @@
 }
 
 - (PMKPromise *)loginToWebMail:(ALMCredential *)credential {
-    //NSString *url = @"https://webaccess.uc.cl/";
-    NSString *url = @"https://webaccess.uc.cl/simplesaml/module.php/core/loginuserpass.php";
+    NSString *url = @"https://webaccess.uc.cl/";
+    // NSString *url = @"https://webaccess.uc.cl/simplesaml/module.php/core/loginuserpass.php";
     
     __weak __typeof(self) weakSelf = self;
     

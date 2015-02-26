@@ -79,12 +79,13 @@
 		F6A0F47E1A801DF000380EE1 /* UCChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A0F47D1A801DF000380EE1 /* UCChatCell.xib */; };
 		F6A0F4811A80355A00380EE1 /* UCMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A0F4801A80355A00380EE1 /* UCMessagesViewController.m */; };
 		F6ACD5C61A83BF6E007B7D2D /* campus_placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6ACD5C51A83BF6E007B7D2D /* campus_placeholder.jpg */; };
+		F6AEF1BB1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEF1BA1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m */; };
 		F6B726861A86C81D00461E17 /* NSUserDefaults+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B726851A86C81D00461E17 /* NSUserDefaults+Config.m */; };
 		F6B726891A86DD8A00461E17 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B726881A86DD8A00461E17 /* UIViewController+BackButtonHandler.m */; };
 		F6B7268C1A86E12700461E17 /* UCTeachersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7268B1A86E12700461E17 /* UCTeachersTableViewController.m */; };
 		F6B726911A86E1E000461E17 /* UCTeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7268F1A86E1E000461E17 /* UCTeacherCell.m */; };
 		F6B726921A86E1E000461E17 /* UCTeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B726901A86E1E000461E17 /* UCTeacherCell.xib */; };
-		F6B726B01A9E4FF2009A339C /* UCGmailAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B726AF1A9E4FF2009A339C /* UCGmailAuth.m */; };
+		F6B726B31A9E5C34009A339C /* UCLoginEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B726B21A9E5C34009A339C /* UCLoginEmailViewController.m */; };
 		F6C463AF1A6B396300BFBFD1 /* UCMapHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463AE1A6B396300BFBFD1 /* UCMapHeaderViewController.m */; };
 		F6C463B31A6B40C000BFBFD1 /* UCScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463B21A6B40C000BFBFD1 /* UCScheduleTableViewController.m */; };
 		F6C463B61A6B414E00BFBFD1 /* UCScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463B51A6B414E00BFBFD1 /* UCScheduleViewController.m */; };
@@ -254,6 +255,8 @@
 		F6A0F47F1A80355A00380EE1 /* UCMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCMessagesViewController.h; sourceTree = "<group>"; };
 		F6A0F4801A80355A00380EE1 /* UCMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCMessagesViewController.m; sourceTree = "<group>"; };
 		F6ACD5C51A83BF6E007B7D2D /* campus_placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus_placeholder.jpg; sourceTree = "<group>"; };
+		F6AEF1B91A9F50DF00FCA20F /* UCGoogleOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCGoogleOAuthViewController.h; sourceTree = "<group>"; };
+		F6AEF1BA1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCGoogleOAuthViewController.m; sourceTree = "<group>"; };
 		F6B726841A86C81D00461E17 /* NSUserDefaults+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Config.h"; sourceTree = "<group>"; };
 		F6B726851A86C81D00461E17 /* NSUserDefaults+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Config.m"; sourceTree = "<group>"; };
 		F6B726871A86DD8A00461E17 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
@@ -263,8 +266,8 @@
 		F6B7268E1A86E1E000461E17 /* UCTeacherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCTeacherCell.h; sourceTree = "<group>"; };
 		F6B7268F1A86E1E000461E17 /* UCTeacherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCTeacherCell.m; sourceTree = "<group>"; };
 		F6B726901A86E1E000461E17 /* UCTeacherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCTeacherCell.xib; sourceTree = "<group>"; };
-		F6B726AE1A9E4FF2009A339C /* UCGmailAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCGmailAuth.h; sourceTree = "<group>"; };
-		F6B726AF1A9E4FF2009A339C /* UCGmailAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCGmailAuth.m; sourceTree = "<group>"; };
+		F6B726B11A9E5C34009A339C /* UCLoginEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCLoginEmailViewController.h; sourceTree = "<group>"; };
+		F6B726B21A9E5C34009A339C /* UCLoginEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCLoginEmailViewController.m; sourceTree = "<group>"; };
 		F6C463AD1A6B396300BFBFD1 /* UCMapHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCMapHeaderViewController.h; sourceTree = "<group>"; };
 		F6C463AE1A6B396300BFBFD1 /* UCMapHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCMapHeaderViewController.m; sourceTree = "<group>"; };
 		F6C463B11A6B40C000BFBFD1 /* UCScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleTableViewController.h; sourceTree = "<group>"; };
@@ -515,6 +518,8 @@
 				F6568C3E1A8580CF00BB7415 /* UCLoginViewController.m */,
 				F696C6631A95537100916F6B /* UCLoginMapViewController.h */,
 				F696C6641A95537100916F6B /* UCLoginMapViewController.m */,
+				F6B726B11A9E5C34009A339C /* UCLoginEmailViewController.h */,
+				F6B726B21A9E5C34009A339C /* UCLoginEmailViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -703,8 +708,8 @@
 		F6B726AD1A9E4FE4009A339C /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				F6B726AE1A9E4FF2009A339C /* UCGmailAuth.h */,
-				F6B726AF1A9E4FF2009A339C /* UCGmailAuth.m */,
+				F6AEF1B91A9F50DF00FCA20F /* UCGoogleOAuthViewController.h */,
+				F6AEF1BA1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1184,7 +1189,6 @@
 				F6C463B61A6B414E00BFBFD1 /* UCScheduleViewController.m in Sources */,
 				F68717881A8B735B002A4EC3 /* UCMenuCell.m in Sources */,
 				F63485AA1A5256E5004A0122 /* UIImage+ImageEffects.m in Sources */,
-				F6B726B01A9E4FF2009A339C /* UCGmailAuth.m in Sources */,
 				F6D743A01A8473CB00073F9D /* UCCourseCell.m in Sources */,
 				F66E665C1A865CE5002E06D5 /* ALMPlace+Defaults.m in Sources */,
 				F65B24E51A9A58D600BD1813 /* UCAcademicUnityCell.m in Sources */,
@@ -1212,6 +1216,7 @@
 				F609D1B81A559BFE008417FA /* UCApiKey.m in Sources */,
 				F645D6CB1A65395B005EB060 /* UCWebBrowserViewController.m in Sources */,
 				F6568C4A1A85B1EF00BB7415 /* UCMapBottomManager.m in Sources */,
+				F6B726B31A9E5C34009A339C /* UCLoginEmailViewController.m in Sources */,
 				F6A0F46B1A8006A700380EE1 /* UCScheduleEndCell.m in Sources */,
 				F6571FFD1A53465E0008E991 /* UCButtonHelper.m in Sources */,
 				F66B934D1A6419840048DACD /* UCWebPagesCollectionViewCell.m in Sources */,
@@ -1224,6 +1229,7 @@
 				F63485A81A524C60004A0122 /* UCTableViewController.m in Sources */,
 				F65B24EE1A9A592600BD1813 /* UCFacultyCell.m in Sources */,
 				F62B94B31A69FDE300C1F534 /* UCPostCell.m in Sources */,
+				F6AEF1BB1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m in Sources */,
 				F6A0F4661A7FFB9300380EE1 /* UCScheduleBaseCell.m in Sources */,
 				F6D19C931A52061700FD4715 /* UCMenuViewController.m in Sources */,
 				F6D743961A845E5A00073F9D /* UCMapBottomViewController.m in Sources */,

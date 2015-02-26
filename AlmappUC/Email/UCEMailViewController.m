@@ -6,8 +6,15 @@
 //  Copyright (c) 2014 almapp. All rights reserved.
 //
 
+
+#import <gtm-oauth2/GTMOAuth2Authentication.h>
+#import <gtm-oauth2/GTMOAuth2ViewControllerTouch.h>
+#import <gtm-oauth2/GTMOAuth2SignIn.h>
+
 #import "UCEMailViewController.h"
 #import "TLYShyNavBarManager.h"
+#import "UCAppDelegate.h"
+#import "UCGoogleOAuthViewController.h"
 
 
 
@@ -41,6 +48,12 @@
     
 }
 
+- (void)showAuthView {
+    [UCAppDelegate promiseLoggedToWebMail].then( ^{
+        UCGoogleOAuthViewController *viewController = [UCGoogleOAuthViewController controllerWitApiKey:[UCApiKey OAuthApiKeyFor:kGoogleApiKey]];
+        [[self navigationController] pushViewController:viewController animated:YES];
+    });
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
