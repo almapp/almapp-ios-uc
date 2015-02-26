@@ -124,6 +124,7 @@
 		F6FEEDD11A9F75BB0033464A /* UCEmailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FEEDCF1A9F75BB0033464A /* UCEmailCell.m */; };
 		F6FEEDD21A9F75BB0033464A /* UCEmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6FEEDD01A9F75BB0033464A /* UCEmailCell.xib */; };
 		F6FEEDD51A9F7A0D0033464A /* UITableView+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FEEDD41A9F7A0D0033464A /* UITableView+Nib.m */; };
+		F6FEEDD71A9FA1440033464A /* CommonImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FEEDD61A9FA1440033464A /* CommonImages.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,6 +337,7 @@
 		F6FEEDD01A9F75BB0033464A /* UCEmailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCEmailCell.xib; sourceTree = "<group>"; };
 		F6FEEDD31A9F7A0D0033464A /* UITableView+Nib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Nib.h"; sourceTree = "<group>"; };
 		F6FEEDD41A9F7A0D0033464A /* UITableView+Nib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Nib.m"; sourceTree = "<group>"; };
+		F6FEEDD61A9FA1440033464A /* CommonImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommonImages.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -795,6 +797,7 @@
 				F6D19C6E1A51F04700FD4715 /* Images.xcassets */,
 				F6C65EF51A6B4F570098B929 /* LaunchImages.xcassets */,
 				F65B24D21A9A11A900BD1813 /* Backgrounds.xcassets */,
+				F6FEEDD61A9FA1440033464A /* CommonImages.xcassets */,
 			);
 			path = AlmappUC;
 			sourceTree = "<group>";
@@ -1111,6 +1114,7 @@
 				F6D19C6D1A51F04700FD4715 /* Main.storyboard in Resources */,
 				F6568C471A85946900BB7415 /* UCSocialBarButton.xib in Resources */,
 				F648658F1A5394C1000E5A4F /* navbar2.jpg in Resources */,
+				F6FEEDD71A9FA1440033464A /* CommonImages.xcassets in Resources */,
 				F6D743A21A8473D600073F9D /* UCCourseCell.xib in Resources */,
 				F6A0F47E1A801DF000380EE1 /* UCChatCell.xib in Resources */,
 				F6D7436F1A83F8E200073F9D /* navbar.jpg in Resources */,

@@ -347,6 +347,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Item" id="zIl-vp-zSY"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rFv-Yl-QfW"/>
+                                    <barButtonItem style="done" systemItem="compose" id="UCW-L7-maz"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -394,9 +396,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Mail UC" id="ZI6-b7-TwX">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="t7Y-T7-9BC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Inbox" id="Tgz-fW-0n0">
+                            <connections>
+                                <action selector="folderButtonClick:" destination="Dfw-nP-3k8" id="Oe1-6c-eFz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="folderButton" destination="Tgz-fW-0n0" id="PMA-Xw-cKi"/>
                         <outlet property="tableView" destination="oDY-gI-kOb" id="e5j-kv-TW7"/>
                         <outlet property="toolBar" destination="BfC-t0-x1K" id="2bv-aJ-3Uz"/>
                     </connections>
@@ -483,9 +490,6 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Md" family="Helvetica Neue LT W1G" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="170" y="342" width="61" height="24"/>
-                                </variation>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-6H-bHb">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>

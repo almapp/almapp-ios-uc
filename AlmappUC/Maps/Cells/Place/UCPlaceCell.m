@@ -23,8 +23,8 @@
     // Initialization code
     [self.arrowImage setTintColor:[UIColor whiteColor]];
     
-    [self.likesButton setTintColor:[UIColor navbarAccent]];
-    [self.commentsButton setTintColor:[UIColor navbarAccent]];
+    [self.likesButton setTintColor:[UIColor accentColor]];
+    [self.commentsButton setTintColor:[UIColor accentColor]];
     
     [self setBackgroundColor:[UIColor myBlack]];
 }

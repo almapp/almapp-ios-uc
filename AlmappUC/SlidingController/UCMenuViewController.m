@@ -17,7 +17,7 @@
 #import "UCMenuCell.h"
 #import "UCMenuHeaderCell.h"
 
-static int const kDefaultViewIndex = 1;
+static int const kDefaultViewIndex = 4;
 static NSString *const kControllerStoryboardIDForProfile = @"";
 static NSString *const kControllerStoryboardIDForMaps = @"mapsNavigation";
 static NSString *const kControllerStoryboardIDForOrganizer = @"organizerNavigation";

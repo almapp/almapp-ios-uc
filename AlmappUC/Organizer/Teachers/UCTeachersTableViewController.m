@@ -34,7 +34,7 @@
     self.searchDisplayController.searchBar.translucent = NO;
     self.searchDisplayController.searchBar.backgroundColor = [UCScheduleConstants backgroundColor];
     
-    [[UIBarButtonItem appearanceWhenContainedIn: [UISearchBar class], nil] setTintColor:[UIColor navbarAccent]];
+    [[UIBarButtonItem appearanceWhenContainedIn: [UISearchBar class], nil] setTintColor:[UIColor accentColor]];
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[UIColor whiteColor]];
     
     //self.tableView.backgroundView = nil;

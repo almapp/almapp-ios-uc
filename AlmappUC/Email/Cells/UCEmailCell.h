@@ -20,4 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *dotImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
 
+@property (assign, nonatomic) BOOL isEven;
+
 @end

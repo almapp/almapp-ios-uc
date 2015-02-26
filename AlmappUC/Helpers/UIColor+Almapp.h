@@ -18,7 +18,7 @@
 + (UIColor*)blurriendUnselectedBackground;
 + (UIColor*)lightLayer;
 
-+ (UIColor*)navbarAccent;
++ (UIColor*)accentColor;
 + (UIColor *)mainColor;
 + (UIColor *)myBlack;
 

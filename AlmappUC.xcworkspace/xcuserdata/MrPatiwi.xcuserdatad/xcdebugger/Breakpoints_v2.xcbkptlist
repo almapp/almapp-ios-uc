@@ -445,7 +445,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "217"
             endingLineNumber = "217"
-            landmarkName = "-SEARCH:ofType:on:"
+            landmarkName = "-SEARCH:ofType:"
             landmarkType = "5">
             <Locations>
                <Location
@@ -775,8 +775,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
             endingLineNumber = "236"
-            landmarkName = "@implementation ALMController"
-            landmarkType = "3">
+            landmarkName = "-GETResource:parameters:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -791,7 +791,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "228"
             endingLineNumber = "228"
-            landmarkName = "-SEARCH:ofType:"
+            landmarkName = "-SEARCH:path:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -871,7 +871,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
             endingLineNumber = "142"
-            landmarkName = "-afterAuth"
+            landmarkName = "-AUTH"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1695,8 +1695,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "@implementation ALMController"
-            landmarkType = "3">
+            landmarkName = "-OAuthPath"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1903,7 +1903,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
             endingLineNumber = "252"
-            landmarkName = "-GETResource:parameters:"
+            landmarkName = "-GETResource:id:parameters:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2951,7 +2951,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "180"
             endingLineNumber = "180"
-            landmarkName = "-AUTH"
+            landmarkName = "-onAuthFailure:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

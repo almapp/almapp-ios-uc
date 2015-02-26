@@ -30,7 +30,7 @@
     return [UIColor colorWithWhite:1.0f alpha:0.1f];
 }
 
-+ (UIColor *)navbarAccent {
++ (UIColor *)accentColor {
     return [UIColor colorFromHexString:@"D7EAAC"];
 }
 

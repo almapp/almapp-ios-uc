@@ -421,7 +421,7 @@ NSString * const KOrganization = @"UC";
 }
 
 - (void)setupNavigationBar {
-    [[UINavigationBar appearance] setTintColor:[UIColor navbarAccent]];
+    [[UINavigationBar appearance] setTintColor:[UIColor accentColor]];
     
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIFont fontWithName:@"Montserrat" size:19],
@@ -434,7 +434,7 @@ NSString * const KOrganization = @"UC";
     
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
      setTitleTextAttributes:
-     @{NSForegroundColorAttributeName:[UIColor navbarAccent],
+     @{NSForegroundColorAttributeName:[UIColor accentColor],
        NSShadowAttributeName:shadow,
        NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-Light" size:17]
        }

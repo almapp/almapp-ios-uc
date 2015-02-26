@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UCViewController.h"
+#import <REMenu/REMenu.h>
 
 @interface UCEMailViewController : UCViewController <UITableViewDelegate, UITableViewDataSource>
 

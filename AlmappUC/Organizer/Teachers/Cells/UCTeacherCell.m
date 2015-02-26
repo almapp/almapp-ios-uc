@@ -27,7 +27,7 @@
     self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
     self.profileImage.clipsToBounds = YES;
     self.profileImage.layer.borderWidth = 2.0f;
-    self.profileImage.layer.borderColor = [UIColor navbarAccent].CGColor;
+    self.profileImage.layer.borderColor = [UIColor accentColor].CGColor;
     //self.profileImage.layer.cornerRadius = 10.0f;
     
     [self.arrowImage setTintColor:[UIColor whiteColor]];

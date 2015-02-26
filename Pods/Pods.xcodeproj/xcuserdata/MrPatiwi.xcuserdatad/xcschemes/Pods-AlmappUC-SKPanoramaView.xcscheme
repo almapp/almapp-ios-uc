@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EBD3C6E2EB8977B7FC7F5A0F"
+               BlueprintIdentifier = "D82C7583DDA570000929ED81"
                BuildableName = "libPods-AlmappUC-SKPanoramaView.a"
                BlueprintName = "Pods-AlmappUC-SKPanoramaView"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D82C7583DDA570000929ED81"
+            BuildableName = "libPods-AlmappUC-SKPanoramaView.a"
+            BlueprintName = "Pods-AlmappUC-SKPanoramaView"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
