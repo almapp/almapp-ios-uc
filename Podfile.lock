@@ -48,6 +48,7 @@ PODS:
   - gtm-http-fetcher (1.0.141)
   - gtm-oauth2 (1.0.126):
     - gtm-http-fetcher (~> 1.0.141)
+  - INSPullToRefresh (1.0.2)
   - JSQMessagesViewController (6.1.3):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -143,7 +144,6 @@ PODS:
   - SKPanoramaView (0.1.1)
   - SKTagView (HEAD based on 0.4):
     - Masonry
-  - SVPullToRefresh (HEAD based on 0.4.1)
   - TDBadgedCell (2.6)
   - THLabel (1.4.6)
   - TLYShyNavBar (HEAD based on 0.9.8)
@@ -153,7 +153,7 @@ PODS:
 
 DEPENDENCIES:
   - AFOAuth2Manager (from `https://github.com/iamcam/AFOAuth2Manager`, commit `7470a389ea74034923999202eedfc04f036b3d37`)
-  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `0b82359f9fc66ffa02f25bd3a34ba95ebdad8631`, branch `master`)
+  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `7ec88105b92a6f00123aac059af8ca86b22b37bd`, branch `master`)
   - BFPaperTabBarController (~> 1.4.5)
   - Colours
   - DateTools
@@ -161,6 +161,7 @@ DEPENDENCIES:
   - DZNSegmentedControl
   - Google-Maps-iOS-SDK
   - gtm-oauth2
+  - INSPullToRefresh
   - JSQMessagesViewController
   - KINWebBrowser (from `https://github.com/mrpatiwi/KINWebBrowser.git`, commit `4aa1aca37e9771c985e9e7fbeb4a79d3d8157946`)
   - MRoundedButton (from `https://github.com/mrpatiwi/MRoundedButton.git`, commit `3cabf1e255a93ee9db77475971304e6480865e08`, branch `no-example`)
@@ -175,7 +176,6 @@ DEPENDENCIES:
   - RKNotificationHub
   - SKPanoramaView
   - SKTagView (HEAD)
-  - SVPullToRefresh (HEAD)
   - TDBadgedCell
   - THLabel (~> 1.4.6)
   - TLYShyNavBar (HEAD)
@@ -186,7 +186,7 @@ EXTERNAL SOURCES:
     :git: https://github.com/iamcam/AFOAuth2Manager
   AlmappCore:
     :branch: master
-    :commit: 0b82359f9fc66ffa02f25bd3a34ba95ebdad8631
+    :commit: 7ec88105b92a6f00123aac059af8ca86b22b37bd
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -209,7 +209,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/iamcam/AFOAuth2Manager
   AlmappCore:
     :branch: master
-    :commit: 0b82359f9fc66ffa02f25bd3a34ba95ebdad8631
+    :commit: 7ec88105b92a6f00123aac059af8ca86b22b37bd
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -241,6 +241,7 @@ SPEC CHECKSUMS:
   Google-Maps-iOS-SDK: 4c008abdb68e03ae125c7f674be841d369e2b3de
   gtm-http-fetcher: 6d4617e7d343b6e4c082b777541c334eb6f5d81e
   gtm-oauth2: 60651b37376fa8fa5d1b92c9a631bd36ba093fd3
+  INSPullToRefresh: e34bc80efc480f748ea8b0647974cb8fe7ffe4a0
   JSQMessagesViewController: e93a288a9662d4519c95a28a8c0eec10beae1bfc
   JSQSystemSoundPlayer: 55528c699a283aae2220d3ae7b8b527d2ecef4b4
   KINWebBrowser: da1593b2d6e52d727221d7ffec1406bb45b66da0
@@ -261,7 +262,6 @@ SPEC CHECKSUMS:
   RKNotificationHub: 04a08446faa30b801b7f227392e0ade6d4b9b9d0
   SKPanoramaView: ff41c7051c34b854ee4aeb352fa4c6d5570ac57f
   SKTagView: 2bce1d0495275c17775c28403276d89c63abd2ae
-  SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
   TDBadgedCell: e683b5557d12ea4e28a8d6ac20b6e394abc2c1fe
   THLabel: 1cf3bad0f33c2bcdee075ce2e4f080791a374d95
   TLYShyNavBar: cf15a919cf7f6e79080ac5b95b56580a752cf64d

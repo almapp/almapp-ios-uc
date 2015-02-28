@@ -8,28 +8,35 @@
 
 #import "ALMEmail.h"
 #import "ALMEmailThread.h"
+#import "ALMEmailConstants.h"
+#import "ALMResourceConstants.h"
+
+ALMEmailLabel const kEmailDefaultLabel = 0;
 
 @implementation ALMEmail
 
 + (NSDictionary *)defaultPropertyValues {
-    return @{@"messageID" : @"",
-             @"subject" : @"",
-             @"to" : @"",
-             @"from" : @"",
-             @"replyTo" : @"",
+    return @{kEmailMessageID : kRDefaultNullString,
+             kEmailSubject : kRDefaultNullString,
+             kEmailTo : kRDefaultNullString,
+             kEmailFrom : kRDefaultNullString,
+             kEmailReplyTo : kRDefaultNullString,
              //@"toName" : @"",
              //@"toEmail" : @"",
              //@"fromName" : @"",
              //@"fromEmail" : @"",
              //@"replyToName" : @"",
              //@"replyToEmail" : @"",
-             @"snippet" : @"",
-             @"date" : [NSDate date]
+             kEmailSnippet : kRDefaultNullString,
+             kEmailLabels : @(kEmailDefaultLabel),
+             kEmailBodyHTML : kRDefaultNullString,
+             kEmailBodyPlain : kRDefaultNullString,
+             kEmailDate : [NSDate date]
              };
 }
 
 + (NSString *)primaryKey {
-    return @"messageID";
+    return kEmailMessageID;
 }
 
 - (NSArray *)threads {

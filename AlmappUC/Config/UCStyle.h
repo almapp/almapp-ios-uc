@@ -23,6 +23,7 @@
 + (UIColor*)accentColor;
 + (UIColor *)mainColor;
 + (UIColor *)myBlack;
++ (UIColor *)myContrast;
 
 @end
 

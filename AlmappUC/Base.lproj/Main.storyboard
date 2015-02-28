@@ -338,6 +338,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oDY-gI-kOb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Buscar" translucent="NO" backgroundImage="navbar1.jpg" id="sg8-uj-Prm">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Dfw-nP-3k8" id="s31-kU-R2G"/>
+                                    </connections>
+                                </searchBar>
                                 <connections>
                                     <outlet property="dataSource" destination="Dfw-nP-3k8" id="aEA-Ew-KmO"/>
                                     <outlet property="delegate" destination="Dfw-nP-3k8" id="a9D-Ze-bQo"/>
@@ -361,6 +369,9 @@
                             <constraint firstItem="oDY-gI-kOb" firstAttribute="top" secondItem="XtZ-sv-3SP" secondAttribute="bottom" id="hls-Pz-3Jl">
                                 <variation key="widthClass=compact" constant="-64"/>
                             </constraint>
+                            <constraint firstItem="oDY-gI-kOb" firstAttribute="top" secondItem="XtZ-sv-3SP" secondAttribute="bottom" id="t1m-7P-frq">
+                                <variation key="widthClass=compact" constant="-1"/>
+                            </constraint>
                             <constraint firstItem="BfC-t0-x1K" firstAttribute="leading" secondItem="CAK-SG-KHh" secondAttribute="leading" id="ti7-xS-3FJ"/>
                             <constraint firstItem="BfC-t0-x1K" firstAttribute="leading" secondItem="oDY-gI-kOb" secondAttribute="leading" id="zuh-2e-JMq"/>
                         </constraints>
@@ -370,13 +381,14 @@
                                 <exclude reference="BfC-t0-x1K"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="hls-Pz-3Jl"/>
+                                <exclude reference="t1m-7P-frq"/>
                                 <exclude reference="1v3-MO-MyB"/>
                                 <exclude reference="4pR-tc-fl1"/>
                                 <exclude reference="JOr-r5-Ur5"/>
                                 <exclude reference="SHE-Qz-Tlt"/>
                                 <exclude reference="ti7-xS-3FJ"/>
                                 <exclude reference="zuh-2e-JMq"/>
-                                <exclude reference="hls-Pz-3Jl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -385,13 +397,14 @@
                                 <include reference="BfC-t0-x1K"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="hls-Pz-3Jl"/>
+                                <include reference="t1m-7P-frq"/>
                                 <include reference="1v3-MO-MyB"/>
                                 <include reference="4pR-tc-fl1"/>
                                 <include reference="JOr-r5-Ur5"/>
                                 <include reference="SHE-Qz-Tlt"/>
                                 <include reference="ti7-xS-3FJ"/>
                                 <include reference="zuh-2e-JMq"/>
-                                <include reference="hls-Pz-3Jl"/>
                             </mask>
                         </variation>
                     </view>
@@ -404,11 +417,21 @@
                     </navigationItem>
                     <connections>
                         <outlet property="folderButton" destination="Tgz-fW-0n0" id="PMA-Xw-cKi"/>
+                        <outlet property="searchDisplayController" destination="EWn-B0-HK0" id="7zu-5a-zzA"/>
                         <outlet property="tableView" destination="oDY-gI-kOb" id="e5j-kv-TW7"/>
                         <outlet property="toolBar" destination="BfC-t0-x1K" id="2bv-aJ-3Uz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yr0-8E-P5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="EWn-B0-HK0">
+                    <connections>
+                        <outlet property="delegate" destination="Dfw-nP-3k8" id="zI1-Oi-P4h"/>
+                        <outlet property="searchBar" destination="sg8-uj-Prm" id="aOM-Is-yF9"/>
+                        <outlet property="searchContentsController" destination="Dfw-nP-3k8" id="uKd-Fa-24R"/>
+                        <outlet property="searchResultsDataSource" destination="Dfw-nP-3k8" id="qJg-et-Owp"/>
+                        <outlet property="searchResultsDelegate" destination="Dfw-nP-3k8" id="gWy-3T-fjH"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="937.5" y="-1385"/>
         </scene>
@@ -491,7 +514,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="170" y="342" width="61" height="24"/>
+                                    <rect key="frame" x="169" y="342" width="61" height="24"/>
                                 </variation>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-6H-bHb">
@@ -1412,7 +1435,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqi-YX-Is9">
                                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="nrt-LR-Ly2"/>
                                                         </constraints>
@@ -1705,8 +1728,7 @@
                                                         <exclude reference="npg-ve-wMa"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="56" y="173" width="288" height="30"/>
+                                                <variation key="widthClass=compact">
                                                     <mask key="constraints">
                                                         <include reference="npg-ve-wMa"/>
                                                     </mask>
@@ -1869,5 +1891,6 @@
         <image name="User" width="30" height="30"/>
         <image name="WebServices" width="30" height="30"/>
         <image name="navbar.jpg" width="640" height="128"/>
+        <image name="navbar1.jpg" width="640" height="128"/>
     </resources>
 </document>

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EEEFF3468C01B7E7EF51C16E"
+               BlueprintIdentifier = "E2FEA8CD370E102B8AA9D204"
                BuildableName = "libPods-AlmappUC-BFPaperTabBarController.a"
                BlueprintName = "Pods-AlmappUC-BFPaperTabBarController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EEEFF3468C01B7E7EF51C16E"
+            BlueprintIdentifier = "E2FEA8CD370E102B8AA9D204"
             BuildableName = "libPods-AlmappUC-BFPaperTabBarController.a"
             BlueprintName = "Pods-AlmappUC-BFPaperTabBarController"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -42,6 +42,10 @@
     return [UIColor colorWithRed:0.11f green:0.11f blue:0.12f alpha:1.0f];
 }
 
++ (UIColor *)myContrast {
+    return [UIColor colorFromHexString:@"FFCC33"];
+}
+
 @end
 
 

@@ -6,7 +6,7 @@ target 'AlmappUC' do
 	pod 'AlmappCore',
         :git => 'https://github.com/almapp/AlmappCore-ios.git',
         :branch => 'master',
-        :commit => '0b82359f9fc66ffa02f25bd3a34ba95ebdad8631'
+        :commit => '7ec88105b92a6f00123aac059af8ca86b22b37bd'
     pod 'Realm+JSON',
         :git => 'https://github.com/mrpatiwi/Realm-JSON.git',
         :commit => '6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab'
@@ -30,7 +30,7 @@ target 'AlmappUC' do
     # Collections
     pod 'QMBParallaxScrollViewController', :head
     pod 'SKTagView', :head
-    pod 'SVPullToRefresh', :head
+    pod 'INSPullToRefresh'
     
     # Tabbars
     pod 'BFPaperTabBarController', '~> 1.4.5'

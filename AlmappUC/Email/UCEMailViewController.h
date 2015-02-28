@@ -10,6 +10,7 @@
 #import "UCViewController.h"
 #import <REMenu/REMenu.h>
 
-@interface UCEMailViewController : UCViewController <UITableViewDelegate, UITableViewDataSource>
+@interface UCEMailViewController : UCViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchControllerDelegate, UISearchDisplayDelegate>
+
 
 @end

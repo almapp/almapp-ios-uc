@@ -120,6 +120,12 @@
 #define COCOAPODS_VERSION_MINOR_Google_Maps_iOS_SDK 9
 #define COCOAPODS_VERSION_PATCH_Google_Maps_iOS_SDK 2
 
+// INSPullToRefresh
+#define COCOAPODS_POD_AVAILABLE_INSPullToRefresh
+#define COCOAPODS_VERSION_MAJOR_INSPullToRefresh 1
+#define COCOAPODS_VERSION_MINOR_INSPullToRefresh 0
+#define COCOAPODS_VERSION_PATCH_INSPullToRefresh 2
+
 // JSQMessagesViewController
 #define COCOAPODS_POD_AVAILABLE_JSQMessagesViewController
 #define COCOAPODS_VERSION_MAJOR_JSQMessagesViewController 6
@@ -377,12 +383,6 @@
 #define COCOAPODS_VERSION_MAJOR_SKTagView 0
 #define COCOAPODS_VERSION_MINOR_SKTagView 4
 #define COCOAPODS_VERSION_PATCH_SKTagView 0
-
-// SVPullToRefresh
-#define COCOAPODS_POD_AVAILABLE_SVPullToRefresh
-#define COCOAPODS_VERSION_MAJOR_SVPullToRefresh 0
-#define COCOAPODS_VERSION_MINOR_SVPullToRefresh 4
-#define COCOAPODS_VERSION_PATCH_SVPullToRefresh 1
 
 // TDBadgedCell
 #define COCOAPODS_POD_AVAILABLE_TDBadgedCell

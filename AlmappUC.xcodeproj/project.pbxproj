@@ -74,6 +74,7 @@
 		F6A0F4811A80355A00380EE1 /* UCMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A0F4801A80355A00380EE1 /* UCMessagesViewController.m */; };
 		F6ACD5C61A83BF6E007B7D2D /* campus_placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6ACD5C51A83BF6E007B7D2D /* campus_placeholder.jpg */; };
 		F6AEF1BB1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEF1BA1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m */; };
+		F6B4FA5B1AA2222F004B0242 /* INSPinterestPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B4FA5A1AA2222F004B0242 /* INSPinterestPullToRefresh.m */; };
 		F6B726861A86C81D00461E17 /* NSUserDefaults+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B726851A86C81D00461E17 /* NSUserDefaults+Config.m */; };
 		F6B7268C1A86E12700461E17 /* UCTeachersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7268B1A86E12700461E17 /* UCTeachersTableViewController.m */; };
 		F6B726911A86E1E000461E17 /* UCTeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7268F1A86E1E000461E17 /* UCTeacherCell.m */; };
@@ -249,6 +250,8 @@
 		F6ACD5C51A83BF6E007B7D2D /* campus_placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus_placeholder.jpg; sourceTree = "<group>"; };
 		F6AEF1B91A9F50DF00FCA20F /* UCGoogleOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCGoogleOAuthViewController.h; sourceTree = "<group>"; };
 		F6AEF1BA1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCGoogleOAuthViewController.m; sourceTree = "<group>"; };
+		F6B4FA591AA2222F004B0242 /* INSPinterestPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSPinterestPullToRefresh.h; sourceTree = "<group>"; };
+		F6B4FA5A1AA2222F004B0242 /* INSPinterestPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSPinterestPullToRefresh.m; sourceTree = "<group>"; };
 		F6B726841A86C81D00461E17 /* NSUserDefaults+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Config.h"; sourceTree = "<group>"; };
 		F6B726851A86C81D00461E17 /* NSUserDefaults+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Config.m"; sourceTree = "<group>"; };
 		F6B7268A1A86E12700461E17 /* UCTeachersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCTeachersTableViewController.h; sourceTree = "<group>"; };
@@ -851,6 +854,8 @@
 				F6FEEDEE1A9FA6570033464A /* UIView+ProgressView.m */,
 				F6FEEDEF1A9FA6570033464A /* UIViewController+BackButtonHandler.h */,
 				F6FEEDF01A9FA6570033464A /* UIViewController+BackButtonHandler.m */,
+				F6B4FA591AA2222F004B0242 /* INSPinterestPullToRefresh.h */,
+				F6B4FA5A1AA2222F004B0242 /* INSPinterestPullToRefresh.m */,
 				F6D19C981A520BED00FD4715 /* Localizable.strings */,
 			);
 			path = Helpers;
@@ -1180,6 +1185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6807E7A1A94CE8700099C29 /* UCLoginNavigationController.m in Sources */,
+				F6B4FA5B1AA2222F004B0242 /* INSPinterestPullToRefresh.m in Sources */,
 				F6571FF71A52EF580008E991 /* UCImageHelper.m in Sources */,
 				F65B24D61A9A3EA400BD1813 /* UCAreaCell.m in Sources */,
 				F67F7FFF1A82C05900E20802 /* UCScheduleNotifications.m in Sources */,

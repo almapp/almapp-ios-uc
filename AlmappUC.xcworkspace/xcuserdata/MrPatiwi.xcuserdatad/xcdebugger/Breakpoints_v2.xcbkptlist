@@ -3266,11 +3266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/UCEMailViewController.m"
-            timestampString = "446776130.187324"
+            timestampString = "446839759.944459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-sendAuthToServer:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3282,11 +3282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/UCEMailViewController.m"
-            timestampString = "446776130.187324"
+            timestampString = "446839759.944459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "-sendAuthToServer:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3298,11 +3298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/UCEMailViewController.m"
-            timestampString = "446776130.187324"
+            timestampString = "446839759.944459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "-authController"
             landmarkType = "5">
          </BreakpointContent>
@@ -3314,11 +3314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/UCEMailViewController.m"
-            timestampString = "446776130.187324"
+            timestampString = "446839759.944459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "-authController"
             landmarkType = "5">
          </BreakpointContent>
@@ -3330,11 +3330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/UCEMailViewController.m"
-            timestampString = "446776130.187324"
+            timestampString = "446839759.944459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "-authController"
             landmarkType = "5">
          </BreakpointContent>
@@ -3346,11 +3346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/UCEMailViewController.m"
-            timestampString = "446776130.187324"
+            timestampString = "446839759.944459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "-authController"
             landmarkType = "5">
          </BreakpointContent>

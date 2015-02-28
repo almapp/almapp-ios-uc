@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37A0EDC99E8D3DC1C5EF3346"
+               BlueprintIdentifier = "38788DC7547DCA13778497DC"
                BuildableName = "libPods-AlmappUC-NGAParallaxMotion.a"
                BlueprintName = "Pods-AlmappUC-NGAParallaxMotion"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37A0EDC99E8D3DC1C5EF3346"
+            BlueprintIdentifier = "38788DC7547DCA13778497DC"
             BuildableName = "libPods-AlmappUC-NGAParallaxMotion.a"
             BlueprintName = "Pods-AlmappUC-NGAParallaxMotion"
             ReferencedContainer = "container:Pods.xcodeproj">
