@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /*  CLASS DESCRIPTION:
  *  ==================
@@ -51,6 +52,8 @@
  * Defaults to YES
  */
 @property (nonatomic, getter = isAlphaFadeEnabled) BOOL alphaFadeEnabled;
+
+@property (nonatomic) BOOL disable;
 
 @end
 

@@ -1,0 +1,1 @@
+../../../AlmappCore/AlmappCore/Email/Models/ALMEmailThread.h

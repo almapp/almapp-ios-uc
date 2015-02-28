@@ -22,10 +22,11 @@ PODS:
     - AFNetworking/NSURLSession
   - AFOAuth2Manager (2.0.0):
     - AFNetworking (~> 2.2)
-  - AlmappCore (0.5):
-    - AFNetworking (~> 2.5)
-    - FayeCpp (~> 0.1.5)
-    - PromiseKit (~> 1.2.2)
+  - AlmappCore (0.6):
+    - AFNetworking (~> 2.5.1)
+    - FayeCpp (~> 0.1.9)
+    - Google-API-Client/Gmail (~> 1.0.422)
+    - PromiseKit (~> 1.3)
     - PromiseKit-AFNetworking
     - UICKeyChainStore
   - ARChromeActivity (1.0.2)
@@ -36,6 +37,13 @@ PODS:
   - DIDatepicker (0.1)
   - DZNSegmentedControl (1.2.2)
   - FayeCpp (0.1.9)
+  - Google-API-Client/Common (1.0.422):
+    - gtm-http-fetcher (~> 1.0.141)
+    - gtm-oauth2 (~> 1.0.125)
+  - Google-API-Client/Gmail (1.0.422):
+    - Google-API-Client/Common
+    - gtm-http-fetcher (~> 1.0.141)
+    - gtm-oauth2 (~> 1.0.125)
   - Google-Maps-iOS-SDK (1.9.2)
   - gtm-http-fetcher (1.0.141)
   - gtm-oauth2 (1.0.126):
@@ -86,42 +94,42 @@ PODS:
   - OMGHTTPURLRQ/UserAgent (2.1)
   - Ono (1.2.0)
   - pop (1.0.7)
-  - PromiseKit (1.2.5):
-    - PromiseKit/CALayer (= 1.2.5)
-    - PromiseKit/NSNotificationCenter (= 1.2.5)
-    - PromiseKit/NSURLConnection (= 1.2.5)
-    - PromiseKit/Pause (= 1.2.5)
-    - PromiseKit/UIActionSheet (= 1.2.5)
-    - PromiseKit/UIAlertView (= 1.2.5)
-    - PromiseKit/UIView (= 1.2.5)
-    - PromiseKit/UIViewController (= 1.2.5)
-    - PromiseKit/Until (= 1.2.5)
-    - PromiseKit/When (= 1.2.5)
+  - PromiseKit (1.3.0):
+    - PromiseKit/CALayer (= 1.3.0)
+    - PromiseKit/NSNotificationCenter (= 1.3.0)
+    - PromiseKit/NSURLConnection (= 1.3.0)
+    - PromiseKit/Pause (= 1.3.0)
+    - PromiseKit/UIActionSheet (= 1.3.0)
+    - PromiseKit/UIAlertView (= 1.3.0)
+    - PromiseKit/UIView (= 1.3.0)
+    - PromiseKit/UIViewController (= 1.3.0)
+    - PromiseKit/Until (= 1.3.0)
+    - PromiseKit/When (= 1.3.0)
   - PromiseKit-AFNetworking (0.1.5):
     - AFNetworking (~> 2.0)
     - PromiseKit/Promise
-  - PromiseKit/CALayer (1.2.5):
+  - PromiseKit/CALayer (1.3.0):
     - PromiseKit/Promise
-  - PromiseKit/NSNotificationCenter (1.2.5):
+  - PromiseKit/NSNotificationCenter (1.3.0):
     - PromiseKit/Promise
-  - PromiseKit/NSURLConnection (1.2.5):
+  - PromiseKit/NSURLConnection (1.3.0):
     - OMGHTTPURLRQ
     - PromiseKit/Promise
-  - PromiseKit/Pause (1.2.5):
+  - PromiseKit/Pause (1.3.0):
     - PromiseKit/Promise
-  - PromiseKit/Promise (1.2.5)
-  - PromiseKit/UIActionSheet (1.2.5):
+  - PromiseKit/Promise (1.3.0)
+  - PromiseKit/UIActionSheet (1.3.0):
     - PromiseKit/Promise
-  - PromiseKit/UIAlertView (1.2.5):
+  - PromiseKit/UIAlertView (1.3.0):
     - PromiseKit/Promise
-  - PromiseKit/UIView (1.2.5):
+  - PromiseKit/UIView (1.3.0):
     - PromiseKit/Promise
-  - PromiseKit/UIViewController (1.2.5):
+  - PromiseKit/UIViewController (1.3.0):
     - PromiseKit/Promise
-  - PromiseKit/Until (1.2.5):
+  - PromiseKit/Until (1.3.0):
     - PromiseKit/Promise
     - PromiseKit/When
-  - PromiseKit/When (1.2.5):
+  - PromiseKit/When (1.3.0):
     - PromiseKit/Promise
   - QMBParallaxScrollViewController (HEAD based on 0.1)
   - Realm (0.90.6):
@@ -135,16 +143,17 @@ PODS:
   - SKPanoramaView (0.1.1)
   - SKTagView (HEAD based on 0.4):
     - Masonry
+  - SVPullToRefresh (HEAD based on 0.4.1)
   - TDBadgedCell (2.6)
   - THLabel (1.4.6)
-  - TLYShyNavBar (0.9.8)
+  - TLYShyNavBar (HEAD based on 0.9.8)
   - TUSafariActivity (1.0.2)
   - UICKeyChainStore (2.0.4)
   - UIColor+BFPaperColors (1.3.1)
 
 DEPENDENCIES:
   - AFOAuth2Manager (from `https://github.com/iamcam/AFOAuth2Manager`, commit `7470a389ea74034923999202eedfc04f036b3d37`)
-  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `a9936fab3d37d07dc407b26b2bd94754e182426f`, branch `master`)
+  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `0b82359f9fc66ffa02f25bd3a34ba95ebdad8631`, branch `master`)
   - BFPaperTabBarController (~> 1.4.5)
   - Colours
   - DateTools
@@ -166,9 +175,10 @@ DEPENDENCIES:
   - RKNotificationHub
   - SKPanoramaView
   - SKTagView (HEAD)
+  - SVPullToRefresh (HEAD)
   - TDBadgedCell
   - THLabel (~> 1.4.6)
-  - TLYShyNavBar
+  - TLYShyNavBar (HEAD)
 
 EXTERNAL SOURCES:
   AFOAuth2Manager:
@@ -176,7 +186,7 @@ EXTERNAL SOURCES:
     :git: https://github.com/iamcam/AFOAuth2Manager
   AlmappCore:
     :branch: master
-    :commit: a9936fab3d37d07dc407b26b2bd94754e182426f
+    :commit: 0b82359f9fc66ffa02f25bd3a34ba95ebdad8631
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -199,7 +209,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/iamcam/AFOAuth2Manager
   AlmappCore:
     :branch: master
-    :commit: a9936fab3d37d07dc407b26b2bd94754e182426f
+    :commit: 0b82359f9fc66ffa02f25bd3a34ba95ebdad8631
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -219,7 +229,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
   AFOAuth2Manager: 6d76c16b475b707cd41aae5580c9b71123e472fd
-  AlmappCore: 5fa09eff3fd7a9153a14c75f87f6c5dc5aecf478
+  AlmappCore: 2089630e70268091a482993323860754372c6090
   ARChromeActivity: 437b3e0c4cc43c19d7dd1af55bea98e008335151
   BFPaperTabBarController: 3a2c1ae4ba0ca297009558658bd103f3c4f0b579
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
@@ -227,6 +237,7 @@ SPEC CHECKSUMS:
   DIDatepicker: 5937543e2ad8c72d49b4ddd0c3a6d5f4fb087133
   DZNSegmentedControl: daa91d107904f7433e73852477f08450575be331
   FayeCpp: 77eac47338e90ed9c7099faa75458042f459eb3c
+  Google-API-Client: 94e15390b2f5507e81a9a8c0edd58a02d2ab464b
   Google-Maps-iOS-SDK: 4c008abdb68e03ae125c7f674be841d369e2b3de
   gtm-http-fetcher: 6d4617e7d343b6e4c082b777541c334eb6f5d81e
   gtm-oauth2: 60651b37376fa8fa5d1b92c9a631bd36ba093fd3
@@ -240,7 +251,7 @@ SPEC CHECKSUMS:
   OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
   Ono: 2c9f6c8c50af1b40e988ff85a3f200574ee445cd
   pop: 2f14a1ea61339767af9e66741b418c831b3844df
-  PromiseKit: 27e79737441ad8b9602c769ae7731ee963269837
+  PromiseKit: 4844db4448b4e387845e702b738cd87433fc02fd
   PromiseKit-AFNetworking: 16db750b394dcd12aa8527eb1bb9f209a36a49f7
   QMBParallaxScrollViewController: 81bb3a89d36f908712fe7c870cc0ebeb96a06edc
   Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
@@ -250,6 +261,7 @@ SPEC CHECKSUMS:
   RKNotificationHub: 04a08446faa30b801b7f227392e0ade6d4b9b9d0
   SKPanoramaView: ff41c7051c34b854ee4aeb352fa4c6d5570ac57f
   SKTagView: 2bce1d0495275c17775c28403276d89c63abd2ae
+  SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
   TDBadgedCell: e683b5557d12ea4e28a8d6ac20b6e394abc2c1fe
   THLabel: 1cf3bad0f33c2bcdee075ce2e4f080791a374d95
   TLYShyNavBar: cf15a919cf7f6e79080ac5b95b56580a752cf64d

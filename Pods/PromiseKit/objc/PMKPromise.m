@@ -23,6 +23,12 @@
 static const id PMKNull = @"PMKNull";
 
 
+
+@interface PMKArray : NSObject
+@end
+
+
+
 static inline NSError *NSErrorFromNil() {
     PMKLog(@"PromiseKit: Warning: Promise rejected with nil");
     return [NSError errorWithDomain:PMKErrorDomain code:PMKInvalidUsageError userInfo:nil];
@@ -96,7 +102,7 @@ NSString const*const PMKThrown = PMKUnderlyingExceptionKey;
  `then` and `catch` are method-signature tolerant, this function calls
  the block correctly and normalizes the return value to `id`.
  */
-static id safely_call_block(id frock, id result) {
+id pmk_safely_call_block(id frock, id result) {
     assert(frock);
 
     if (result == PMKNull)
@@ -313,7 +319,7 @@ typedef PMKPromise *(^PMKResolveOnQueueBlock)(dispatch_queue_t, id block);
             block = [block copy];
 
             return dispatch_promise_on(q, ^{
-                return safely_call_block(block, result);
+                return pmk_safely_call_block(block, result);
             });
         };
     }
@@ -321,7 +327,7 @@ typedef PMKPromise *(^PMKResolveOnQueueBlock)(dispatch_queue_t, id block);
         if (IsError(result))
             PMKResolve(next, result);
         else dispatch_async(q, ^{
-            resolve(safely_call_block(block, result));
+            resolve(pmk_safely_call_block(block, result));
         });
     }];
 }
@@ -340,7 +346,7 @@ typedef PMKPromise *(^PMKResolveOnQueueBlock)(dispatch_queue_t, id block);
 
             return dispatch_promise_on(q, ^{
                 [PMKError consume:result];
-                return safely_call_block(block, result);
+                return pmk_safely_call_block(block, result);
             });
         };
         
@@ -352,7 +358,7 @@ typedef PMKPromise *(^PMKResolveOnQueueBlock)(dispatch_queue_t, id block);
         if (IsError(result)) {
             dispatch_async(q, ^{
                 [PMKError consume:result];
-                resolve(safely_call_block(block, result));
+                resolve(pmk_safely_call_block(block, result));
             });
         } else
             PMKResolve(next, result);
@@ -567,7 +573,7 @@ PMKPromise *dispatch_promise(id block) {
 PMKPromise *dispatch_promise_on(dispatch_queue_t queue, id block) {
     return [PMKPromise new:^(void(^fulfiller)(id), void(^rejecter)(id)){
         dispatch_async(queue, ^{
-            id result = safely_call_block(block, nil);
+            id result = pmk_safely_call_block(block, nil);
             if (IsError(result))
                 rejecter(result);
             else
@@ -577,11 +583,23 @@ PMKPromise *dispatch_promise_on(dispatch_queue_t queue, id block) {
 }
 
 
+@implementation PMKArray {
+@public id objs[3];
+@public NSUInteger count;
+}
 
-@implementation PMKArray { NSUInteger count; id objs[3]; }
+- (id)objectAtIndexedSubscript:(NSUInteger)idx {
+	if (count <= idx) {
+        // this check is necessary due to lack of checks in `pmk_safely_call_block`
+		return nil;
+    }
+    return objs[idx];
+}
 
-+ (instancetype)arrayWithCount:(NSUInteger)count, ... {
-    PMKArray *this = [self new];
+@end
+
+id __PMKArrayWithCount(NSUInteger count, ...) {
+    PMKArray *this = [PMKArray new];
     this->count = count;
     va_list args;
     va_start(args, count);
@@ -590,16 +608,6 @@ PMKPromise *dispatch_promise_on(dispatch_queue_t queue, id block) {
     va_end(args);
     return this;
 }
-
-- (id)objectAtIndexedSubscript:(NSUInteger)idx {
-	if (count <= idx) {
-        // this check is necessary due to lack of checks in `safely_call_block`
-		return nil;
-    }
-    return objs[idx];
-}
-
-@end
 
 
 

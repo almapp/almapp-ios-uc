@@ -21,7 +21,7 @@ static NSString * const kGoogleAuthKeychainIdentifier = @"ALMAPP_GMAIL_API_KEYCH
 
 @implementation UCGoogleOAuthViewController
 
-+ (instancetype)controllerWitApiKey:(UCApiKey *)apiKey {
++ (instancetype)controllerWitApiKey:(UCApiKey *)apiKey block:(void (^)(GTMOAuth2ViewControllerTouch *, GTMOAuth2Authentication *, NSError *))block {
     NSString *scope = [GTMOAuth2Authentication scopeWithStrings:
                        //@"https://www.googleapis.com/auth/userinfo.email",
                        //@"https://www.googleapis.com/auth/userinfo.profile",
@@ -33,14 +33,12 @@ static NSString * const kGoogleAuthKeychainIdentifier = @"ALMAPP_GMAIL_API_KEYCH
                                             clientID:apiKey.uid
                                         clientSecret:apiKey.secret
                                     keychainItemName:kGoogleAuthKeychainIdentifier
-                                   completionHandler:^(GTMOAuth2ViewControllerTouch *viewController, GTMOAuth2Authentication *auth, NSError *error) {
-                                       
-                                   }];
+                                   completionHandler:block];
     
     NSDictionary *params = @{@"access_type" : @"offline"}; //, @"approval_prompt" : @"force"};
     
     viewController.signIn.shouldFetchGoogleUserProfile = YES;
-    viewController.signIn.additionalAuthorizationParameters=params;
+    viewController.signIn.additionalAuthorizationParameters = params;
     
     return viewController;
 }

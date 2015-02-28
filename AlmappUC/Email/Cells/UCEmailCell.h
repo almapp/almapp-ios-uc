@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AlmappCore/ALMEmailFolder.h>
 
 @interface UCEmailCell : UITableViewCell
 
@@ -21,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
 
 @property (assign, nonatomic) BOOL isEven;
+@property (weak, nonatomic) ALMEmailThread *emailThread;
 
 @end

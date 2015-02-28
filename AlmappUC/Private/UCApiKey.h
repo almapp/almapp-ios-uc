@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AlmappCore/ALMApiKey.h>
 
 extern NSString *const API_KEYS_FILE;
 
@@ -22,5 +23,7 @@ extern NSString *const kGoogleApiKey;
 + (instancetype)OAuthApiKeyFor:(NSString *)service;
 
 + (NSString*)apiKeyFor:(NSString*)service;
+
+- (ALMApiKey *)almappApiKey;
 
 @end

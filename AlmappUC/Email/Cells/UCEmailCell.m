@@ -22,8 +22,17 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [self.arrowImageView setTintColor:[UIColor black75PercentColor]];
     
     // self.dateLabel.text = item.createdAt.shortTimeAgoSinceNow;
+}
+
+- (void)setEmailThread:(ALMEmailThread *)emailThread {
+    ALMEmail *email = emailThread.newestEmail;
+    self.senderLabel.text = email.from;
+    self.subjectLabel.text = email.subject;
+    self.bodyLabel.text = email.snippet;
+    self.dateLabel.text = email.date.shortTimeAgoSinceNow;
 }
 
 - (void)setIsEven:(BOOL)isEven {
@@ -33,8 +42,8 @@
 
 - (void)setCorrespondientColor {
     if(self.isEven) {
-        // self.backgroundColor = [UIColor colorWithRed:247/255.0 green:249/255.0 blue:249/255.0 alpha:1.0f];
-        self.backgroundColor = [[UIColor accentColor] colorWithAlphaComponent:0.1f];
+        self.backgroundColor = [UIColor colorWithRed:247/255.0 green:249/255.0 blue:249/255.0 alpha:1.0f];
+        //self.backgroundColor = [[UIColor accentColor] colorWithAlphaComponent:0.1f];
     }
     else {
         self.backgroundColor = [UIColor whiteColor];

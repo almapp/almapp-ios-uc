@@ -52,6 +52,9 @@ extern NSString * const KOrganization;
 - (ALMLikesController *)controllerLike;
 + (ALMLikesController *)controllerLike;
 
+- (ALMGmailManager *)gmailManager;
++ (ALMGmailManager *)gmailManager;
+
 
 #pragma mark - Promises
 

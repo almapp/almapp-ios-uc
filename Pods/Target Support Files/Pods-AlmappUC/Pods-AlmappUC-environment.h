@@ -63,7 +63,7 @@
 // AlmappCore
 #define COCOAPODS_POD_AVAILABLE_AlmappCore
 #define COCOAPODS_VERSION_MAJOR_AlmappCore 0
-#define COCOAPODS_VERSION_MINOR_AlmappCore 5
+#define COCOAPODS_VERSION_MINOR_AlmappCore 6
 #define COCOAPODS_VERSION_PATCH_AlmappCore 0
 
 // BFPaperTabBarController
@@ -101,6 +101,18 @@
 #define COCOAPODS_VERSION_MAJOR_FayeCpp 0
 #define COCOAPODS_VERSION_MINOR_FayeCpp 1
 #define COCOAPODS_VERSION_PATCH_FayeCpp 9
+
+// Google-API-Client/Common
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Common
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Common 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Common 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Common 422
+
+// Google-API-Client/Gmail
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Gmail
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Gmail 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Gmail 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Gmail 422
 
 // Google-Maps-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Google_Maps_iOS_SDK
@@ -237,8 +249,8 @@
 // PromiseKit
 #define COCOAPODS_POD_AVAILABLE_PromiseKit
 #define COCOAPODS_VERSION_MAJOR_PromiseKit 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit 0
 
 // PromiseKit-AFNetworking
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_AFNetworking
@@ -249,68 +261,68 @@
 // PromiseKit/CALayer
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_CALayer
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_CALayer 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_CALayer 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_CALayer 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_CALayer 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_CALayer 0
 
 // PromiseKit/NSNotificationCenter
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_NSNotificationCenter
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_NSNotificationCenter 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_NSNotificationCenter 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_NSNotificationCenter 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_NSNotificationCenter 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_NSNotificationCenter 0
 
 // PromiseKit/NSURLConnection
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_NSURLConnection
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_NSURLConnection 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_NSURLConnection 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_NSURLConnection 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_NSURLConnection 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_NSURLConnection 0
 
 // PromiseKit/Pause
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Pause
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Pause 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_Pause 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Pause 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_Pause 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Pause 0
 
 // PromiseKit/Promise
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Promise
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Promise 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_Promise 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Promise 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_Promise 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Promise 0
 
 // PromiseKit/UIActionSheet
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIActionSheet
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIActionSheet 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_UIActionSheet 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIActionSheet 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIActionSheet 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIActionSheet 0
 
 // PromiseKit/UIAlertView
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIAlertView
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIAlertView 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_UIAlertView 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIAlertView 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIAlertView 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIAlertView 0
 
 // PromiseKit/UIView
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIView
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIView 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_UIView 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIView 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIView 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIView 0
 
 // PromiseKit/UIViewController
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIViewController
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIViewController 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_UIViewController 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIViewController 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIViewController 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIViewController 0
 
 // PromiseKit/Until
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Until
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Until 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_Until 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Until 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_Until 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Until 0
 
 // PromiseKit/When
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_When
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_When 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_When 2
-#define COCOAPODS_VERSION_PATCH_PromiseKit_When 5
+#define COCOAPODS_VERSION_MINOR_PromiseKit_When 3
+#define COCOAPODS_VERSION_PATCH_PromiseKit_When 0
 
 // QMBParallaxScrollViewController
 #define COCOAPODS_POD_AVAILABLE_QMBParallaxScrollViewController
@@ -365,6 +377,12 @@
 #define COCOAPODS_VERSION_MAJOR_SKTagView 0
 #define COCOAPODS_VERSION_MINOR_SKTagView 4
 #define COCOAPODS_VERSION_PATCH_SKTagView 0
+
+// SVPullToRefresh
+#define COCOAPODS_POD_AVAILABLE_SVPullToRefresh
+#define COCOAPODS_VERSION_MAJOR_SVPullToRefresh 0
+#define COCOAPODS_VERSION_MINOR_SVPullToRefresh 4
+#define COCOAPODS_VERSION_PATCH_SVPullToRefresh 1
 
 // TDBadgedCell
 #define COCOAPODS_POD_AVAILABLE_TDBadgedCell

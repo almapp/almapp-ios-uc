@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0E3DC9B1A4188E3CE5A557B"
+               BlueprintIdentifier = "56C1448258CA6B3CC32EF42E"
                BuildableName = "TUSafariActivity.bundle"
                BlueprintName = "TUSafariActivity"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D0E3DC9B1A4188E3CE5A557B"
+            BlueprintIdentifier = "56C1448258CA6B3CC32EF42E"
             BuildableName = "TUSafariActivity.bundle"
             BlueprintName = "TUSafariActivity"
             ReferencedContainer = "container:Pods.xcodeproj">

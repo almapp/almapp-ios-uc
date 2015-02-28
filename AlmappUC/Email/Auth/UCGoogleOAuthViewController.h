@@ -11,6 +11,9 @@
 
 @interface UCGoogleOAuthViewController : GTMOAuth2ViewControllerTouch
 
-+ (instancetype)controllerWitApiKey:(UCApiKey *)apiKey;
++ (instancetype)controllerWitApiKey:(UCApiKey *)apiKey
+                              block:(void(^)(GTMOAuth2ViewControllerTouch *viewController,
+                                             GTMOAuth2Authentication *auth,
+                                             NSError *error))block;
 
 @end

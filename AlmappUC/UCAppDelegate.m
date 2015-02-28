@@ -27,7 +27,7 @@ static NSString * const kLoginNavigationControllerName = @"LoginNavigationContro
 
 int const kAPIVersion = 1;
 NSString * const kAPIBaseUrl = @"http://patiwi-mcburger-pro.local:5000";
-//NSString * const kAPIBaseUrl = @"https://almapp.me";
+// NSString * const kAPIBaseUrl = @"https://almapp.me";
 NSString * const KOrganization = @"UC";
 
 #pragma mark - Interface
@@ -39,6 +39,7 @@ NSString * const KOrganization = @"UC";
 @property (strong, nonatomic) ALMLikesController *controllerLike;
 @property (strong, nonatomic) ALMScheduleController *controllerSchedule;
 @property (strong, nonatomic) ALMMapController *controllerMap;
+@property (strong, nonatomic) ALMGmailManager *gmailManager;
 
 @end
 
@@ -235,10 +236,6 @@ NSString * const KOrganization = @"UC";
 
 - (ALMController *)controller {
     ALMController *controller = [self.almappCore controllerWithCredential:self.credential];
-    controller.saveToRealm = YES;
-    if (!controller.realm) {
-        controller.realm = [RLMRealm defaultRealm];
-    }
     return controller;
 }
 
@@ -294,6 +291,18 @@ NSString * const KOrganization = @"UC";
         _controllerSchedule = [ALMScheduleController controllerForSession:self.currentSession];
     }
     return _controllerSchedule;
+}
+
+- (ALMGmailManager *)gmailManager {
+    if (!_gmailManager) {
+        _gmailManager = [ALMGmailManager emailManager:self.currentSession];
+        _gmailManager.apiKey = [UCApiKey OAuthApiKeyFor:kGoogleApiKey].almappApiKey;
+    }
+    return _gmailManager;
+}
+
++ (ALMGmailManager *)gmailManager {
+    return [[self delegate] gmailManager];
 }
 
 
@@ -354,12 +363,10 @@ NSString * const KOrganization = @"UC";
 #pragma mark - Setup methods
 
 - (void)setupAlmapp {
-    UCApiKey *key = [UCApiKey OAuthApiKeyFor:kAlmappApiKey];
-
     _almappCore = [ALMCore coreWithDelegate:self
                                     baseURL:[NSURL URLWithString:kAPIBaseUrl]
                                  apiVersion:self.apiVersionNumber
-                                     apiKey:[ALMApiKey apiKeyWithClient:key.uid secret:key.secret]
+                                     apiKey:[UCApiKey OAuthApiKeyFor:kAlmappApiKey].almappApiKey
                                organization:KOrganization];
 }
 

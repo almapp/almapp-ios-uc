@@ -8,7 +8,6 @@
         <mutableArray key="HelveticaNeueLTW1G-Lt.otf">
             <string>HelveticaNeueLTW1G-Lt</string>
             <string>HelveticaNeueLTW1G-Lt</string>
-            <string>HelveticaNeueLTW1G-Lt</string>
         </mutableArray>
         <mutableArray key="HelveticaNeueLTW1G-Md.otf">
             <string>HelveticaNeueLTW1G-Md</string>
@@ -37,10 +36,17 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. " lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-ya-gyu">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-ya-gyu">
                         <rect key="frame" x="30" y="61" width="260" height="41"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Lt" family="Helvetica Neue LT W1G" pointSize="16"/>
-                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. ">
+                                <attributes>
+                                    <color key="NSColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="16" name="HelveticaNeueLTW1G-Lt"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" lineHeightMultiple="1"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="QLm-on-Or2">
@@ -51,14 +57,14 @@
                             <constraint firstAttribute="height" constant="20" id="cdh-Qo-81a"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorena Impsum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX9-mQ-enA">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Lorena Impsum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX9-mQ-enA">
                         <rect key="frame" x="30" y="19" width="130" height="18"/>
                         <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Md" family="Helvetica Neue LT W1G" pointSize="18"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miercoles" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-HC-zwD">
-                        <rect key="frame" x="228" y="19" width="62" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-HC-zwD">
+                        <rect key="frame" x="269" y="21" width="21" height="15"/>
                         <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Lt" family="Helvetica Neue LT W1G" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -67,6 +73,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="uOG-Iw-6ks" secondAttribute="trailing" constant="30" id="091-d1-vOV"/>
                     <constraint firstItem="F2q-ya-gyu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="61" id="262-eW-kim"/>
+                    <constraint firstItem="4Sh-HC-zwD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gX9-mQ-enA" secondAttribute="trailing" constant="5" id="3Z9-ky-zSO"/>
                     <constraint firstItem="xSu-u2-cxi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7FQ-Sg-eBd"/>
                     <constraint firstItem="xSu-u2-cxi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="7eD-D1-8mn"/>
                     <constraint firstItem="gX9-mQ-enA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="8Rw-gD-uFz"/>
@@ -74,9 +81,10 @@
                     <constraint firstItem="uOG-Iw-6ks" firstAttribute="top" secondItem="gX9-mQ-enA" secondAttribute="bottom" constant="6" id="CGc-Mr-1CJ"/>
                     <constraint firstItem="uOG-Iw-6ks" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="43" id="GeZ-IH-Web"/>
                     <constraint firstItem="F2q-ya-gyu" firstAttribute="leading" secondItem="gX9-mQ-enA" secondAttribute="leading" id="Shj-mt-mNJ"/>
+                    <constraint firstItem="4Sh-HC-zwD" firstAttribute="leading" secondItem="gX9-mQ-enA" secondAttribute="trailing" constant="-37" id="Tie-kV-uu8"/>
                     <constraint firstItem="gX9-mQ-enA" firstAttribute="leading" secondItem="uOG-Iw-6ks" secondAttribute="leading" id="YRP-lx-5Ia"/>
                     <constraint firstItem="gX9-mQ-enA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="Yv2-Ih-rhI"/>
-                    <constraint firstItem="4Sh-HC-zwD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="coJ-BA-tx8"/>
+                    <constraint firstItem="4Sh-HC-zwD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="coJ-BA-tx8"/>
                     <constraint firstAttribute="trailing" secondItem="4Sh-HC-zwD" secondAttribute="trailing" constant="30" id="ft8-If-Ci0"/>
                     <constraint firstAttribute="trailing" secondItem="QLm-on-Or2" secondAttribute="trailing" constant="8" id="k9C-ZX-AH5"/>
                     <constraint firstItem="QLm-on-Or2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="rYb-Y0-U9D"/>
@@ -87,6 +95,7 @@
                     <mask key="constraints">
                         <exclude reference="CGc-Mr-1CJ"/>
                         <exclude reference="t0S-Ht-unX"/>
+                        <exclude reference="Tie-kV-uu8"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

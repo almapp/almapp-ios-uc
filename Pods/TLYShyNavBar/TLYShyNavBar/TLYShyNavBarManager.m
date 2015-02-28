@@ -31,6 +31,23 @@ static inline CGFloat AACStatusBarHeight()
     return MIN(statusBarSize.width, statusBarSize.height);
 }
 
+@implementation UIScrollView(Helper)
+
+// Modify contentInset and scrollIndicatorInsets while preserving visual content offset
+- (void)tly_smartSetInsets:(UIEdgeInsets)contentAndScrollIndicatorInsets
+{
+    if (contentAndScrollIndicatorInsets.top != self.contentInset.top)
+    {
+        CGPoint contentOffset = self.contentOffset;
+        contentOffset.y -= contentAndScrollIndicatorInsets.top - self.contentInset.top;
+        self.contentOffset = contentOffset;
+    }
+
+    self.contentInset = self.scrollIndicatorInsets = contentAndScrollIndicatorInsets;
+}
+
+@end
+
 #pragma mark - TLYShyNavBarManager class
 
 @interface TLYShyNavBarManager () <UIScrollViewDelegate>
@@ -171,10 +188,29 @@ static inline CGFloat AACStatusBarHeight()
     return self.viewController.isViewLoaded && self.viewController.view.window;
 }
 
+- (void)setDisable:(BOOL)disable
+{
+    if (disable == _disable)
+    {
+        return;
+    }
+
+    _disable = disable;
+
+    if (!disable) {
+        self.previousYOffset = self.scrollView.contentOffset.y;
+    }
+}
+
 #pragma mark - Private methods
 
 - (BOOL)_shouldHandleScrolling
 {
+    if (self.disable)
+    {
+        return NO;
+    }
+
     CGRect scrollFrame = UIEdgeInsetsInsetRect(self.scrollView.bounds, self.scrollView.contentInset);
     CGFloat scrollableAmount = self.scrollView.contentSize.height - CGRectGetHeight(scrollFrame);
     BOOL scrollViewIsSuffecientlyLong = (scrollableAmount > self.navBarController.totalHeight);
@@ -203,7 +239,7 @@ static inline CGFloat AACStatusBarHeight()
         
         /* rounding to resolve a dumb issue with the contentOffset value */
         CGFloat end = floorf(self.scrollView.contentSize.height - CGRectGetHeight(self.scrollView.bounds) + self.scrollView.contentInset.bottom - 0.5f);
-        if (self.previousYOffset > end)
+        if (self.previousYOffset > end && deltaY > 0)
         {
             deltaY = MAX(0, deltaY - self.previousYOffset + end);
         }
@@ -306,8 +342,7 @@ static inline CGFloat AACStatusBarHeight()
     [self.navBarController expand];
     [self.extensionViewContainer.superview bringSubviewToFront:self.extensionViewContainer];
 
-    self.scrollView.contentInset = scrollInsets;
-    self.scrollView.scrollIndicatorInsets = scrollInsets;
+    [self.scrollView tly_smartSetInsets:scrollInsets];
 }
 
 - (void)cleanup

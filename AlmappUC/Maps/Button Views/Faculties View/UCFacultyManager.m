@@ -28,7 +28,7 @@
     }
     
     ALMController *controller = [UCAppDelegate controller];
-    [controller GETResources:[ALMPlace class] on:self.area parameters:nil].then( ^(id result, NSURLSessionDataTask *task) {
+    [controller GETResources:[ALMPlace class] on:self.area parameters:nil].then( ^(id jsonResult, NSURLSessionDataTask *task, id result) {
         [self dismissProgress];
         
         self.classrooms = [self.area placesWithCategory:ALMCategoryTypeClassroom];

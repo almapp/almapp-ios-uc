@@ -101,9 +101,8 @@
             [strongSelf addCookiesFromOperation:operation onUrl:url];
         }
         
-        NSString* encodedString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        
-        NSLog(@"%@", encodedString);
+        // NSString* encodedString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        // NSLog(@"%@", encodedString);
         
     }).catch(^(NSError *error){
         NSLog(@"error happened: %@", error.localizedDescription);

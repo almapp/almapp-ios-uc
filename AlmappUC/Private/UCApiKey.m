@@ -44,4 +44,8 @@ static NSDictionary *apiKeyFile = nil;
     return (values && values.count > 0) ? [self OauthApiKey:values[@"uid"] secret:values[@"secret"]] : nil;
 }
 
+- (id)almappApiKey {
+    return [ALMApiKey apiKeyWithClient:self.uid secret:self.secret];
+}
+
 @end

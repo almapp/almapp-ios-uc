@@ -25,7 +25,7 @@
     [self.navigationController showProgress];
     
     ALMController *controller = [UCAppDelegate controller];
-    [controller GETResources:[ALMPost class] path:@"campuses/1/posts" parameters:nil].then( ^(id result, NSURLSessionDataTask *task) {
+    [controller GETResources:[ALMPost class] path:@"campuses/1/posts" parameters:nil realm:[RLMRealm defaultRealm]].then( ^(id jsonResult, NSURLSessionDataTask *task, id result) {
         self.posts = [result sortedResultsUsingProperty:kRResourceID ascending:YES];
         [self.tableView reloadData];
         

@@ -48,7 +48,7 @@
     }
     
     self.controller = [UCAppDelegate controller];
-    self.controller.realm = [RLMRealm inMemoryRealmWithIdentifier:@"Courses"];
+    self.controller.realmSearch = [RLMRealm inMemoryRealmWithIdentifier:@"Courses"];
     
     [self fetch];
 }
@@ -59,7 +59,7 @@
 
     [self.tableView reloadData];
     
-    [self.controller GETResources:[ALMAcademicUnity class] parameters:nil].then( ^(id response, NSURLSessionDataTask *task) {
+    [self.controller GETResources:[ALMAcademicUnity class] parameters:nil realm:[RLMRealm defaultRealm]].then( ^(id jsonResponse, NSURLSessionDataTask *task, id response) {
         self.academicUnities = [[ALMAcademicUnity allObjects] sortedResultsUsingProperty:kRShortName ascending:YES];
         [self.tableView reloadData];
         

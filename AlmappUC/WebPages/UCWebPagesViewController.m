@@ -68,7 +68,7 @@ static float const kWebPageCellMargin = 3.0f;
     }
 
     
-    [controller GETResources:[ALMWebPage class] parameters:nil].then( ^(id result, NSURLSessionDataTask *task) {
+    [controller GETResources:[ALMWebPage class] parameters:nil realm:[RLMRealm defaultRealm]].then( ^(id jsonResult, NSURLSessionDataTask *task, id result) {
         [self loadWebPagesForSegmentIndex:_segmentedControl.selectedSegmentIndex];
         [self.navigationController dismissProgress];
         
