@@ -20,11 +20,14 @@
 #import "INSPinterestPullToRefresh.h"
 
 #import "UCEMailViewController.h"
+#import "UCEmailDetailViewController.h"
 #import "UCAppDelegate.h"
 #import "UCGoogleOAuthViewController.h"
 #import "UITableView+Nib.h"
 #import "UCEmailCell.h"
 #import "UCStyle.h"
+
+static NSString *const kEmailShowSegue = @"EmailViewSegue";
 
 typedef NS_ENUM(NSUInteger, UCEmailFolder) {
     UCEmailFolderInbox,
@@ -262,6 +265,7 @@ static UCEmailFolder const kDefaultFolder = UCEmailFolderInbox;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:kEmailShowSegue sender:self];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -349,14 +353,24 @@ static UCEmailFolder const kDefaultFolder = UCEmailFolderInbox;
 }
 
 
-/*
+
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     if ([segue.identifier isEqual:kEmailShowSegue]) {
+         NSUInteger selectedIndex = [self.tableView indexPathForSelectedRow].row;
+         
+         UIViewController *destination = [segue destinationViewController];
+         if ([destination isKindOfClass:[UCEmailDetailViewController class]]) {
+             UCEmailDetailViewController *detail = (UCEmailDetailViewController *)destination;
+             detail.folder = self.currentFolder;
+             detail.selectedThreadIndex = selectedIndex;
+         }
+     }
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
  }
- */
+
 
 @end

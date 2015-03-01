@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="56" id="KGk-i7-Jjw" customClass="UCEmailViewFrom">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="De:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xk5-7U-L0U">
+                        <rect key="frame" x="15" y="9" width="24" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorena Ipsum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7x-Y6-sco">
+                        <rect key="frame" x="48" y="8" width="265" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lorem@ipsum.cl" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOS-Jq-Jmc">
+                        <rect key="frame" x="49" y="27" width="265" height="16"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="l7x-Y6-sco" secondAttribute="bottom" constant="19" id="3bA-NZ-X1E"/>
+                    <constraint firstItem="xk5-7U-L0U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="74l-BB-8ZD"/>
+                    <constraint firstItem="oOS-Jq-Jmc" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="1" id="BoW-gF-MgK"/>
+                    <constraint firstAttribute="trailing" secondItem="l7x-Y6-sco" secondAttribute="trailing" constant="7" id="EVh-q3-kx9"/>
+                    <constraint firstAttribute="centerY" secondItem="xk5-7U-L0U" secondAttribute="centerY" constant="9.5" id="Vhp-v2-SP8"/>
+                    <constraint firstAttribute="centerY" secondItem="l7x-Y6-sco" secondAttribute="centerY" constant="9.25" id="ZOl-2u-m9E"/>
+                    <constraint firstItem="l7x-Y6-sco" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="aCp-J2-wMA"/>
+                    <constraint firstItem="l7x-Y6-sco" firstAttribute="leading" secondItem="xk5-7U-L0U" secondAttribute="trailing" constant="10" id="bqv-NQ-BLP"/>
+                    <constraint firstItem="l7x-Y6-sco" firstAttribute="leading" secondItem="oOS-Jq-Jmc" secondAttribute="leading" id="kMe-Je-uMW"/>
+                    <constraint firstItem="oOS-Jq-Jmc" firstAttribute="top" secondItem="l7x-Y6-sco" secondAttribute="bottom" constant="-2" id="p2k-XA-4kE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="senderEmail" destination="oOS-Jq-Jmc" id="Qfm-wH-mfy"/>
+                <outlet property="senderName" destination="l7x-Y6-sco" id="QnL-eA-99k"/>
+            </connections>
+            <point key="canvasLocation" x="399" y="384"/>
+        </tableViewCell>
+    </objects>
+</document>

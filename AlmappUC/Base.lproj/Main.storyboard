@@ -358,6 +358,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rFv-Yl-QfW"/>
                                     <barButtonItem style="done" systemItem="compose" id="UCW-L7-maz"/>
                                 </items>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -381,14 +382,14 @@
                                 <exclude reference="BfC-t0-x1K"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="hls-Pz-3Jl"/>
-                                <exclude reference="t1m-7P-frq"/>
                                 <exclude reference="1v3-MO-MyB"/>
                                 <exclude reference="4pR-tc-fl1"/>
                                 <exclude reference="JOr-r5-Ur5"/>
                                 <exclude reference="SHE-Qz-Tlt"/>
                                 <exclude reference="ti7-xS-3FJ"/>
                                 <exclude reference="zuh-2e-JMq"/>
+                                <exclude reference="hls-Pz-3Jl"/>
+                                <exclude reference="t1m-7P-frq"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -397,14 +398,14 @@
                                 <include reference="BfC-t0-x1K"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="hls-Pz-3Jl"/>
-                                <include reference="t1m-7P-frq"/>
                                 <include reference="1v3-MO-MyB"/>
                                 <include reference="4pR-tc-fl1"/>
                                 <include reference="JOr-r5-Ur5"/>
                                 <include reference="SHE-Qz-Tlt"/>
                                 <include reference="ti7-xS-3FJ"/>
                                 <include reference="zuh-2e-JMq"/>
+                                <exclude reference="hls-Pz-3Jl"/>
+                                <include reference="t1m-7P-frq"/>
                             </mask>
                         </variation>
                     </view>
@@ -420,6 +421,7 @@
                         <outlet property="searchDisplayController" destination="EWn-B0-HK0" id="7zu-5a-zzA"/>
                         <outlet property="tableView" destination="oDY-gI-kOb" id="e5j-kv-TW7"/>
                         <outlet property="toolBar" destination="BfC-t0-x1K" id="2bv-aJ-3Uz"/>
+                        <segue destination="F7m-Ob-KnU" kind="show" identifier="EmailViewSegue" id="zTu-ML-6y0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yr0-8E-P5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -434,6 +436,84 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="937.5" y="-1385"/>
+        </scene>
+        <!--Email Detail View Controller-->
+        <scene sceneID="fnk-UQ-hpZ">
+            <objects>
+                <viewController id="F7m-Ob-KnU" customClass="UCEmailDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="71m-L1-hKI"/>
+                        <viewControllerLayoutGuide type="bottom" id="RF5-bL-ebL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e7e-3y-9N3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bYR-s2-oPd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                            <tabBar contentMode="scaleToFill" itemPositioning="centered" translatesAutoresizingMaskIntoConstraints="NO" id="qVE-xb-tpV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Responder" image="Reply" id="bsE-kT-k7e"/>
+                                    <tabBarItem title="Reponder a todos" image="ReplyToAll" id="ESy-GK-cWo"/>
+                                    <tabBarItem title="Reenviar" image="Forward" id="JyF-gB-ZNk"/>
+                                    <tabBarItem title="Star" image="Star" id="7px-lE-l22"/>
+                                    <tabBarItem title="Borrar" image="Trash" id="TJK-oM-Lur"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bYR-s2-oPd" secondAttribute="trailing" id="Nvw-qd-v5j"/>
+                            <constraint firstItem="bYR-s2-oPd" firstAttribute="top" secondItem="71m-L1-hKI" secondAttribute="bottom" id="OM8-fy-cbW"/>
+                            <constraint firstItem="qVE-xb-tpV" firstAttribute="leading" secondItem="e7e-3y-9N3" secondAttribute="leading" id="adj-fo-yFI"/>
+                            <constraint firstAttribute="trailing" secondItem="qVE-xb-tpV" secondAttribute="trailing" id="ktL-vc-5OL"/>
+                            <constraint firstItem="RF5-bL-ebL" firstAttribute="top" secondItem="qVE-xb-tpV" secondAttribute="bottom" id="qVv-iZ-Qdx"/>
+                            <constraint firstItem="qVE-xb-tpV" firstAttribute="top" secondItem="bYR-s2-oPd" secondAttribute="bottom" id="sjF-yy-boh"/>
+                            <constraint firstItem="bYR-s2-oPd" firstAttribute="leading" secondItem="e7e-3y-9N3" secondAttribute="leading" id="u1R-j9-YSg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bYR-s2-oPd"/>
+                                <exclude reference="qVE-xb-tpV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="qVv-iZ-Qdx"/>
+                                <exclude reference="adj-fo-yFI"/>
+                                <exclude reference="ktL-vc-5OL"/>
+                                <exclude reference="sjF-yy-boh"/>
+                                <exclude reference="Nvw-qd-v5j"/>
+                                <exclude reference="OM8-fy-cbW"/>
+                                <exclude reference="u1R-j9-YSg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bYR-s2-oPd"/>
+                                <include reference="qVE-xb-tpV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="qVv-iZ-Qdx"/>
+                                <include reference="adj-fo-yFI"/>
+                                <include reference="ktL-vc-5OL"/>
+                                <include reference="sjF-yy-boh"/>
+                                <include reference="Nvw-qd-v5j"/>
+                                <include reference="OM8-fy-cbW"/>
+                                <include reference="u1R-j9-YSg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tabBar" destination="qVE-xb-tpV" id="eft-HK-ggE"/>
+                        <outlet property="tableView" destination="bYR-s2-oPd" id="YfO-Js-wRG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ci-Om-Qqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-1385"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZdG-dj-67S">
@@ -1728,7 +1808,8 @@
                                                         <exclude reference="npg-ve-wMa"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="widthClass=compact">
+                                                <variation key="widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="56" y="173" width="288" height="30"/>
                                                     <mask key="constraints">
                                                         <include reference="npg-ve-wMa"/>
                                                     </mask>
@@ -1884,10 +1965,15 @@
     </scenes>
     <resources>
         <image name="Events" width="30" height="30"/>
+        <image name="Forward" width="30" height="30"/>
         <image name="Key" width="30" height="30"/>
         <image name="Like" width="30" height="30"/>
         <image name="Maps" width="30" height="30"/>
         <image name="Posts" width="30" height="30"/>
+        <image name="Reply" width="30" height="30"/>
+        <image name="ReplyToAll" width="30" height="30"/>
+        <image name="Star" width="30" height="30"/>
+        <image name="Trash" width="30" height="30"/>
         <image name="User" width="30" height="30"/>
         <image name="WebServices" width="30" height="30"/>
         <image name="navbar.jpg" width="640" height="128"/>

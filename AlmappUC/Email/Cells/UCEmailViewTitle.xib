@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="UCEmailViewTitle">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miercoles 23 de enero 2014" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-7s-cjw">
+                        <rect key="frame" x="15" y="13" width="297" height="14"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="My tableview cell then waits for touchesBegan." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="304" translatesAutoresizingMaskIntoConstraints="NO" id="qgj-EE-0C7">
+                        <rect key="frame" x="15" y="32" width="297" height="48"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="dqq-7s-cjw" secondAttribute="trailing" constant="8" id="9E2-Hs-JG2"/>
+                    <constraint firstItem="dqq-7s-cjw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="QDs-O5-IXX"/>
+                    <constraint firstAttribute="bottom" secondItem="qgj-EE-0C7" secondAttribute="bottom" constant="14.5" id="WsP-9s-Kgf"/>
+                    <constraint firstItem="qgj-EE-0C7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Xdy-dn-WRI"/>
+                    <constraint firstItem="qgj-EE-0C7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="laf-nF-XEy"/>
+                    <constraint firstAttribute="trailing" secondItem="qgj-EE-0C7" secondAttribute="trailing" constant="8" id="up6-IB-AXY"/>
+                    <constraint firstItem="dqq-7s-cjw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="wQH-Pd-gRj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="date" destination="dqq-7s-cjw" id="Leh-8p-yea"/>
+                <outlet property="title" destination="qgj-EE-0C7" id="Nso-dy-TYS"/>
+            </connections>
+            <point key="canvasLocation" x="368" y="436.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -80,6 +80,14 @@
 		F6B726911A86E1E000461E17 /* UCTeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7268F1A86E1E000461E17 /* UCTeacherCell.m */; };
 		F6B726921A86E1E000461E17 /* UCTeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B726901A86E1E000461E17 /* UCTeacherCell.xib */; };
 		F6B726B31A9E5C34009A339C /* UCLoginEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B726B21A9E5C34009A339C /* UCLoginEmailViewController.m */; };
+		F6B752111AA29A4D00D68D86 /* UCEmailViewFrom.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7520F1AA29A4D00D68D86 /* UCEmailViewFrom.m */; };
+		F6B752121AA29A4D00D68D86 /* UCEmailViewFrom.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B752101AA29A4D00D68D86 /* UCEmailViewFrom.xib */; };
+		F6B752161AA29D6600D68D86 /* UCEmailViewTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B752141AA29D6600D68D86 /* UCEmailViewTitle.m */; };
+		F6B752171AA29D6600D68D86 /* UCEmailViewTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B752151AA29D6600D68D86 /* UCEmailViewTitle.xib */; };
+		F6B7521A1AA29E0000D68D86 /* UCEmailDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B752191AA29E0000D68D86 /* UCEmailDetailViewController.m */; };
+		F6B7521D1AA2A37200D68D86 /* UCEmailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7521C1AA2A37200D68D86 /* UCEmailViewCell.m */; };
+		F6B752211AA2B06B00D68D86 /* UCEmailViewTo.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B7521F1AA2B06B00D68D86 /* UCEmailViewTo.m */; };
+		F6B752221AA2B06B00D68D86 /* UCEmailViewTo.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B752201AA2B06B00D68D86 /* UCEmailViewTo.xib */; };
 		F6C463AF1A6B396300BFBFD1 /* UCMapHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463AE1A6B396300BFBFD1 /* UCMapHeaderViewController.m */; };
 		F6C463B31A6B40C000BFBFD1 /* UCScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463B21A6B40C000BFBFD1 /* UCScheduleTableViewController.m */; };
 		F6C463B61A6B414E00BFBFD1 /* UCScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C463B51A6B414E00BFBFD1 /* UCScheduleViewController.m */; };
@@ -261,6 +269,19 @@
 		F6B726901A86E1E000461E17 /* UCTeacherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCTeacherCell.xib; sourceTree = "<group>"; };
 		F6B726B11A9E5C34009A339C /* UCLoginEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCLoginEmailViewController.h; sourceTree = "<group>"; };
 		F6B726B21A9E5C34009A339C /* UCLoginEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCLoginEmailViewController.m; sourceTree = "<group>"; };
+		F6B7520E1AA29A4D00D68D86 /* UCEmailViewFrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCEmailViewFrom.h; sourceTree = "<group>"; };
+		F6B7520F1AA29A4D00D68D86 /* UCEmailViewFrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCEmailViewFrom.m; sourceTree = "<group>"; };
+		F6B752101AA29A4D00D68D86 /* UCEmailViewFrom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCEmailViewFrom.xib; sourceTree = "<group>"; };
+		F6B752131AA29D6600D68D86 /* UCEmailViewTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCEmailViewTitle.h; sourceTree = "<group>"; };
+		F6B752141AA29D6600D68D86 /* UCEmailViewTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCEmailViewTitle.m; sourceTree = "<group>"; };
+		F6B752151AA29D6600D68D86 /* UCEmailViewTitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCEmailViewTitle.xib; sourceTree = "<group>"; };
+		F6B752181AA29E0000D68D86 /* UCEmailDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCEmailDetailViewController.h; sourceTree = "<group>"; };
+		F6B752191AA29E0000D68D86 /* UCEmailDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCEmailDetailViewController.m; sourceTree = "<group>"; };
+		F6B7521B1AA2A37200D68D86 /* UCEmailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCEmailViewCell.h; sourceTree = "<group>"; };
+		F6B7521C1AA2A37200D68D86 /* UCEmailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCEmailViewCell.m; sourceTree = "<group>"; };
+		F6B7521E1AA2B06B00D68D86 /* UCEmailViewTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCEmailViewTo.h; sourceTree = "<group>"; };
+		F6B7521F1AA2B06B00D68D86 /* UCEmailViewTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCEmailViewTo.m; sourceTree = "<group>"; };
+		F6B752201AA2B06B00D68D86 /* UCEmailViewTo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCEmailViewTo.xib; sourceTree = "<group>"; };
 		F6C463AD1A6B396300BFBFD1 /* UCMapHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCMapHeaderViewController.h; sourceTree = "<group>"; };
 		F6C463AE1A6B396300BFBFD1 /* UCMapHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCMapHeaderViewController.m; sourceTree = "<group>"; };
 		F6C463B11A6B40C000BFBFD1 /* UCScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleTableViewController.h; sourceTree = "<group>"; };
@@ -678,6 +699,15 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		F6B4FA5C1AA2401C004B0242 /* Thread View */ = {
+			isa = PBXGroup;
+			children = (
+				F6B752181AA29E0000D68D86 /* UCEmailDetailViewController.h */,
+				F6B752191AA29E0000D68D86 /* UCEmailDetailViewController.m */,
+			);
+			path = "Thread View";
+			sourceTree = "<group>";
+		};
 		F6B726831A86C80300461E17 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,6 +896,7 @@
 			children = (
 				F6D19C9B1A520FD900FD4715 /* UCEMailViewController.h */,
 				F6D19C9C1A520FD900FD4715 /* UCEMailViewController.m */,
+				F6B4FA5C1AA2401C004B0242 /* Thread View */,
 				F6B726AD1A9E4FE4009A339C /* Auth */,
 				F6FEEDCD1A9F75970033464A /* Cells */,
 			);
@@ -999,6 +1030,17 @@
 				F6FEEDD01A9F75BB0033464A /* UCEmailCell.xib */,
 				F6FEEDCE1A9F75BB0033464A /* UCEmailCell.h */,
 				F6FEEDCF1A9F75BB0033464A /* UCEmailCell.m */,
+				F6B7521B1AA2A37200D68D86 /* UCEmailViewCell.h */,
+				F6B7521C1AA2A37200D68D86 /* UCEmailViewCell.m */,
+				F6B752151AA29D6600D68D86 /* UCEmailViewTitle.xib */,
+				F6B752131AA29D6600D68D86 /* UCEmailViewTitle.h */,
+				F6B752141AA29D6600D68D86 /* UCEmailViewTitle.m */,
+				F6B752101AA29A4D00D68D86 /* UCEmailViewFrom.xib */,
+				F6B7520E1AA29A4D00D68D86 /* UCEmailViewFrom.h */,
+				F6B7520F1AA29A4D00D68D86 /* UCEmailViewFrom.m */,
+				F6B752201AA2B06B00D68D86 /* UCEmailViewTo.xib */,
+				F6B7521E1AA2B06B00D68D86 /* UCEmailViewTo.h */,
+				F6B7521F1AA2B06B00D68D86 /* UCEmailViewTo.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1095,6 +1137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B752171AA29D6600D68D86 /* UCEmailViewTitle.xib in Resources */,
 				F64865931A53965E000E5A4F /* Montserrat-Regular.ttf in Resources */,
 				F6568C521A85DD0600BB7415 /* navbar3.jpg in Resources */,
 				F6D947071A7F20A30070B18B /* UCScheduleEventCell.xib in Resources */,
@@ -1120,6 +1163,7 @@
 				F62B94B11A69FDE300C1F534 /* UCPostCell.xib in Resources */,
 				F6FEEDFA1A9FAF030033464A /* background1.jpg in Resources */,
 				F65B24E01A9A58BD00BD1813 /* UCBuildingCell.xib in Resources */,
+				F6B752121AA29A4D00D68D86 /* UCEmailViewFrom.xib in Resources */,
 				F6D7437B1A84091800073F9D /* UCSocialBarView.xib in Resources */,
 				F6D19C991A520BED00FD4715 /* Localizable.strings in Resources */,
 				F6A0F4681A80058300380EE1 /* UCScheduleEndCell.xib in Resources */,
@@ -1131,6 +1175,7 @@
 				F64865921A53965E000E5A4F /* Montserrat-Bold.ttf in Resources */,
 				F6B726921A86E1E000461E17 /* UCTeacherCell.xib in Resources */,
 				F6D947051A7F205F0070B18B /* UCScheduleCell.xib in Resources */,
+				F6B752221AA2B06B00D68D86 /* UCEmailViewTo.xib in Resources */,
 				F65B24E21A9A58BD00BD1813 /* UCFacultyCell.xib in Resources */,
 				F6FEEDD21A9F75BB0033464A /* UCEmailCell.xib in Resources */,
 				F6D19C6F1A51F04700FD4715 /* Images.xcassets in Resources */,
@@ -1193,10 +1238,12 @@
 				F6FEEDF21A9FA6570033464A /* RWLabel.m in Sources */,
 				F696C6621A954D9E00916F6B /* UCLoginBaseViewController.m in Sources */,
 				F6B726861A86C81D00461E17 /* NSUserDefaults+Config.m in Sources */,
+				F6B752211AA2B06B00D68D86 /* UCEmailViewTo.m in Sources */,
 				F65B24EB1A9A591700BD1813 /* UCCampusCell.m in Sources */,
 				F6D19C9D1A520FD900FD4715 /* UCEMailViewController.m in Sources */,
 				F66E66591A865A3B002E06D5 /* UCFacultyManager.m in Sources */,
 				F696C6651A95537100916F6B /* UCLoginMapViewController.m in Sources */,
+				F6B752161AA29D6600D68D86 /* UCEmailViewTitle.m in Sources */,
 				F6D743791A84090A00073F9D /* UCSocialBarView.m in Sources */,
 				F6A0F4721A801D8B00380EE1 /* UCChatTableViewController.m in Sources */,
 				F687178D1A8B77C1002A4EC3 /* UCMenuHeaderCell.m in Sources */,
@@ -1208,6 +1255,7 @@
 				F6568C401A8580CF00BB7415 /* UCLoginViewController.m in Sources */,
 				F6FEEDDD1A9FA57D0033464A /* UCStyle.m in Sources */,
 				F6C463B61A6B414E00BFBFD1 /* UCScheduleViewController.m in Sources */,
+				F6B7521A1AA29E0000D68D86 /* UCEmailDetailViewController.m in Sources */,
 				F68717881A8B735B002A4EC3 /* UCMenuCell.m in Sources */,
 				F6D743A01A8473CB00073F9D /* UCCourseCell.m in Sources */,
 				F66E665C1A865CE5002E06D5 /* ALMPlace+Defaults.m in Sources */,
@@ -1244,6 +1292,7 @@
 				F6A0F46B1A8006A700380EE1 /* UCScheduleEndCell.m in Sources */,
 				F6571FFD1A53465E0008E991 /* UCButtonHelper.m in Sources */,
 				F66B934D1A6419840048DACD /* UCWebPagesCollectionViewCell.m in Sources */,
+				F6B752111AA29A4D00D68D86 /* UCEmailViewFrom.m in Sources */,
 				F6568C3B1A85804100BB7415 /* UCPresentationManager.m in Sources */,
 				F6FEEDF51A9FA6570033464A /* UITableView+DUExtensions.m in Sources */,
 				F6FEEDF61A9FA6570033464A /* UITableView+Nib.m in Sources */,
@@ -1252,6 +1301,7 @@
 				F66E66541A865928002E06D5 /* UCBigLikeCell.m in Sources */,
 				F63485A81A524C60004A0122 /* UCTableViewController.m in Sources */,
 				F65B24EE1A9A592600BD1813 /* UCFacultyCell.m in Sources */,
+				F6B7521D1AA2A37200D68D86 /* UCEmailViewCell.m in Sources */,
 				F62B94B31A69FDE300C1F534 /* UCPostCell.m in Sources */,
 				F6AEF1BB1A9F50DF00FCA20F /* UCGoogleOAuthViewController.m in Sources */,
 				F6A0F4661A7FFB9300380EE1 /* UCScheduleBaseCell.m in Sources */,

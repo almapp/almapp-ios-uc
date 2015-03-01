@@ -29,7 +29,7 @@
                         </constraints>
                     </imageView>
                     <label userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patricio López J." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="132" translatesAutoresizingMaskIntoConstraints="NO" id="7yq-SX-1A9">
-                        <rect key="frame" x="68" y="16" width="132" height="21"/>
+                        <rect key="frame" x="68" y="16" width="132" height="20.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -51,7 +51,7 @@
                         </variation>
                     </label>
                     <label userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1h 20m" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2R-wF-yle">
-                        <rect key="frame" x="204" y="22" width="41" height="14"/>
+                        <rect key="frame" x="204" y="22" width="40.5" height="14"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +130,7 @@
                     <constraint firstAttribute="bottom" secondItem="3uC-Tj-djT" secondAttribute="bottom" constant="10" id="HwR-9R-mIr"/>
                     <constraint firstItem="gVD-7h-Kfg" firstAttribute="leading" secondItem="2Yf-yl-has" secondAttribute="leading" constant="21" id="I6g-6t-cMy"/>
                     <constraint firstAttribute="bottom" secondItem="Z9w-Lr-bhC" secondAttribute="bottom" constant="9.5" id="Oao-QH-IxE"/>
-                    <constraint firstAttribute="bottom" secondItem="gVD-7h-Kfg" secondAttribute="bottom" constant="37.5" id="Wh4-JB-Ewv"/>
+                    <constraint firstAttribute="bottom" secondItem="gVD-7h-Kfg" secondAttribute="bottom" constant="38" id="Wh4-JB-Ewv"/>
                     <constraint firstItem="gVD-7h-Kfg" firstAttribute="top" secondItem="ia3-Au-efk" secondAttribute="bottom" constant="14" id="dMp-lJ-RfM"/>
                     <constraint firstAttribute="trailing" secondItem="W7a-jT-LI7" secondAttribute="trailing" constant="7" id="fI7-g0-tjk"/>
                     <constraint firstAttribute="trailing" secondItem="Z9w-Lr-bhC" secondAttribute="trailing" constant="22" id="kFD-MQ-Pxn"/>
