@@ -10,8 +10,20 @@
 
 @implementation UCEmailViewCell
 
++ (NSString *)nibName {
+    return nil;
+}
+
++ (CGFloat)height {
+    return -1;
+}
+
 - (void)awakeFromNib {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+}
+
+- (void)setEmail:(ALMEmail *)email {
+    _email = email;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

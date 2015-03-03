@@ -22,8 +22,16 @@
 
 + (UIColor*)accentColor;
 + (UIColor *)mainColor;
++ (UIColor *)mainColorTone1;
++ (UIColor *)mainColorTone2;
++ (UIColor *)mainColorTone3;
++ (UIColor *)mainColorTone4;
++ (UIColor *)mainColorTone5;
+
 + (UIColor *)myBlack;
 + (UIColor *)myContrast;
++ (UIColor *)alertColor;
++ (UIColor *)starColor;
 
 @end
 

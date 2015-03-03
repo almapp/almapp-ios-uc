@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UCEmailViewFrom.h"
+#import "UCEmailViewTitle.h"
+#import "UCEmailViewBody.h"
 #import "UCAppDelegate.h"
 
-@interface UCEmailDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface UCEmailDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UCEmailViewTitleDelegate, UCEmailViewBodyDelegate>
 
-@property (weak, nonatomic) ALMEmailFolder *folder;
+@property (weak, nonatomic) NSArray *threadList;
 
 @property (assign, nonatomic) NSUInteger selectedThreadIndex;
 @property (strong, nonatomic) ALMEmailThread *thread;
+@property (strong, nonatomic) RLMResults *emails;
 
 @end

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "064342ECD537D7A158A81ECE"
+               BlueprintIdentifier = "B7BDD6C55FBCC350A3F19A4A"
                BuildableName = "libPods-AlmappUC-RKNotificationHub.a"
                BlueprintName = "Pods-AlmappUC-RKNotificationHub"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "064342ECD537D7A158A81ECE"
+            BlueprintIdentifier = "B7BDD6C55FBCC350A3F19A4A"
             BuildableName = "libPods-AlmappUC-RKNotificationHub.a"
             BlueprintName = "Pods-AlmappUC-RKNotificationHub"
             ReferencedContainer = "container:Pods.xcodeproj">

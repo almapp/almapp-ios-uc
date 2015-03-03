@@ -15,6 +15,8 @@
 
 - (void)showMenu;
 
+- (void)menuButtonEnable:(BOOL)enable;
+
 - (BOOL)shouldAddPanGesture;
 
 - (BOOL)shouldUseLightStatusBar;

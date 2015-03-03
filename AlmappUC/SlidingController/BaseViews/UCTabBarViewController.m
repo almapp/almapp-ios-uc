@@ -10,6 +10,8 @@
 
 @interface UCTabBarViewController ()
 
+@property (strong, nonatomic) UIBarButtonItem *menuButtom;
+
 @end
 
 @implementation UCTabBarViewController
@@ -20,10 +22,9 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[UCStyle bannerBackgroundImage] forBarMetrics:UIBarMetricsDefault];
     
-    UIImage *menu = [UIImage imageNamed:@"Menu"];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:menu style:UIBarButtonItemStyleDone target:self action:@selector(menuButtonPressed:)];
+    self.menuButtom = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Menu"] style:UIBarButtonItemStyleDone target:self action:@selector(menuButtonPressed:)];
     
-    self.navigationItem.leftBarButtonItem = leftButton;
+    self.navigationItem.leftBarButtonItem = self.menuButtom;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +42,10 @@
 
 -(void)showMenu {
     [self.sideMenuViewController presentLeftMenuViewController];
+}
+
+- (void)menuButtonEnable:(BOOL)enable {
+    self.menuButtom.enabled = enable;
 }
 
 - (BOOL)shouldAddPanGesture {

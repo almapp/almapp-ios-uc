@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8A7FF3FE9B0227958B1D2D8"
+               BlueprintIdentifier = "64C3492221834F78535E4F6B"
                BuildableName = "libPods-AlmappUC-AFNetworking.a"
                BlueprintName = "Pods-AlmappUC-AFNetworking"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8A7FF3FE9B0227958B1D2D8"
+            BlueprintIdentifier = "64C3492221834F78535E4F6B"
             BuildableName = "libPods-AlmappUC-AFNetworking.a"
             BlueprintName = "Pods-AlmappUC-AFNetworking"
             ReferencedContainer = "container:Pods.xcodeproj">

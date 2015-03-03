@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "369B8BC3786E09F11CB6F384"
+               BlueprintIdentifier = "70FF8FE76FB178C909F6F702"
                BuildableName = "libPods-AlmappUC-MRoundedButton.a"
                BlueprintName = "Pods-AlmappUC-MRoundedButton"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "369B8BC3786E09F11CB6F384"
+            BlueprintIdentifier = "70FF8FE76FB178C909F6F702"
             BuildableName = "libPods-AlmappUC-MRoundedButton.a"
             BlueprintName = "Pods-AlmappUC-MRoundedButton"
             ReferencedContainer = "container:Pods.xcodeproj">

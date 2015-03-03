@@ -10,14 +10,28 @@
 
 @interface ALMEmailThread : RLMObject
 
-@property NSString *threadID;
+@property NSString *identifier;
 @property NSString *snippet;
 @property RLMArray<ALMEmail> *emails;
 
-@property (readonly) NSArray *folders;
 @property (readonly) ALMEmail *newestEmail;
 @property (readonly) ALMEmail *oldetsEmail;
 @property (readonly) RLMResults *sortedEmails;
+
++ (RLMResults *)sortedThreads;
++ (RLMResults *)sortedThreadsInRealm:(RLMRealm *)realm;
+
++ (ALMEmailThread *)newestThread;
++ (ALMEmailThread *)newestThreadInRealm:(RLMRealm *)realm;
+
++ (ALMEmailThread *)oldestThread;
++ (ALMEmailThread *)oldestThreadInRealm:(RLMRealm *)realm;
+
++ (NSArray *)threadsSortedAscending:(BOOL)ascending first:(NSUInteger)count;
++ (NSArray *)threadsSortedAscending:(BOOL)ascending realm:(RLMRealm *)realm first:(NSUInteger)count;
+
++ (RLMResults *)threadsSortedAscending:(BOOL)ascending;
++ (RLMResults *)threadsSortedAscending:(BOOL)ascending realm:(RLMRealm *)realm;
 
 - (RLMResults *)emailsSortedAscending:(BOOL)ascending;
 - (NSArray *)emailsSortedAscending:(BOOL)ascending first:(NSUInteger)count;

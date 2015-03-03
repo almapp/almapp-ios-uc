@@ -184,6 +184,14 @@ NSString * const KOrganization = @"UC";
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    /*
+    NSInteger mailsToSave = 20;
+    for (ALMEmailFolder *folder in @[self.gmailManager.inboxFolder, self.gmailManager.sentFolder, self.gmailManager.starredFolder, self.gmailManager.spamFolder, self.gmailManager.threadFolder]) {
+        [self.gmailManager.emailController saveLastThreads:<#(NSInteger)#> labeled:<#(ALMEmailLabel)#>]
+        [self.gmailManager.emailController saveLastMails:mailsToSave on:folder];
+    }
+    */
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -197,6 +205,8 @@ NSString * const KOrganization = @"UC";
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    
+    
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
@@ -446,6 +456,13 @@ NSString * const KOrganization = @"UC";
        }
      forState:UIControlStateNormal];
     
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+     setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor lightGrayColor],
+       NSShadowAttributeName:shadow,
+       NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-Light" size:17]
+       }
+     forState:UIControlStateDisabled];
 }
 
 

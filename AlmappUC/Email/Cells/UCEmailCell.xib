@@ -23,6 +23,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zlN-Q0-Njh">
+                        <rect key="frame" x="5" y="16" width="20" height="20"/>
+                    </activityIndicatorView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dot" translatesAutoresizingMaskIntoConstraints="NO" id="xSu-u2-cxi">
                         <rect key="frame" x="8" y="19" width="14" height="14"/>
                         <constraints>
@@ -58,7 +61,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Lorena Impsum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX9-mQ-enA">
-                        <rect key="frame" x="30" y="19" width="130" height="18"/>
+                        <rect key="frame" x="30" y="19" width="129.5" height="18"/>
                         <fontDescription key="fontDescription" name="HelveticaNeueLTW1G-Md" family="Helvetica Neue LT W1G" pointSize="18"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -69,6 +72,13 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dot" translatesAutoresizingMaskIntoConstraints="NO" id="ePs-7U-qRa">
+                        <rect key="frame" x="8" y="43" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="Ku9-W6-7Vc"/>
+                            <constraint firstAttribute="height" constant="14" id="vMH-h5-og2"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="uOG-Iw-6ks" secondAttribute="trailing" constant="30" id="091-d1-vOV"/>
@@ -80,11 +90,15 @@
                     <constraint firstAttribute="trailing" secondItem="F2q-ya-gyu" secondAttribute="trailing" constant="30" id="AOQ-4u-JyX"/>
                     <constraint firstItem="uOG-Iw-6ks" firstAttribute="top" secondItem="gX9-mQ-enA" secondAttribute="bottom" constant="6" id="CGc-Mr-1CJ"/>
                     <constraint firstItem="uOG-Iw-6ks" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="43" id="GeZ-IH-Web"/>
+                    <constraint firstItem="ePs-7U-qRa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="43" id="Iwv-sK-A75"/>
                     <constraint firstItem="F2q-ya-gyu" firstAttribute="leading" secondItem="gX9-mQ-enA" secondAttribute="leading" id="Shj-mt-mNJ"/>
                     <constraint firstItem="4Sh-HC-zwD" firstAttribute="leading" secondItem="gX9-mQ-enA" secondAttribute="trailing" constant="-37" id="Tie-kV-uu8"/>
+                    <constraint firstItem="xSu-u2-cxi" firstAttribute="centerX" secondItem="zlN-Q0-Njh" secondAttribute="centerX" id="UhI-zN-LqY"/>
+                    <constraint firstItem="ePs-7U-qRa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="VS1-lM-0L7"/>
                     <constraint firstItem="gX9-mQ-enA" firstAttribute="leading" secondItem="uOG-Iw-6ks" secondAttribute="leading" id="YRP-lx-5Ia"/>
                     <constraint firstItem="gX9-mQ-enA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="Yv2-Ih-rhI"/>
                     <constraint firstItem="4Sh-HC-zwD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="coJ-BA-tx8"/>
+                    <constraint firstItem="xSu-u2-cxi" firstAttribute="centerY" secondItem="zlN-Q0-Njh" secondAttribute="centerY" id="dGr-LH-lTl"/>
                     <constraint firstAttribute="trailing" secondItem="4Sh-HC-zwD" secondAttribute="trailing" constant="30" id="ft8-If-Ci0"/>
                     <constraint firstAttribute="trailing" secondItem="QLm-on-Or2" secondAttribute="trailing" constant="8" id="k9C-ZX-AH5"/>
                     <constraint firstItem="QLm-on-Or2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="rYb-Y0-U9D"/>
@@ -100,14 +114,16 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="activityIndicator" destination="zlN-Q0-Njh" id="mFg-tG-2Ot"/>
                 <outlet property="arrowImageView" destination="QLm-on-Or2" id="lID-xO-tKh"/>
                 <outlet property="bodyLabel" destination="F2q-ya-gyu" id="Xke-u4-MxK"/>
                 <outlet property="dateLabel" destination="4Sh-HC-zwD" id="SLn-UJ-c1f"/>
                 <outlet property="dotImageView" destination="xSu-u2-cxi" id="sMr-ta-meo"/>
                 <outlet property="senderLabel" destination="gX9-mQ-enA" id="fog-4S-tPx"/>
+                <outlet property="starredDotImageView" destination="ePs-7U-qRa" id="54R-tH-Ybz"/>
                 <outlet property="subjectLabel" destination="uOG-Iw-6ks" id="mjW-ie-nHF"/>
             </connections>
-            <point key="canvasLocation" x="434" y="377.5"/>
+            <point key="canvasLocation" x="446" y="377.5"/>
         </tableViewCell>
     </objects>
     <resources>

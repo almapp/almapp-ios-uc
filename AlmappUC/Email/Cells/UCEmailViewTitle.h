@@ -9,8 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "UCEmailViewCell.h"
 
+@protocol UCEmailViewTitleDelegate <NSObject>
+
+@required
+- (void)setCacheTitle:(NSString *)title forEmail:(ALMEmail *)email;
+- (NSString *)cacheTitleForEmail:(ALMEmail *)email;
+
+@end
+
 @interface UCEmailViewTitle : UCEmailViewCell
 
+@property (weak, nonatomic) id<UCEmailViewTitleDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *date;
 

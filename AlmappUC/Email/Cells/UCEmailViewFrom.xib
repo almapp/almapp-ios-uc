@@ -38,7 +38,9 @@
                     <constraint firstAttribute="bottomMargin" secondItem="l7x-Y6-sco" secondAttribute="bottom" constant="19" id="3bA-NZ-X1E"/>
                     <constraint firstItem="xk5-7U-L0U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="74l-BB-8ZD"/>
                     <constraint firstItem="oOS-Jq-Jmc" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="1" id="BoW-gF-MgK"/>
+                    <constraint firstItem="xk5-7U-L0U" firstAttribute="centerY" secondItem="l7x-Y6-sco" secondAttribute="centerY" id="Cd8-LM-Ode"/>
                     <constraint firstAttribute="trailing" secondItem="l7x-Y6-sco" secondAttribute="trailing" constant="7" id="EVh-q3-kx9"/>
+                    <constraint firstItem="l7x-Y6-sco" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Pem-CP-thD"/>
                     <constraint firstAttribute="centerY" secondItem="xk5-7U-L0U" secondAttribute="centerY" constant="9.5" id="Vhp-v2-SP8"/>
                     <constraint firstAttribute="centerY" secondItem="l7x-Y6-sco" secondAttribute="centerY" constant="9.25" id="ZOl-2u-m9E"/>
                     <constraint firstItem="l7x-Y6-sco" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="aCp-J2-wMA"/>
@@ -46,6 +48,13 @@
                     <constraint firstItem="l7x-Y6-sco" firstAttribute="leading" secondItem="oOS-Jq-Jmc" secondAttribute="leading" id="kMe-Je-uMW"/>
                     <constraint firstItem="oOS-Jq-Jmc" firstAttribute="top" secondItem="l7x-Y6-sco" secondAttribute="bottom" constant="-2" id="p2k-XA-4kE"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Vhp-v2-SP8"/>
+                        <exclude reference="ZOl-2u-m9E"/>
+                        <exclude reference="aCp-J2-wMA"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="senderEmail" destination="oOS-Jq-Jmc" id="Qfm-wH-mfy"/>

@@ -14,17 +14,40 @@
 
 @implementation ALMEmailController
 
-- (ALMEmailFolder *)folder:(NSString *)identifier {
-    RLMRealm *realm = self.realm;
-    ALMEmailFolder *folder = [ALMEmailFolder objectsInRealm:realm where:[NSString stringWithFormat:@"%@ = '%@'", kRIdentifier, identifier]].firstObject;
-    if (!folder) {
-        [realm beginWriteTransaction];
-        folder = [[ALMEmailFolder alloc] init];
-        folder.identifier = identifier;
-        folder = [ALMEmailFolder createInRealm:realm withObject:folder];
-        [realm commitWriteTransaction];
+- (NSArray *)threadsLabeled:(ALMEmailLabel)labels ascending:(BOOL)ascending;{
+    return [self threadsLabeled:labels inRealm:self.session.realm ascending:ascending];
+}
+
+- (NSArray *)threadsLabeled:(ALMEmailLabel)labels inRealm:(RLMRealm *)realm ascending:(BOOL)ascending;{
+    NSMutableArray *threads = [NSMutableArray array];
+    id iterable = [ALMEmailThread threadsSortedAscending:ascending realm:realm];
+    for (ALMEmailThread *thread in iterable) {
+        for (ALMEmail *email in thread.emails) {
+            if (email.labels & labels) {
+                [threads addObject:thread];
+                break;
+            }
+        }
     }
-    return folder;
+    return threads;
+}
+
+- (void)saveLastThreads:(NSInteger)count labeled:(ALMEmailLabel)labels {
+    [self saveLastThreads:count labeled:labels inRealm:self.realm];
+}
+
+- (void)saveLastThreads:(NSInteger)count labeled:(ALMEmailLabel)labels inRealm:(RLMRealm *)realm {
+    [realm beginWriteTransaction];
+    
+    RLMResults *orderedThreads = [ALMEmailThread threadsSortedAscending:NO realm:realm];
+    
+    for (NSInteger i = orderedThreads.count - 1; i >= 0 && [ALMEmailThread allObjectsInRealm:realm].count > count; i--) {
+        ALMEmailThread *thread = orderedThreads[i];
+        [thread deleteEmailsForced:YES];
+        [realm deleteObject:thread];
+    }
+    
+    [realm commitWriteTransaction];
 }
 
 - (ALMEmailToken *)emailToken {
@@ -74,7 +97,7 @@
     [realm commitWriteTransaction];
     return token;
 }
-
+/*
 - (void)saveLastMails:(NSInteger)count on:(ALMEmailFolder *)folder {
     if (folder.threads.count <= count) {
         return;
@@ -85,13 +108,13 @@
     
     RLMResults *orderedThreads = [folder threadsSortedAscending:NO];
     
-    for (NSUInteger i = 0; i < orderedThreads.count; i++) {
-        if (i >= count) {
-            [folder deleteThread:orderedThreads[i] force:NO];
-        }
+    for (NSInteger i = folder.threads.count - 1; i >= 0 && folder.threads.count > count; i--) {
+        [folder deleteThread:orderedThreads[i] force:NO];
     }
+    
     [realm commitWriteTransaction];
 }
+ */
 
 - (BOOL)isAccessTokenValid {
     return self.emailToken && !self.emailToken.isExpired;

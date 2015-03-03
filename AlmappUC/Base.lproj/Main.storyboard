@@ -354,9 +354,12 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfC-t0-x1K">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem style="done" systemItem="edit" id="zIl-vp-zSY"/>
+                                    <barButtonItem title="Editar" style="plain" id="zIl-vp-zSY">
+                                        <connections>
+                                            <action selector="editButtonClick:" destination="Dfw-nP-3k8" id="cPG-OK-w7Z"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rFv-Yl-QfW"/>
-                                    <barButtonItem style="done" systemItem="compose" id="UCW-L7-maz"/>
                                 </items>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
@@ -417,6 +420,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="zIl-vp-zSY" id="xag-ir-R2G"/>
                         <outlet property="folderButton" destination="Tgz-fW-0n0" id="PMA-Xw-cKi"/>
                         <outlet property="searchDisplayController" destination="EWn-B0-HK0" id="7zu-5a-zzA"/>
                         <outlet property="tableView" destination="oDY-gI-kOb" id="e5j-kv-TW7"/>
@@ -594,7 +598,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="169" y="342" width="61" height="24"/>
+                                    <rect key="frame" x="169" y="342" width="61" height="23.5"/>
                                 </variation>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-6H-bHb">
@@ -1809,7 +1813,7 @@
                                                     </mask>
                                                 </variation>
                                                 <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="56" y="173" width="288" height="30"/>
+                                                    <rect key="frame" x="56" y="172.5" width="288" height="29.5"/>
                                                     <mask key="constraints">
                                                         <include reference="npg-ve-wMa"/>
                                                     </mask>

@@ -6,13 +6,10 @@ target 'AlmappUC' do
 	pod 'AlmappCore',
         :git => 'https://github.com/almapp/AlmappCore-ios.git',
         :branch => 'master',
-        :commit => '7ec88105b92a6f00123aac059af8ca86b22b37bd'
+        :commit => '5a7c4a5c969905c6085a7c4a1909a4944f85c191'
     pod 'Realm+JSON',
         :git => 'https://github.com/mrpatiwi/Realm-JSON.git',
         :commit => '6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab'
-    pod 'AFOAuth2Manager',
-        :git => 'https://github.com/iamcam/AFOAuth2Manager',
-        :commit => '7470a389ea74034923999202eedfc04f036b3d37'
 
 	## UI
     
@@ -31,6 +28,7 @@ target 'AlmappUC' do
     pod 'QMBParallaxScrollViewController', :head
     pod 'SKTagView', :head
     pod 'INSPullToRefresh'
+    pod 'SWTableViewCell', '~> 0.3.7'
     
     # Tabbars
     pod 'BFPaperTabBarController', '~> 1.4.5'

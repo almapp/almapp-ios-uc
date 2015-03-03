@@ -51,7 +51,7 @@
 // AFOAuth2Manager
 #define COCOAPODS_POD_AVAILABLE_AFOAuth2Manager
 #define COCOAPODS_VERSION_MAJOR_AFOAuth2Manager 2
-#define COCOAPODS_VERSION_MINOR_AFOAuth2Manager 0
+#define COCOAPODS_VERSION_MINOR_AFOAuth2Manager 1
 #define COCOAPODS_VERSION_PATCH_AFOAuth2Manager 0
 
 // ARChromeActivity
@@ -64,7 +64,7 @@
 #define COCOAPODS_POD_AVAILABLE_AlmappCore
 #define COCOAPODS_VERSION_MAJOR_AlmappCore 0
 #define COCOAPODS_VERSION_MINOR_AlmappCore 6
-#define COCOAPODS_VERSION_PATCH_AlmappCore 0
+#define COCOAPODS_VERSION_PATCH_AlmappCore 1
 
 // BFPaperTabBarController
 #define COCOAPODS_POD_AVAILABLE_BFPaperTabBarController
@@ -383,6 +383,12 @@
 #define COCOAPODS_VERSION_MAJOR_SKTagView 0
 #define COCOAPODS_VERSION_MINOR_SKTagView 4
 #define COCOAPODS_VERSION_PATCH_SKTagView 0
+
+// SWTableViewCell
+#define COCOAPODS_POD_AVAILABLE_SWTableViewCell
+#define COCOAPODS_VERSION_MAJOR_SWTableViewCell 0
+#define COCOAPODS_VERSION_MINOR_SWTableViewCell 3
+#define COCOAPODS_VERSION_PATCH_SWTableViewCell 7
 
 // TDBadgedCell
 #define COCOAPODS_POD_AVAILABLE_TDBadgedCell

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FB1E6FEF8A40F39728AC60E9"
+               BlueprintIdentifier = "E2B5E5BACCE7CF83E9B3AA6D"
                BuildableName = "libPods-AlmappUC-gtm-http-fetcher.a"
                BlueprintName = "Pods-AlmappUC-gtm-http-fetcher"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FB1E6FEF8A40F39728AC60E9"
+            BlueprintIdentifier = "E2B5E5BACCE7CF83E9B3AA6D"
             BuildableName = "libPods-AlmappUC-gtm-http-fetcher.a"
             BlueprintName = "Pods-AlmappUC-gtm-http-fetcher"
             ReferencedContainer = "container:Pods.xcodeproj">

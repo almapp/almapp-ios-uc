@@ -118,7 +118,7 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
 
 #pragma mark -
 
-- (void)authenticateUsingOAuthWithURLString:(NSString *)URLString
+- (AFHTTPRequestOperation *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                    username:(NSString *)username
                                    password:(NSString *)password
                                       scope:(NSString *)scope
@@ -136,10 +136,10 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
                                  @"scope": scope
                                 };
 
-    [self authenticateUsingOAuthWithURLString:URLString parameters:parameters success:success failure:failure];
+    return [self authenticateUsingOAuthWithURLString:URLString parameters:parameters success:success failure:failure];
 }
 
-- (void)authenticateUsingOAuthWithURLString:(NSString *)URLString
+- (AFHTTPRequestOperation *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                       scope:(NSString *)scope
                                     success:(void (^)(AFOAuthCredential *credential))success
                                     failure:(void (^)(NSError *error))failure
@@ -151,10 +151,10 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
                                  @"scope": scope
                                 };
 
-    [self authenticateUsingOAuthWithURLString:URLString parameters:parameters success:success failure:failure];
+    return [self authenticateUsingOAuthWithURLString:URLString parameters:parameters success:success failure:failure];
 }
 
-- (void)authenticateUsingOAuthWithURLString:(NSString *)URLString
+- (AFHTTPRequestOperation *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                refreshToken:(NSString *)refreshToken
                                     success:(void (^)(AFOAuthCredential *credential))success
                                     failure:(void (^)(NSError *error))failure
@@ -166,10 +166,10 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
                                  @"refresh_token": refreshToken
                                 };
 
-    [self authenticateUsingOAuthWithURLString:URLString parameters:parameters success:success failure:failure];
+    return [self authenticateUsingOAuthWithURLString:URLString parameters:parameters success:success failure:failure];
 }
 
-- (void)authenticateUsingOAuthWithURLString:(NSString *)URLString
+- (AFHTTPRequestOperation *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                        code:(NSString *)code
                                 redirectURI:(NSString *)uri
                                     success:(void (^)(AFOAuthCredential *credential))success
@@ -184,10 +184,10 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
                                  @"redirect_uri": uri
                                 };
 
-    [self authenticateUsingOAuthWithURLString:URLString parameters:parameters success:success failure:failure];
+    return [self authenticateUsingOAuthWithURLString:URLString parameters:parameters success:success failure:failure];
 }
 
-- (void)authenticateUsingOAuthWithURLString:(NSString *)URLString
+- (AFHTTPRequestOperation *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                  parameters:(NSDictionary *)parameters
                                     success:(void (^)(AFOAuthCredential *credential))success
                                     failure:(void (^)(NSError *error))failure
@@ -197,7 +197,7 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
     mutableParameters[@"client_secret"] = self.secret;
     parameters = [NSDictionary dictionaryWithDictionary:mutableParameters];
 
-    [self POST:URLString parameters:parameters success:^(__unused AFHTTPRequestOperation *operation, id responseObject) {
+    AFHTTPRequestOperation *requestOperation = [self POST:URLString parameters:parameters success:^(__unused AFHTTPRequestOperation *operation, id responseObject) {
         if (!responseObject) {
             if (failure) {
                 failure(nil);
@@ -221,20 +221,14 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
 
         AFOAuthCredential *credential = [AFOAuthCredential credentialWithOAuthToken:[responseObject valueForKey:@"access_token"] tokenType:[responseObject valueForKey:@"token_type"]];
 
-
-        if (refreshToken) { // refreshToken is optional in the OAuth2 spec
-            [credential setRefreshToken:refreshToken];
-        }
-
-        // Expiration is optional, but recommended in the OAuth2 spec. It not provide, assume distantFuture === never expires
         NSDate *expireDate = [NSDate distantFuture];
         id expiresIn = [responseObject valueForKey:@"expires_in"];
         if (expiresIn && ![expiresIn isEqual:[NSNull null]]) {
             expireDate = [NSDate dateWithTimeIntervalSinceNow:[expiresIn doubleValue]];
         }
 
-        if (expireDate) {
-            [credential setExpiration:expireDate];
+        if (refreshToken && expireDate) {
+            [credential setRefreshToken:refreshToken expiration:expireDate];
         }
 
         if (success) {
@@ -245,6 +239,8 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
             failure(error);
         }
     }];
+    
+    return requestOperation;
 }
 
 @end
@@ -288,19 +284,8 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
 }
 
 - (void)setRefreshToken:(NSString *)refreshToken
-{
-    _refreshToken = refreshToken;
-}
-
-- (void)setExpiration:(NSDate *)expiration
-{
-    _expiration = expiration;
-}
-
-- (void)setRefreshToken:(NSString *)refreshToken
              expiration:(NSDate *)expiration
 {
-    NSParameterAssert(refreshToken);
     NSParameterAssert(expiration);
 
     self.refreshToken = refreshToken;

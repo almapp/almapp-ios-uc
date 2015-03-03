@@ -20,10 +20,11 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - AFOAuth2Manager (2.0.0):
-    - AFNetworking (~> 2.2)
-  - AlmappCore (0.6):
+  - AFOAuth2Manager (2.1.0):
+    - AFNetworking/NSURLConnection (~> 2.2)
+  - AlmappCore (0.6.1):
     - AFNetworking (~> 2.5.1)
+    - AFOAuth2Manager (~> 2.1.0)
     - FayeCpp (~> 0.1.9)
     - Google-API-Client/Gmail (~> 1.0.422)
     - PromiseKit (~> 1.3)
@@ -144,6 +145,7 @@ PODS:
   - SKPanoramaView (0.1.1)
   - SKTagView (HEAD based on 0.4):
     - Masonry
+  - SWTableViewCell (0.3.7)
   - TDBadgedCell (2.6)
   - THLabel (1.4.6)
   - TLYShyNavBar (HEAD based on 0.9.8)
@@ -152,8 +154,7 @@ PODS:
   - UIColor+BFPaperColors (1.3.1)
 
 DEPENDENCIES:
-  - AFOAuth2Manager (from `https://github.com/iamcam/AFOAuth2Manager`, commit `7470a389ea74034923999202eedfc04f036b3d37`)
-  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `7ec88105b92a6f00123aac059af8ca86b22b37bd`, branch `master`)
+  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `5a7c4a5c969905c6085a7c4a1909a4944f85c191`, branch `master`)
   - BFPaperTabBarController (~> 1.4.5)
   - Colours
   - DateTools
@@ -176,17 +177,15 @@ DEPENDENCIES:
   - RKNotificationHub
   - SKPanoramaView
   - SKTagView (HEAD)
+  - SWTableViewCell (~> 0.3.7)
   - TDBadgedCell
   - THLabel (~> 1.4.6)
   - TLYShyNavBar (HEAD)
 
 EXTERNAL SOURCES:
-  AFOAuth2Manager:
-    :commit: 7470a389ea74034923999202eedfc04f036b3d37
-    :git: https://github.com/iamcam/AFOAuth2Manager
   AlmappCore:
     :branch: master
-    :commit: 7ec88105b92a6f00123aac059af8ca86b22b37bd
+    :commit: 5a7c4a5c969905c6085a7c4a1909a4944f85c191
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -204,12 +203,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/mrpatiwi/Realm-JSON.git
 
 CHECKOUT OPTIONS:
-  AFOAuth2Manager:
-    :commit: 7470a389ea74034923999202eedfc04f036b3d37
-    :git: https://github.com/iamcam/AFOAuth2Manager
   AlmappCore:
     :branch: master
-    :commit: 7ec88105b92a6f00123aac059af8ca86b22b37bd
+    :commit: 5a7c4a5c969905c6085a7c4a1909a4944f85c191
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -228,8 +224,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  AFOAuth2Manager: 6d76c16b475b707cd41aae5580c9b71123e472fd
-  AlmappCore: 2089630e70268091a482993323860754372c6090
+  AFOAuth2Manager: 3b15750b04a1349a30f82c8ca21828ba90a96771
+  AlmappCore: 00de5e385ab74d3e7f856b46f7a1a68d1392d0ce
   ARChromeActivity: 437b3e0c4cc43c19d7dd1af55bea98e008335151
   BFPaperTabBarController: 3a2c1ae4ba0ca297009558658bd103f3c4f0b579
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
@@ -262,6 +258,7 @@ SPEC CHECKSUMS:
   RKNotificationHub: 04a08446faa30b801b7f227392e0ade6d4b9b9d0
   SKPanoramaView: ff41c7051c34b854ee4aeb352fa4c6d5570ac57f
   SKTagView: 2bce1d0495275c17775c28403276d89c63abd2ae
+  SWTableViewCell: 25de71898e3fcd11cf75707ef90245acf990ec03
   TDBadgedCell: e683b5557d12ea4e28a8d6ac20b6e394abc2c1fe
   THLabel: 1cf3bad0f33c2bcdee075ce2e4f080791a374d95
   TLYShyNavBar: cf15a919cf7f6e79080ac5b95b56580a752cf64d

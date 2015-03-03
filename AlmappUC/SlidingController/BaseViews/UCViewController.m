@@ -10,6 +10,8 @@
 
 @interface UCViewController ()
 
+@property (strong, nonatomic) UIBarButtonItem *menuButtom;
+
 @end
 
 @implementation UCViewController
@@ -24,12 +26,10 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[UCStyle bannerBackgroundImage] forBarMetrics:UIBarMetricsDefault];
     
-    UIImage *menu = [UIImage imageNamed:@"Menu"];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:menu style:UIBarButtonItemStyleDone target:self action:@selector(menuButtonPressed:)];
+    self.menuButtom = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Menu"] style:UIBarButtonItemStyleDone target:self action:@selector(menuButtonPressed:)];
     
-    self.navigationItem.leftBarButtonItem = leftButton;
+    self.navigationItem.leftBarButtonItem = self.menuButtom;
     
-
     // UIBarButtonItem *barButtonItem2 = [[UIBarButtonItem alloc] initWithCustomView:[super hamburgerButton]];
     // NSArray *arrRightBarItems = @[barButtonItem2];
     // self.navigationItem.leftBarButtonItems = arrRightBarItems;
@@ -46,10 +46,10 @@
                                    
 - (void)showMenu {
     [self.sideMenuViewController presentLeftMenuViewController];
-    
-    //if ([self.slidingViewController currentTopViewPosition] == ECSlidingViewControllerTopViewPositionAnchoredRight) {
-    //    [self.slidingViewController resetTopViewAnimated:YES];
-    //}
+}
+
+- (void)menuButtonEnable:(BOOL)enable {
+    self.menuButtom.enabled = enable;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{

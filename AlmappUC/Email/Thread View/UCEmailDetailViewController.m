@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 almapp. All rights reserved.
 //
 
+#import <PromiseKit/Promise.h>
+
 #import "UCEmailDetailViewController.h"
 #import "UCStyle.h"
-#import "UCEmailViewFrom.h"
-#import "UCEmailViewTitle.h"
 #import "UITableView+Nib.h"
 
 @interface UCEmailDetailViewController ()
@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 @property (strong, nonatomic) NSArray *cellClasses;
+@property (strong, nonatomic) NSMutableDictionary *bodyCellHeights;
 
 @property (strong, nonatomic) UIBarButtonItem *upButton;
 @property (strong, nonatomic) UIBarButtonItem *downButton;
@@ -44,19 +45,48 @@
     [self setThreadAtIndex:self.selectedThreadIndex];
 }
 
+- (NSMutableDictionary *)bodyCellHeights {
+    if (!_bodyCellHeights) {
+        _bodyCellHeights = [NSMutableDictionary dictionary];
+    }
+    return _bodyCellHeights;
+}
+
+- (NSMutableDictionary *)titlesCache {
+    static NSMutableDictionary *titlesCache = nil;
+    if (!titlesCache) {
+        titlesCache = [NSMutableDictionary dictionary];
+    }
+    return titlesCache;
+}
+
 - (void)setThreadAtIndex:(NSInteger)index {
-    RLMResults *threads = self.folder.sortedThreads;
-    
-    self.downButton.enabled = index < threads.count - 2;
+    self.downButton.enabled = index < self.threadList.count - 2;
     self.upButton.enabled = index > 0;
     
-    self.thread = threads[index];
+    self.thread = self.threadList[index];
 }
 
 - (void)setThread:(ALMEmailThread *)thread {
     _thread = thread;
-    [self.tableView reloadData];
+    self.emails = thread.sortedEmails;
+    [self.bodyCellHeights removeAllObjects];
+    for (ALMEmail *email in thread.emails) {
+        self.bodyCellHeights[email.identifier] = @([UCEmailViewBody height]);
+    }
+    [self scrollToTop].then(^{
+        [self.tableView reloadData];
+    });
 }
+
+- (ALMEmail *)emailAtIndex:(NSInteger)index {
+    return self.emails[index];
+}
+
+- (NSInteger)indexOfEmail:(ALMEmail *)email {
+    return [self.emails indexOfObject:email];
+}
+
 
 - (void)upButtonTouch:(UIBarButtonItem *)sender {
     self.selectedThreadIndex -= 1;
@@ -68,17 +98,26 @@
     [self setThreadAtIndex:self.selectedThreadIndex];
 }
 
-
+- (PMKPromise *)scrollToTop {
+    return [UIView promiseWithDuration:0.3 animations:^{
+        [self.tableView setContentOffset:CGPointZero animated:NO];
+    }];
+}
 
 - (NSArray *)cellClasses {
     if (!_cellClasses) {
-        _cellClasses = @[[UCEmailViewTitle class], [UCEmailViewFrom class]];
+        _cellClasses = @[[UCEmailViewTitle class], [UCEmailViewFrom class], [UCEmailViewBody class]];
     }
     return _cellClasses;
 }
 
+- (NSInteger)indexOfBodyCell {
+    return [self.cellClasses indexOfObject:[UCEmailViewBody class]];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    [self.titlesCache removeAllObjects];
     // Dispose of any resources that can be recreated.
 }
 
@@ -102,11 +141,23 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    ((UCEmailViewCell *)cell).email = self.thread.sortedEmails[indexPath.section];
+    if ([cell isKindOfClass:[UCEmailViewBody class]]) {
+        ((UCEmailViewBody *)cell).delegate = self;
+    }
+    else if ([cell isKindOfClass:[UCEmailViewTitle class]]) {
+        ((UCEmailViewTitle *)cell).delegate = self;
+    }
+    ((UCEmailViewCell *)cell).email = [self emailAtIndex:indexPath.section];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self heightForBasicCellAtIndexPath:indexPath];
+    if (indexPath.row == self.indexOfBodyCell) {
+        ALMEmail *email = [self emailAtIndex:indexPath.section];
+        return [self.bodyCellHeights[email.identifier] floatValue];
+    }
+    else {
+        return [self heightForBasicCellAtIndexPath:indexPath];
+    }
 }
 
 - (CGFloat)heightForBasicCellAtIndexPath:(NSIndexPath *)indexPath {
@@ -137,6 +188,26 @@
     }
     else {
         return [NSString stringWithFormat:@"Email %d de %d en la conversación", (int)section + 1, (int)numberOfSections];
+    }
+}
+
+- (void)setCacheTitle:(NSString *)title forEmail:(ALMEmail *)email {
+    self.titlesCache[email.identifier] = title;
+}
+
+- (NSString *)cacheTitleForEmail:(ALMEmail *)email {
+    return self.titlesCache[email.identifier];
+}
+
+- (void)reloadEmailCell:(ALMEmail *)email height:(NSInteger)height {
+    if ([self.thread.emails indexOfObject:email] != NSNotFound) {
+        self.bodyCellHeights[email.identifier] = @(height);
+        
+        NSInteger index = [self indexOfEmail:email];
+        NSInteger webCellIndex = self.indexOfBodyCell;
+        
+        NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:webCellIndex inSection:index];
+        [self.tableView reloadRowsAtIndexPaths:@[rowToReload] withRowAnimation:UITableViewRowAnimationNone];
     }
 }
 

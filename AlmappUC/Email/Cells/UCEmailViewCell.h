@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AlmappCore/ALMEmail.h>
+#import <AlmappCore/ALMEmailThread.h>
 
 @interface UCEmailViewCell : UITableViewCell
 
 + (NSString *)nibName;
 + (CGFloat)height;
 
-@property (weak, nonatomic) ALMEmail *email;
+@property (strong, nonatomic) ALMEmail *email;
 
 @end

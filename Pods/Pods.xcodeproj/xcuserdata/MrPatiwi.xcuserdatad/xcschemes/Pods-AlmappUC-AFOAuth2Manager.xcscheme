@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2389AE4CB4BA9BBE6B3A1D82"
+               BlueprintIdentifier = "D3FB5EDD911450653B4231B5"
                BuildableName = "libPods-AlmappUC-AFOAuth2Manager.a"
                BlueprintName = "Pods-AlmappUC-AFOAuth2Manager"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2389AE4CB4BA9BBE6B3A1D82"
+            BlueprintIdentifier = "D3FB5EDD911450653B4231B5"
             BuildableName = "libPods-AlmappUC-AFOAuth2Manager.a"
             BlueprintName = "Pods-AlmappUC-AFOAuth2Manager"
             ReferencedContainer = "container:Pods.xcodeproj">

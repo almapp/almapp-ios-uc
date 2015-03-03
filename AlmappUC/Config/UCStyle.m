@@ -35,8 +35,29 @@
 }
 
 + (UIColor *)mainColor {
-    return [UIColor colorFromHexString:@"242945"];
+    return [UIColor colorFromHexString:@"46404E"]; //@"242945"];
 }
+
++ (UIColor *)mainColorTone1 {
+    return [UIColor colorFromHexString:@"C4B3DA"];
+}
+
++ (UIColor *)mainColorTone2 {
+    return [UIColor colorFromHexString:@"8B7F9A"];
+}
+
++ (UIColor *)mainColorTone3 {
+    return [self mainColor];
+}
+
++ (UIColor *)mainColorTone4 {
+    return [UIColor colorFromHexString:@"514A5B"];
+}
+
++ (UIColor *)mainColorTone5 {
+    return [UIColor colorFromHexString:@"2F2B34"];
+}
+
 
 + (UIColor *)myBlack {
     return [UIColor colorWithRed:0.11f green:0.11f blue:0.12f alpha:1.0f];
@@ -44,6 +65,14 @@
 
 + (UIColor *)myContrast {
     return [UIColor colorFromHexString:@"FFCC33"];
+}
+
++ (instancetype)alertColor {
+    return [UIColor colorFromHexString:@"70509A"];
+}
+
++ (UIColor *)starColor {
+    return [self myContrast];
 }
 
 @end

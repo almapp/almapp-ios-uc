@@ -13,13 +13,76 @@
 
 
 NSString *const kGmailProvider = @"GMAIL";
+NSInteger const kGmailDefaultResultsPerPage = 20;
 
 NSString *const kGmailLabelINBOX = @"INBOX";
+NSString *const kGmailLabelSENT = @"SENT";
+NSString *const kGmailLabelDRAFT = @"DRAFT";
 NSString *const kGmailLabelSPAM = @"SPAM";
 NSString *const kGmailLabelTRASH = @"TRASH";
 NSString *const kGmailLabelUNREAD = @"UNREAD";
 NSString *const kGmailLabelSTARRED = @"STARRED";
 NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
+
+
+
+@implementation NSString (NSAddition)
+
+- (NSString*) stringBetweenString:(NSString*)start andString:(NSString*)end {
+    NSRange startRange = [self rangeOfString:start];
+    if (startRange.location != NSNotFound) {
+        NSRange targetRange;
+        targetRange.location = startRange.location + startRange.length;
+        targetRange.length = [self length] - targetRange.location;
+        NSRange endRange = [self rangeOfString:end options:0 range:targetRange];
+        if (endRange.location != NSNotFound) {
+            targetRange.length = endRange.location - targetRange.location;
+            return [self substringWithRange:targetRange];
+        }
+    }
+    return nil;
+}
+
+- (NSString *)removeFirstChar {
+    return (self.length > 0) ? [self substringFromIndex:1] : self;
+}
+
+- (NSString *)removeLastChar {
+    return (self.length > 0) ? [self substringToIndex:[self length] - 1] : self;
+}
+
+- (BOOL)hasPrefixes:(NSArray *)prefixes {
+    for (NSString *prefix in prefixes) {
+        if ([self hasPrefix:prefix]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (BOOL)hasSuffixes:(NSArray *)suffixes {
+    for (NSString *suffix in suffixes) {
+        if ([self hasSuffix:suffix]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (NSString *)cleanChars:(NSArray *)charsToRemove {
+    if ([self hasPrefixes:charsToRemove]) {
+        return [[self removeFirstChar] cleanChars:charsToRemove];
+    }
+    else if ([self hasSuffixes:charsToRemove]) {
+        return [[self removeLastChar] cleanChars:charsToRemove];
+    }
+    else {
+        return self;
+    }
+}
+
+@end
+
 
 
 @implementation GTLServiceGmail (Promise)
@@ -96,13 +159,68 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 
 
 
+@implementation NSDate (Util)
+
++ (NSArray *)formats {
+    static NSArray *formats = nil;
+    if (!formats) {
+        formats = @[@"EEE, dd MMM yyyy HH:mm:ss Z"
+                    ];
+    }
+    return formats;
+}
+
++ (NSDateFormatter*)dateFormater {
+    static NSDateFormatter *formatter = nil;
+    if (formatter == nil)  {
+        formatter = [[NSDateFormatter alloc] init];
+        NSLocale *enUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        [formatter setLocale:enUS];
+        //[formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss ZZ"];
+    }
+    return formatter;
+}
+
++ (NSDate*)fuckingDate:(NSString *)string {
+    NSDateFormatter *formatter = [self dateFormater];
+    
+    NSString *timezone = [string stringBetweenString:@"(" andString:@")"];
+    if (timezone && timezone.length > 0) {
+        formatter.timeZone = [NSTimeZone timeZoneWithName:timezone];
+    }
+    else {
+        formatter.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    }
+    
+    NSString *cleanString = [[string stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"(%@)", timezone] withString:@""] cleanChars:@[@" "]];
+    
+    for (NSString *format in self.formats) {
+        formatter.dateFormat = format;
+        NSDate *result = [formatter dateFromString:cleanString];
+        if (result) {
+            return result;
+        }
+    }
+    return nil;
+}
+
+
+@end
+
+
+
+
 @implementation GTLGmailMessage (Realm)
 
 + (NSDateFormatter *)dateFormatter {
     static NSDateFormatter *dateFormat = nil;
     if (!dateFormat) {
         dateFormat = [[NSDateFormatter alloc] init];
-        dateFormat.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss Z";
+        dateFormat.dateStyle = NSDateFormatterFullStyle;
+        dateFormat.timeStyle = NSDateFormatterFullStyle;
+        dateFormat.lenient = YES;
+        //dateFormat.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss Z";
+        //dateFormat.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
     }
     return dateFormat;
 }
@@ -110,28 +228,19 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 + (NSDictionary *)labels {
     static NSDictionary *labelsHash = nil;
     if (!labelsHash) {
-        labelsHash = @{@"INBOX" : @(ALMEmailLabelInbox),
-                       @"IMPORTANT" : @(ALMEmailLabelImportant),
-                       @"UNREAD" : @(ALMEmailLabelUnread),
-                       @"SPAM" : @(ALMEmailLabelSpam),
-                       @"TRASH" : @(ALMEmailLabelTrash),
-                       @"STARRED" : @(ALMEmailLabelStarred),
-                       @"SENT" : @(ALMEmailLabelSent),
-                       @"DRAFT" : @(ALMEmailLabelDraft)};
+        labelsHash = @{kGmailLabelINBOX : @(ALMEmailLabelInbox),
+                       kGmailLabelIMPORTANT : @(ALMEmailLabelImportant),
+                       kGmailLabelUNREAD : @(ALMEmailLabelUnread),
+                       kGmailLabelSPAM : @(ALMEmailLabelSpam),
+                       kGmailLabelTRASH : @(ALMEmailLabelTrash),
+                       kGmailLabelSTARRED : @(ALMEmailLabelStarred),
+                       kGmailLabelSENT : @(ALMEmailLabelSent),
+                       kGmailLabelDRAFT : @(ALMEmailLabelDraft)};
     }
     return labelsHash;
 }
 
-- (ALMEmail *)toSavedRealm:(RLMRealm *)realm {
-    return [ALMEmail createOrUpdateInRealm:realm withObject:self.toUnsavedRealm];
-}
-
-- (ALMEmail *)toUnsavedRealm {
-    BOOL messageID = NO, subject = NO, to = NO, from = NO, date = NO, replyTo = NO;
-    
-    ALMEmail *email = [[ALMEmail alloc] init];
-    email.snippet = self.snippet;
-    
+- (ALMEmailLabel)setupLabelsOn:(ALMEmail *)email {
     email.labels = kEmailDefaultLabel;
     for (NSString *labelString in self.labelIds) {
         NSNumber *labelValue = [GTLGmailMessage labels][labelString];
@@ -140,6 +249,20 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
             email.labels |= label;
         }
     }
+    return email.labels;
+}
+
+- (ALMEmail *)toSavedRealm:(RLMRealm *)realm {
+    return [ALMEmail createOrUpdateInRealm:realm withObject:self.toUnsavedRealm];
+}
+
+- (ALMEmail *)toUnsavedRealm {
+    BOOL messageID = NO, subject = NO, from = NO, to = NO, cc = NO, cco = NO, date = NO, replyTo = NO;
+    
+    ALMEmail *email = [ALMEmail createWithIdentifier:self.identifier];
+    email.snippet = self.snippet;
+    
+    [self setupLabelsOn:email];
     
     if (self.payload.isPlainText) {
         GTLGmailMessagePartBody *body = self.payload.body;
@@ -156,52 +279,100 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
         }
     }
     
-    for (GTLGmailMessagePartHeader *header in self.payload.headers) {
+    id headers = self.payload.headers;
+    //NSLog(@"%@", headers);
+    
+    for (GTLGmailMessagePartHeader *header in headers) {
         if ([header.name isEqualToString:@"Message-ID"]) {
-            email.messageID = header.value;
+            // email.messageID = header.value;
             messageID = YES;
-            if (messageID && subject && to && from && date && replyTo) {
+            if (messageID && subject && from && to && cc && cco && date && replyTo) {
                 break;
             }
         }
         else if ([header.name isEqualToString:@"Subject"]) {
             email.subject = header.value;
             subject = YES;
-            if (messageID && subject && to && from && date && replyTo) {
-                break;
-            }
-        }
-        else if ([header.name isEqualToString:@"To"]) {
-            email.to = header.value;
-            to = YES;
-            if (messageID && subject && to && from && date && replyTo) {
+            if (messageID && subject && from && to && cc && cco && date && replyTo) {
                 break;
             }
         }
         else if ([header.name isEqualToString:@"From"]) {
-            email.from = header.value;
+            email.from = [GTLGmailMessage getAddresses:header.value];
             from = YES;
-            if (messageID && subject && to && from && date && replyTo) {
+            if (messageID && subject && from && to && cc && cco && date && replyTo) {
+                break;
+            }
+        }
+        else if ([header.name isEqualToString:@"To"]) {
+            email.to = [GTLGmailMessage getAddresses:header.value];
+            to = YES;
+            if (messageID && subject && from && to && cc && cco && date && replyTo) {
+                break;
+            }
+        }
+        else if ([header.name isEqualToString:@"Cc"]) {
+            email.cc = [GTLGmailMessage getAddresses:header.value];
+            cc = YES;
+            if (messageID && subject && from && to && cc && cco && date && replyTo) {
+                break;
+            }
+        }
+        else if ([header.name isEqualToString:@"Cco"]) {
+            email.cco = [GTLGmailMessage getAddresses:header.value];
+            cco = YES;
+            if (messageID && subject && from && to && cc && cco && date && replyTo) {
                 break;
             }
         }
         else if ([header.name isEqualToString:@"Reply-To"]) {
-            email.replyTo = header.value;
+            //email.replyTo = header.value;
             replyTo = YES;
-            if (messageID && subject && to && from && date && replyTo) {
+            if (messageID && subject && from && to && cc && cco && date && replyTo) {
                 break;
             }
         }
         else if ([header.name isEqualToString:@"Date"]) {
-            email.date = [[GTLGmailMessage dateFormatter] dateFromString:header.value];
+            email.date = [NSDate fuckingDate:header.value];
             date = YES;
-            if (messageID && subject && to && from && date && replyTo) {
+            if (messageID && subject && from && to && cc && cco && date && replyTo) {
                 break;
             }
         }
     }
     
     return email;
+}
+
++ (NSDictionary *)getAddresses:(NSString *)string {
+    NSArray *parts = [string componentsSeparatedByString:@","];
+    NSMutableDictionary *result = [NSMutableDictionary dictionaryWithCapacity:parts.count];
+    
+    for (NSString *part in parts) {
+        NSDictionary *asd = [self getAddress:part];
+        [result addEntriesFromDictionary:asd];
+    }
+    return result;
+}
+
++ (NSDictionary *)getAddress:(NSString *)string {
+    static NSArray *charsToRemove = nil;
+    if (!charsToRemove) {
+        charsToRemove = @[@",", @" ", @"\""];
+    }
+    
+    NSString *cleanedString = [string cleanChars:charsToRemove];
+    
+    if ([ALMEmail validateEmailAddress:cleanedString]) {
+        return @{cleanedString : [NSNull null]};
+    }
+    else {
+        NSString *email = [cleanedString stringBetweenString:@"<" andString:@">"];
+        NSString *name = [cleanedString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"<%@>", email] withString:@""];
+        name = [name cleanChars:charsToRemove];
+
+        return @{email : name};
+    }
 }
 
 @end
@@ -222,7 +393,7 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 
 - (ALMEmailThread *)toUnsavedRealm {
     ALMEmailThread *thread = [[ALMEmailThread alloc] init];
-    thread.threadID = self.identifier;
+    thread.identifier = self.identifier;
     thread.snippet = self.snippet;
     return thread;
 }
@@ -236,7 +407,7 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 - (NSArray *)successesArray {
     NSDictionary *results = self.successes;
     NSMutableArray *gmailObjects = [NSMutableArray arrayWithCapacity:results.count];
-    for (NSString *requestID in results) {
+    for (NSString *requestID in results.allKeys) {
         [gmailObjects addObject:[results objectForKey:requestID]];
     }
     return gmailObjects;
@@ -245,7 +416,7 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 - (NSArray *)failuresArray {
     NSDictionary *results = self.failures;
     NSMutableArray *gmailObjects = [NSMutableArray arrayWithCapacity:results.count];
-    for (NSString *requestID in results) {
+    for (NSString *requestID in results.allKeys) {
         [gmailObjects addObject:[results objectForKey:requestID]];
     }
     return gmailObjects;
@@ -268,24 +439,57 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 
 #pragma mark - Folders
 
-- (ALMEmailFolder *)inboxFolder {
-    return [self.emailController folder:kGmailLabelINBOX];
+- (NSArray *)inboxFolder {
+    return [self.emailController threadsLabeled:ALMEmailLabelInbox inRealm:self.realm ascending:NO];
 }
 
-- (ALMEmailFolder *)sentFolder {
-    return [self.emailController folder:nil];
+- (NSArray *)sentFolder {
+    return [self.emailController threadsLabeled:ALMEmailLabelSent inRealm:self.realm ascending:NO];
 }
 
-- (ALMEmailFolder *)starredFolder {
-    return [self.emailController folder:kGmailLabelSTARRED];
+- (NSArray *)starredFolder {
+    return [self.emailController threadsLabeled:ALMEmailLabelStarred inRealm:self.realm ascending:NO];
 }
 
-- (ALMEmailFolder *)spamFolder {
-    return [self.emailController folder:kGmailLabelSPAM];
+- (NSArray *)spamFolder {
+    return [self.emailController threadsLabeled:ALMEmailLabelSpam inRealm:self.realm ascending:NO];
 }
 
-- (ALMEmailFolder *)threadFolder {
-    return [self.emailController folder:kGmailLabelTRASH];
+- (NSArray *)trashFolder {
+    return [self.emailController threadsLabeled:ALMEmailLabelTrash inRealm:self.realm ascending:NO];
+}
+
+
+#pragma mark - Others
+
++ (NSArray *)identifiersForLabels:(ALMEmailLabel)labels {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    if (labels & ALMEmailLabelInbox) {
+        [array addObject:kGmailLabelINBOX];
+    }
+    else if (labels & ALMEmailLabelSent) {
+        [array addObject:kGmailLabelSENT];
+    }
+    else if (labels & ALMEmailLabelDraft) {
+        [array addObject:kGmailLabelDRAFT];
+    }
+    else if (labels & ALMEmailLabelSpam) {
+        [array addObject:kGmailLabelSPAM];
+    }
+    else if (labels & ALMEmailLabelTrash) {
+        [array addObject:kGmailLabelTRASH];
+    }
+    else if (labels & ALMEmailLabelUnread) {
+        [array addObject:kGmailLabelUNREAD];
+    }
+    else if (labels & ALMEmailLabelStarred) {
+        [array addObject:kGmailLabelSTARRED];
+    }
+    else if (labels & ALMEmailLabelImportant) {
+        [array addObject:kGmailLabelIMPORTANT];
+    }
+    return array;
 }
 
 - (NSString *)scope {
@@ -293,6 +497,13 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
         _scope = [GTMOAuth2Authentication scopeWithStrings:kGTLAuthScopeGmailCompose, kGTLAuthScopeGmailModify, nil];
     }
     return _scope;
+}
+
+- (RLMRealm *)realm {
+    if (!_realm) {
+        _realm = self.session.realm;
+    }
+    return _realm;
 }
 
 
@@ -321,6 +532,8 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
         auth.tokenType = @"Bearer";
         auth.accessToken = token.accessToken;
         auth.expirationDate = token.expiresAt;
+        return auth;
+        
     }).catch ( ^(NSError *error) {
         if ([error.userInfo[AFNetworkingOperationFailingURLResponseErrorKey] statusCode] == 404) {
             if (self.delegate && [self.delegate respondsToSelector:@selector(gmailManager:tokenNotFound:)]) {
@@ -334,40 +547,169 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 
 #pragma mark - Fetching
 
-- (PMKPromise *)fetchEmailsInFolder:(ALMEmailFolder *)folder {
+- (PMKPromise *)fetchThreadsWithEmails:(ALMEmailLabel)labels {
+    return [self fetchThreadsWithEmailsLabeled:labels count:kGmailDefaultResultsPerPage];
+}
+
+- (PMKPromise *)fetchThreadsWithEmailsLabeled:(ALMEmailLabel)labels count:(NSInteger)count {
+    return [self fetchThreadsWithEmailsLabeled:labels count:count pageToken:nil];
+}
+
+- (PMKPromise *)fetchThreadsWithEmailsLabeled:(ALMEmailLabel)labels count:(NSInteger)count pageToken:(NSString *)pageToken {
     return self.getAccessToken.then ( ^{
-        return [self fetchMessagesWithLabels:@[folder.identifier]].then( ^(NSArray *gmailObjects, NSArray *errorObjets) {
+        NSArray *identifiers = [self.class identifiersForLabels:labels];
+        return [self fetchMessagesWithLabels:identifiers count:count pageToken:pageToken].then( ^(NSArray *gmailObjects, NSArray *errorObjets, GTLGmailListThreadsResponse *response) {
             
-            RLMRealm *realm = folder.realm;
+            RLMRealm *realm = self.realm;
             [realm beginWriteTransaction];
             
+            NSMutableArray *newThreads = [NSMutableArray arrayWithCapacity:gmailObjects.count];
             for (GTLGmailThread *thread in gmailObjects) {
                 ALMEmailThread *realmThread = [thread toSavedRealm:realm];
-                [folder.threads addObject:realmThread allowDuplicates:NO];
+                [newThreads addObject:realmThread];
             }
             
             [realm commitWriteTransaction];
             
-            return folder.threads;
+            NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:NO];
+            NSArray *sortedArray = [newThreads sortedArrayUsingDescriptors:@[valueDescriptor]];
+            
+            return PMKManifold(sortedArray, errorObjets, response.nextPageToken);
         });
     });
 }
 
-- (PMKPromise *)fetchMessagesWithLabels:(NSArray *)labels {
-    return [self fetchThreadWithLabels:labels].then( ^(GTLGmailListThreadsResponse *response) {
-        return [self fetchThreadsWithIdentifiers:response.identifiers];
-        
-    }).then( ^(GTLBatchResult *results) {
-        return PMKManifold(results.successesArray, results.failuresArray);
+- (PMKPromise *)fetchMessagesWithLabels:(NSArray *)labels count:(NSInteger)count pageToken:(NSString *)pageToken {
+    return [self fetchThreadWithLabels:labels count:count pageToken:pageToken].then( ^(GTLGmailListThreadsResponse *response) {
+        return [self fetchThreadsWithIdentifiers:response.identifiers].then( ^(GTLBatchResult *results) {
+            return PMKManifold(results.successesArray, results.failuresArray, response);
+        });
     });
 }
 
-- (PMKPromise *)fetchThreadWithLabels:(NSArray *)labels; {
+- (PMKPromise *)fetchThreadWithLabels:(NSArray *)labels count:(NSInteger)count pageToken:(NSString *)pageToken  {
     GTLQueryGmail *query = [GTLQueryGmail queryForUsersThreadsList];
     query.labelIds = labels;
-    query.maxResults = 20;
+    query.maxResults = count;
+    query.pageToken = pageToken;
     
     return [self.service executeQuery:query];
+}
+
+
+#pragma mark - Modify
+
+- (PMKPromise *)markThreadAsReaded:(ALMEmailThread *)thread readed:(BOOL)readed {
+    return [self markThreadsAsReaded:@[thread] readed:readed];
+}
+
+- (PMKPromise *)markThreadsAsReaded:(NSArray *)threads readed:(BOOL)readed {
+    NSMutableArray *emails = [NSMutableArray array];
+    for (ALMEmailThread *thread in threads) {
+        for (ALMEmail *email in thread.emails) {
+            [emails addObject:email];
+        }
+    }
+    return [self markEmailsAsReaded:emails readed:readed];
+}
+
+- (PMKPromise *)markEmailAsReaded:(ALMEmail *)email readed:(BOOL)readed {
+    return [self markEmailsAsReaded:@[email] readed:readed];
+}
+
+- (PMKPromise *)markEmailsAsReaded:(NSArray *)emails readed:(BOOL)readed {
+    if (readed) {
+        return [self modifyEmails:emails addLabels:nil removeLabels:@[kGmailLabelUNREAD]];
+    }
+    else {
+        return [self modifyEmails:emails addLabels:@[kGmailLabelUNREAD] removeLabels:nil];
+    }
+}
+
+
+- (PMKPromise *)starThread:(ALMEmailThread *)thread starred:(BOOL)starred {
+    return [self starThreads:@[thread] starred:starred];
+}
+
+- (PMKPromise *)starThreads:(NSArray *)threads starred:(BOOL)starred {
+    NSMutableArray *emails = [NSMutableArray array];
+    for (ALMEmailThread *thread in threads) {
+        for (ALMEmail *email in thread.emails) {
+            [emails addObject:email];
+        }
+    }
+    return [self starEmails:emails starred:starred];
+}
+
+- (PMKPromise *)starEmail:(ALMEmail *)email starred:(BOOL)starred {
+    return [self starEmails:@[email] starred:starred];
+}
+
+- (PMKPromise *)starEmails:(NSArray *)emails starred:(BOOL)starred {
+    if (starred) {
+        return [self modifyEmails:emails addLabels:@[kGmailLabelSTARRED] removeLabels:nil];
+    }
+    else {
+        return [self modifyEmails:emails addLabels:nil removeLabels:@[kGmailLabelSTARRED]];
+    }
+}
+
+
+- (PMKPromise *)deleteThread:(ALMEmailThread *)thread markAsReaded:(BOOL)markAsReaded {
+    return [self deleteThreads:@[thread] markAsReaded:markAsReaded];
+}
+
+- (PMKPromise *)deleteThreads:(NSArray *)threads markAsReaded:(BOOL)markAsReaded {
+    NSMutableArray *emails = [NSMutableArray array];
+    for (ALMEmailThread *thread in threads) {
+        for (ALMEmail *email in thread.emails) {
+            [emails addObject:email];
+        }
+    }
+    return [self deleteEmails:emails markAsReaded:markAsReaded];
+}
+
+- (PMKPromise *)deleteEmail:(ALMEmail *)email markAsReaded:(BOOL)markAsReaded {
+    return [self deleteEmails:@[email] markAsReaded:markAsReaded];
+}
+
+- (PMKPromise *)deleteEmails:(NSArray *)emails markAsReaded:(BOOL)markAsReaded {
+    NSArray *removeLabels = (markAsReaded) ? @[kGmailLabelUNREAD] : nil;
+    return [self modifyEmails:emails addLabels:@[kGmailLabelTRASH] removeLabels:removeLabels];
+}
+
+
+
+- (PMKPromise *)modifyEmails:(NSArray *)emails addLabels:(NSArray *)addLabels removeLabels:(NSArray *)removeLabels {
+    NSMutableDictionary *identifiers = [NSMutableDictionary dictionaryWithCapacity:emails.count];
+    for (ALMEmail *email in emails) {
+        identifiers[email.identifier] = email;
+    }
+    
+    GTLBatchQuery *batch = [GTLBatchQuery batchQuery];
+    for (NSString *identifier in identifiers.allKeys) {
+        GTLQueryGmail *query = [GTLQueryGmail queryForUsersMessagesModify];
+        query.identifier = identifier;
+        query.addLabelIds = addLabels;
+        query.removeLabelIds = removeLabels;
+        [batch addQuery:query];
+    }
+    
+    return [self batchRequestWith:batch].then( ^(GTLBatchResult *results) {
+        
+        RLMRealm *realm = ([emails.firstObject realm]) ? (RLMRealm *)[emails.firstObject realm] : self.session.realm;
+        
+        [realm beginWriteTransaction];
+        
+        for (GTLGmailMessage *success in results.successesArray) {
+            ALMEmail *email = identifiers[[success identifier]];
+            [success setupLabelsOn:email];
+        }
+        
+        [realm commitWriteTransaction];
+        
+        return PMKManifold(emails, results.failuresArray);
+    });
 }
 
 
@@ -394,7 +736,7 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 }
 
 - (PMKPromise *)batchRequestWith:(GTLBatchQuery *)batch {
-    return [self.service executeQuery:batch];
+    return [self.service executeQuery:batch]; // On success returns GTLBatchResult
 }
 
 
@@ -403,7 +745,7 @@ NSString *const kGmailLabelIMPORTANT = @"IMPORTANT";
 - (GTLServiceGmail *)service {
     if (!_service) {
         _service = [[GTLServiceGmail alloc] init];
-        //_service.shouldFetchNextPages = YES;
+        // _service.shouldFetchNextPages = YES;
         _service.retryEnabled = YES;
     }
     return _service;

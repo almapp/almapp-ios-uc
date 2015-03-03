@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "895EF8CB039E5007558663A4"
+               BlueprintIdentifier = "C089D4C84C481866A593C539"
                BuildableName = "libPods-AlmappUC-RESideMenu.a"
                BlueprintName = "Pods-AlmappUC-RESideMenu"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "895EF8CB039E5007558663A4"
+            BlueprintIdentifier = "C089D4C84C481866A593C539"
             BuildableName = "libPods-AlmappUC-RESideMenu.a"
             BlueprintName = "Pods-AlmappUC-RESideMenu"
             ReferencedContainer = "container:Pods.xcodeproj">
