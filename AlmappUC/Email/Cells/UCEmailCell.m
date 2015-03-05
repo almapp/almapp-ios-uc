@@ -10,6 +10,16 @@
 #import "UCStyle.h"
 #import <DateTools/NSDate+DateTools.h>
 
+
+@implementation ALMEmailThread (Show)
+
+- (ALMEmail *)displayEmail {
+    return self.newestEmail;
+}
+
+@end
+
+
 @implementation UCEmailCell
 
 + (NSString *)nibName {
@@ -38,13 +48,22 @@
     // self.dateLabel.text = item.createdAt.shortTimeAgoSinceNow;
 }
 
+- (void)setThread:(ALMEmailThread *)thread emailAtIndex:(NSInteger)emailIndex state:(UCEmailCellState)state {
+    RLMResults *sortedThreads = thread.sortedEmails;
+    ALMEmail *email =  (sortedThreads.count > emailIndex) ? thread.sortedEmails[emailIndex] : thread.newestEmail;
+    [self setThread:thread email:email state:state];
+}
+
 - (void)setThread:(ALMEmailThread *)thread state:(UCEmailCellState)state {
+    [self setThread:thread email:thread.newestEmail state:state];
+}
+
+- (void)setThread:(ALMEmailThread *)thread email:(ALMEmail *)email state:(UCEmailCellState)state {
     _thread = thread;
     _state = state;
-    
-    ALMEmail *email = thread.newestEmail;
+    _primaryEmail = email;
 
-    self.subjectLabel.text = [NSString stringWithFormat:@"%d - %@", (int)thread.emails.count, email.subject]; //email.subject;
+    self.subjectLabel.text = email.subject; //[NSString stringWithFormat:@"%d - %@", (int)thread.emails.count, email.subject]; //
     self.bodyLabel.text = email.snippet;
     self.dateLabel.text = email.date.shortTimeAgoSinceNow;
     
@@ -86,14 +105,14 @@
         self.backgroundColor = [UIColor whiteColor];
     }
     
-    if (self.thread.newestEmail.labels & ALMEmailLabelUnread) {
+    if (self.primaryEmail.labels & ALMEmailLabelUnread) {
         self.dotImageView.hidden = NO;
     }
     else {
         self.dotImageView.hidden = YES;
     }
     
-    if (self.thread.newestEmail.labels & ALMEmailLabelStarred) {
+    if (self.primaryEmail.labels & ALMEmailLabelStarred) {
         self.starredDotImageView.hidden = NO;
     }
     else {

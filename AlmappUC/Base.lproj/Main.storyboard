@@ -426,6 +426,7 @@
                         <outlet property="tableView" destination="oDY-gI-kOb" id="e5j-kv-TW7"/>
                         <outlet property="toolBar" destination="BfC-t0-x1K" id="2bv-aJ-3Uz"/>
                         <segue destination="F7m-Ob-KnU" kind="show" identifier="EmailViewSegue" id="zTu-ML-6y0"/>
+                        <segue destination="72I-Xp-7hp" kind="show" identifier="ThreadViewSegue" id="SLp-BN-CLB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yr0-8E-P5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -517,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ci-Om-Qqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="-1385"/>
+            <point key="canvasLocation" x="2485.5" y="-1385"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZdG-dj-67S">
@@ -598,7 +599,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="169" y="342" width="61" height="23.5"/>
+                                    <rect key="frame" x="169" y="342" width="61" height="24"/>
                                 </variation>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-6H-bHb">
@@ -928,6 +929,66 @@
             </objects>
             <point key="canvasLocation" x="937.5" y="-571"/>
         </scene>
+        <!--Thread-->
+        <scene sceneID="tod-KB-pya">
+            <objects>
+                <viewController id="72I-Xp-7hp" customClass="UCThreadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wvN-m1-Q6N"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nl3-i3-ySG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="izo-2U-37Z">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ae4-Rj-YnN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="72I-Xp-7hp" id="w7s-40-qK4"/>
+                                    <outlet property="delegate" destination="72I-Xp-7hp" id="R9I-To-yG6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ae4-Rj-YnN" firstAttribute="leading" secondItem="izo-2U-37Z" secondAttribute="leading" id="aXm-gB-Kt1"/>
+                            <constraint firstItem="Nl3-i3-ySG" firstAttribute="top" secondItem="ae4-Rj-YnN" secondAttribute="bottom" id="kid-Ka-LR8"/>
+                            <constraint firstItem="ae4-Rj-YnN" firstAttribute="top" secondItem="wvN-m1-Q6N" secondAttribute="bottom" id="oDJ-p5-EEI"/>
+                            <constraint firstAttribute="trailing" secondItem="ae4-Rj-YnN" secondAttribute="trailing" id="xrd-4G-RDM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ae4-Rj-YnN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="aXm-gB-Kt1"/>
+                                <exclude reference="oDJ-p5-EEI"/>
+                                <exclude reference="xrd-4G-RDM"/>
+                                <exclude reference="kid-Ka-LR8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ae4-Rj-YnN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="aXm-gB-Kt1"/>
+                                <include reference="oDJ-p5-EEI"/>
+                                <include reference="xrd-4G-RDM"/>
+                                <include reference="kid-Ka-LR8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thread" id="y0b-WF-6cH"/>
+                    <connections>
+                        <outlet property="tableView" destination="ae4-Rj-YnN" id="pzC-7r-cIf"/>
+                        <segue destination="F7m-Ob-KnU" kind="show" identifier="EmailViewSegue" id="fgO-Kd-2kw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSL-AY-8gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-1252"/>
+        </scene>
         <!--Campus-->
         <scene sceneID="TJD-jQ-lKA">
             <objects>
@@ -1024,7 +1085,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQQ-Wk-a0A">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbar.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YkL-aR-hgg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YkL-aR-hgg">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                     </imageView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bwy-2k-Rzn">
@@ -1270,6 +1331,7 @@
                     <navigationItem key="navigationItem" title="Páginas Web" id="ESK-Jq-C8R"/>
                     <connections>
                         <outlet property="collectionView" destination="V0K-xx-5Jz" id="4Hm-67-xQT"/>
+                        <outlet property="navBarBackgroundImageView" destination="YkL-aR-hgg" id="sP9-5c-zCF"/>
                         <outlet property="segmentedControl" destination="Bwy-2k-Rzn" id="QBK-hj-qaG"/>
                     </connections>
                 </viewController>
@@ -1812,8 +1874,7 @@
                                                         <exclude reference="npg-ve-wMa"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="56" y="172.5" width="288" height="29.5"/>
+                                                <variation key="widthClass=compact">
                                                     <mask key="constraints">
                                                         <include reference="npg-ve-wMa"/>
                                                     </mask>
@@ -1980,7 +2041,9 @@
         <image name="Trash" width="30" height="30"/>
         <image name="User" width="30" height="30"/>
         <image name="WebServices" width="30" height="30"/>
-        <image name="navbar.jpg" width="640" height="128"/>
         <image name="navbar1.jpg" width="640" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fgO-Kd-2kw"/>
+    </inferredMetricsTieBreakers>
 </document>

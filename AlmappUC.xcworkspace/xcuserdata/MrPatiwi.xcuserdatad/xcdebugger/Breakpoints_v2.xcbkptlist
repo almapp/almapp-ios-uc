@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446597399.519979"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275">
+            startingLineNumber = "278"
+            endingLineNumber = "278">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -930,11 +930,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446597399.519979"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258">
+            startingLineNumber = "261"
+            endingLineNumber = "261">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -944,11 +944,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446597399.519979"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257">
+            startingLineNumber = "260"
+            endingLineNumber = "260">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -990,11 +990,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446597399.519979"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "-webPageTypeForIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1006,11 +1006,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446597399.519979"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "-webPageTypeForIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1038,11 +1038,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446597399.519979"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "@implementation UCWebPagesViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1679,7 +1679,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "257"
             endingLineNumber = "257"
-            landmarkName = "-GETResource:id:parameters:"
+            landmarkName = "-GETResources:parameters:realm:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1903,7 +1903,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
             endingLineNumber = "252"
-            landmarkName = "-GETResource:id:parameters:"
+            landmarkName = "-GETResource:id:parameters:realm:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2139,7 +2139,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "313"
             endingLineNumber = "313"
-            landmarkName = "-GET:parameters:"
+            landmarkName = "-POSTResource:path:parameters:realm:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2155,7 +2155,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "316"
             endingLineNumber = "316"
-            landmarkName = "-GET:parameters:"
+            landmarkName = "-POSTResource:path:parameters:realm:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2599,7 +2599,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "273"
             endingLineNumber = "273"
-            landmarkName = "-GETResources:parameters:"
+            landmarkName = "-GETResources:on:parameters:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2615,7 +2615,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "272"
             endingLineNumber = "272"
-            landmarkName = "-GETResources:parameters:"
+            landmarkName = "-GETResources:path:parameters:realm:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3198,27 +3198,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446598215.145775"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446598215.690435"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -3230,15 +3214,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
-            timestampString = "446598216.705521"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlmappUC/WebPages/UCWebPagesViewController.m"
+            timestampString = "447132700.213083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3266,12 +3266,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
+            timestampString = "447180914.459952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-indexOfBodyCell"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3282,12 +3282,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
+            timestampString = "447180914.459952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
-            landmarkName = "-heightForBasicCellAtIndexPath:"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "-configureCell:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3298,12 +3298,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
+            timestampString = "447180914.459952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "-calculateHeightForConfiguredSizingCell:"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-configureCell:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3314,12 +3314,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
+            timestampString = "447180914.459952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "-tableView:estimatedHeightForRowAtIndexPath:"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "-tableView:heightForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3335,8 +3335,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkName = "@implementation UCEmailDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3346,12 +3346,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
+            timestampString = "447180914.459952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-cellClasses"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-showEmailDetail:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3378,12 +3378,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
+            timestampString = "447180914.459952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "-heightForBasicCellAtIndexPath:"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "-configureCell:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3394,11 +3394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Cells/UCEmailViewBody.m"
-            timestampString = "447086139.082832"
+            timestampString = "447107696.529928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "-webViewDidFinishLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3410,12 +3410,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
+            timestampString = "447180914.459952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-setThread:"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-numberOfSectionsInTableView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3426,76 +3426,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
+            timestampString = "447180914.459952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-emailAtIndex:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-indexOfEmail:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "-configureCell:forRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447081979.920662"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "-tableView:heightForRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
-            timestampString = "447086139.082832"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "-reloadEmailCell:height:"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3506,11 +3442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Cells/UCEmailViewBody.m"
-            timestampString = "447086139.082832"
+            timestampString = "447103859.983371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "-setEmail:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3522,11 +3458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/Cells/UCEmailViewBody.m"
-            timestampString = "447086139.082832"
+            timestampString = "447107696.529928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-webViewDidFinishLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3538,13 +3474,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/UCEMailViewController.m"
-            timestampString = "447102076.921503"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "768"
-            endingLineNumber = "768"
-            landmarkName = "-prepareForSegue:sender:"
-            landmarkType = "5">
+            startingLineNumber = "790"
+            endingLineNumber = "790"
+            landmarkName = "@implementation UCEMailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3570,12 +3506,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlmappUC/Email/UCEMailViewController.m"
-            timestampString = "447102076.921503"
+            timestampString = "447132700.213083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "738"
-            endingLineNumber = "738"
-            landmarkName = "-menuItemSelected:"
+            startingLineNumber = "760"
+            endingLineNumber = "760"
+            landmarkName = "-setupDropDownMenu"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3651,7 +3587,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
-            landmarkName = "-setCorrespondientColor"
+            landmarkName = "-willUpdateFromServer:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3875,7 +3811,151 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "-willUpdateFromServer:"
+            landmarkName = "-setThread:email:state:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlmappUC/Email/Thread View/UCEmailDetailViewController.m"
+            timestampString = "447180914.459952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "-tableView:titleForHeaderInSection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlmappUC/Email/Cells/UCEmailViewBody.m"
+            timestampString = "447104091.484941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-setEmail:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlmappUC/Email/Cells/UCEmailViewBody.m"
+            timestampString = "447107696.529928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-webViewDidFinishLoad:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlmappUC/Email/Cells/UCEmailViewBody.m"
+            timestampString = "447104552.556763"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-setEmail:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlmappUC/Email/UCEMailViewController.m"
+            timestampString = "447132700.213083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "643"
+            endingLineNumber = "643"
+            landmarkName = "-addLabels:removeLabels:andRemove:indexes:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
+            timestampString = "447131640.921161"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-AUTH"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
+            timestampString = "447131654.914655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-afterAuth"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AlmappCore/AlmappCore/Controllers/ALMController.m"
+            timestampString = "447131696.892814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-AUTH"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFOAuth2Manager/AFOAuth2Manager/AFOAuth2Manager.m"
+            timestampString = "447131707.277184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-setUseHTTPBasicAuthentication:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,6 +12,9 @@
 #import <gtm-oauth2/GTMOAuth2SignIn.h>
 
 #import <PromiseKit/PromiseKit+UIKit.h>
+#import <UIActionSheet+PromiseKit.h>
+
+#import <Doppelganger/Doppelganger.h>
 
 #import <INSPullToRefresh/INSAnimatable.h>
 #import <INSPullToRefresh/INSDefaultInfiniteIndicator.h>
@@ -23,6 +26,7 @@
 
 #import "UCEMailViewController.h"
 #import "UCEmailDetailViewController.h"
+#import "UCThreadViewController.h"
 #import "UCAppDelegate.h"
 #import "UCGoogleOAuthViewController.h"
 #import "UITableView+Nib.h"
@@ -30,6 +34,7 @@
 #import "UCStyle.h"
 
 static NSString *const kEmailShowSegue = @"EmailViewSegue";
+static NSString *const kThreadShowSegue = @"ThreadViewSegue";
 /*
 typedef NS_ENUM(NSUInteger, UCEmailFolder) {
     UCEmailFolderInbox,
@@ -40,6 +45,7 @@ typedef NS_ENUM(NSUInteger, UCEmailFolder) {
 };
  */
 
+static BOOL const kFetchOnViewDidLoad = NO;
 static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
 
 @interface UCEMailViewController () <ALMGmailDelegate, SWTableViewCellDelegate>
@@ -92,7 +98,7 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
     [self setupDropDownMenu];
     [self setupRefreshAndInfinity];
     
-    [self selectLabels:kDefaultLabel fetch:YES];
+    [self selectLabels:kDefaultLabel fetch:kFetchOnViewDidLoad];
     
     [self switchTableViewEditingModeTo:NO];
     [self setupToolbarEditing:NO];
@@ -268,8 +274,8 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
     
     //[self.tableView reloadData];
     [self.tableView beginUpdates];
-    [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
-    [self.tableView insertSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
+    [self.tableView insertSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
     [self.tableView endUpdates];
     
     if (shouldFetch) {
@@ -293,9 +299,15 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
         if (!self.lastPageToken && nextPageToken) {
             [self.lastPageTokens setObject:nextPageToken forKey:@(self.currentLabel)];
         }
+        NSArray *oldData = self.currentThreads;
         self.currentThreads = emailThreads.mutableCopy;
         
-        [self.tableView reloadData];
+        NSArray *diffs = [WMLArrayDiffUtility diffForCurrentArray:self.currentThreads
+                                                    previousArray:oldData];
+        
+        [self.tableView wml_applyBatchChanges:diffs
+                                    inSection:0
+                             withRowAnimation:UITableViewRowAnimationRight];
         
         return PMKManifold(emailThreads, nextPageToken);
     });
@@ -308,8 +320,16 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
             [self.lastPageTokens setObject:nextPageToken forKey:@(self.currentLabel)];
         }
         
+        NSArray *oldData = self.currentThreads.copy;
         [self.currentThreads addObjectsFromArray:emailThreads];
-        [self.tableView reloadData];
+
+        NSArray *diffs = [WMLArrayDiffUtility diffForCurrentArray:self.currentThreads
+                                                    previousArray:oldData];
+        
+        [self.tableView wml_applyBatchChanges:diffs
+                                    inSection:0
+                             withRowAnimation:UITableViewRowAnimationRight];
+        
         return PMKManifold(emailThreads, nextPageToken);
     });
 }
@@ -318,8 +338,10 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     return [self.manager fetchThreadsWithEmailsLabeled:self.currentLabel count:self.itemsPerPage pageToken:pageToken].then(^(NSArray *emailThreads, NSArray *errors, NSString *nextPageToken) {
         
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         return PMKManifold(emailThreads, nextPageToken);
+        
+    }).finally( ^{
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     });
 }
 
@@ -457,7 +479,8 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
     cell.delegate = self;
     cell.isEven = indexPath.row % 2 == 0;
     ALMEmailThread *thread = self.currentThreads[indexPath.row];
-    [cell setThread:thread state:[self stateForThread:thread]];
+    [cell setThread:thread email:[thread displayEmail] state:[self stateForThread:thread]];
+    
     return cell;
 }
 
@@ -467,7 +490,10 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!tableView.isEditing) {
-        [self performSegueWithIdentifier:kEmailShowSegue sender:self];
+        ALMEmailThread *thread = self.currentThreads[indexPath.row];
+        
+        NSString *segue = (thread.emails.count > 1) ? kThreadShowSegue : kEmailShowSegue;
+        [self performSegueWithIdentifier:segue sender:self];
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
@@ -618,6 +644,8 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
     }
     
     return [self.manager modifyEmails:emails addLabels:addLabels removeLabels:removeLabels].then( ^(NSArray *emails, NSArray *errors) {
+        NSLog(@"%@", errors);
+        
         NSMutableArray *newIndexes = [NSMutableArray arrayWithCapacity:threads.count];
         for (ALMEmailThread *thread in threads) {
             NSUInteger index = [self.currentThreads indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
@@ -764,16 +792,18 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     NSUInteger selectedIndex = [self.tableView indexPathForSelectedRow].row;
      if ([segue.identifier isEqual:kEmailShowSegue]) {
-         NSUInteger selectedIndex = [self.tableView indexPathForSelectedRow].row;
-         
-         UIViewController *destination = [segue destinationViewController];
-         if ([destination isKindOfClass:[UCEmailDetailViewController class]]) {
-             UCEmailDetailViewController *detail = (UCEmailDetailViewController *)destination;
-             detail.threadList = self.currentThreads;
-             detail.selectedThreadIndex = selectedIndex;
-         }
+         UCEmailDetailViewController *detail = [segue destinationViewController];
+         detail.threadList = self.currentThreads;
+         detail.email = [self.currentThreads[selectedIndex] displayEmail];
      }
+     else if ([segue.identifier isEqual:kThreadShowSegue]) {
+         UCThreadViewController *detail = [segue destinationViewController];
+         detail.selectedThreadIndex = selectedIndex;
+         detail.currentThreads = self.currentThreads;
+     }
+     
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
  }

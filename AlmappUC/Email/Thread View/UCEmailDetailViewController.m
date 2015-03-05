@@ -17,12 +17,28 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 @property (strong, nonatomic) NSArray *cellClasses;
-@property (strong, nonatomic) NSMutableDictionary *bodyCellHeights;
+@property (assign, nonatomic) CGFloat bodyCellHeight;
 
 @property (strong, nonatomic) UIBarButtonItem *upButton;
 @property (strong, nonatomic) UIBarButtonItem *downButton;
 
 @end
+
+
+@implementation NSArray (NextPrevious)
+
+- (id)nextOf:(id)object {
+    NSInteger index = [self indexOfObject:object];
+    return (index + 1 < self.count) ? [self objectAtIndex:index + 1] : nil;
+}
+
+- (id)previousOf:(id)object {
+    NSInteger index = [self indexOfObject:object];
+    return (index - 1 >= 0) ? [self objectAtIndex:index - 1] : nil;
+}
+
+@end
+
 
 @implementation UCEmailDetailViewController
 
@@ -42,14 +58,7 @@
         [self.tableView registerClassesNib:[cellClass nibName]];
     }
     
-    [self setThreadAtIndex:self.selectedThreadIndex];
-}
-
-- (NSMutableDictionary *)bodyCellHeights {
-    if (!_bodyCellHeights) {
-        _bodyCellHeights = [NSMutableDictionary dictionary];
-    }
-    return _bodyCellHeights;
+    [self showEmailDetail:self.email];
 }
 
 - (NSMutableDictionary *)titlesCache {
@@ -60,42 +69,55 @@
     return titlesCache;
 }
 
-- (void)setThreadAtIndex:(NSInteger)index {
-    self.downButton.enabled = index < self.threadList.count - 2;
-    self.upButton.enabled = index > 0;
-    
-    self.thread = self.threadList[index];
+- (void)setEmail:(ALMEmail *)email {
+    _email = email;
+    self.bodyCellHeight = [UCEmailViewBody height];
 }
 
-- (void)setThread:(ALMEmailThread *)thread {
-    _thread = thread;
-    self.emails = thread.sortedEmails;
-    [self.bodyCellHeights removeAllObjects];
-    for (ALMEmail *email in thread.emails) {
-        self.bodyCellHeights[email.identifier] = @([UCEmailViewBody height]);
-    }
+- (void)showEmailDetail:(ALMEmail *)email {
     [self scrollToTop].then(^{
+        self.email = email;
+        self.nextEmail = self.previousEmail = nil;
+        
+        ALMEmailThread *thread = email.threads.firstObject;
+        RLMResults *emails = thread.sortedEmails;
+        
+        NSInteger emailIndexInThread = [emails indexOfObject:email];
+        
+        if (emailIndexInThread == 0) {
+            ALMEmailThread *previousThread = [self.threadList previousOf:thread];
+            if (previousThread) {
+                self.previousEmail = [previousThread.sortedEmails lastObject];
+            }
+        }
+        else {
+            self.previousEmail = [emails objectAtIndex:emailIndexInThread - 1];
+        }
+        
+        if (emailIndexInThread == thread.emails.count - 1) {
+            ALMEmailThread *nextThread = [self.threadList nextOf:thread];
+            if (nextThread) {
+                self.nextEmail = [nextThread.sortedEmails firstObject];
+            }
+        }
+        else {
+            self.nextEmail = [emails objectAtIndex:emailIndexInThread + 1];
+        }
+        
+        self.downButton.enabled = (self.nextEmail != nil);
+        self.upButton.enabled = (self.previousEmail != nil);
+        
         [self.tableView reloadData];
     });
 }
 
-- (ALMEmail *)emailAtIndex:(NSInteger)index {
-    return self.emails[index];
-}
-
-- (NSInteger)indexOfEmail:(ALMEmail *)email {
-    return [self.emails indexOfObject:email];
-}
-
 
 - (void)upButtonTouch:(UIBarButtonItem *)sender {
-    self.selectedThreadIndex -= 1;
-    [self setThreadAtIndex:self.selectedThreadIndex];
+    [self showEmailDetail:self.nextEmail];
 }
 
 - (void)downButtonTouch:(UIBarButtonItem *)sender {
-    self.selectedThreadIndex += 1;
-    [self setThreadAtIndex:self.selectedThreadIndex];
+    [self showEmailDetail:self.previousEmail];
 }
 
 - (PMKPromise *)scrollToTop {
@@ -122,7 +144,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.thread.emails.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -147,13 +169,12 @@
     else if ([cell isKindOfClass:[UCEmailViewTitle class]]) {
         ((UCEmailViewTitle *)cell).delegate = self;
     }
-    ((UCEmailViewCell *)cell).email = [self emailAtIndex:indexPath.section];
+    ((UCEmailViewCell *)cell).email = self.email;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == self.indexOfBodyCell) {
-        ALMEmail *email = [self emailAtIndex:indexPath.section];
-        return [self.bodyCellHeights[email.identifier] floatValue];
+        return MAX(self.bodyCellHeight, [UCEmailViewBody height]);
     }
     else {
         return [self heightForBasicCellAtIndexPath:indexPath];
@@ -182,12 +203,15 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSInteger numberOfSections = self.thread.emails.count;
-    if (numberOfSections <= 1) {
+    ALMEmailThread *thread = self.email.threads.firstObject;
+    RLMResults *sortedEmail = thread.sortedEmails;
+    
+    NSInteger emailsInThread = sortedEmail.count;
+    if (emailsInThread <= 1) {
         return nil;
     }
     else {
-        return [NSString stringWithFormat:@"Email %d de %d en la conversación", (int)section + 1, (int)numberOfSections];
+        return [NSString stringWithFormat:@"Email %d de %d en la conversación", (int)[sortedEmail indexOfObject:self.email], (int)emailsInThread];
     }
 }
 
@@ -200,15 +224,12 @@
 }
 
 - (void)reloadEmailCell:(ALMEmail *)email height:(NSInteger)height {
-    if ([self.thread.emails indexOfObject:email] != NSNotFound) {
-        self.bodyCellHeights[email.identifier] = @(height);
-        
-        NSInteger index = [self indexOfEmail:email];
-        NSInteger webCellIndex = self.indexOfBodyCell;
-        
-        NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:webCellIndex inSection:index];
-        [self.tableView reloadRowsAtIndexPaths:@[rowToReload] withRowAnimation:UITableViewRowAnimationNone];
-    }
+    self.bodyCellHeight = height;
+    
+    NSInteger webCellIndex = self.indexOfBodyCell;
+    
+    NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:webCellIndex inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[rowToReload] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 /*

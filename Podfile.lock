@@ -20,11 +20,11 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - AFOAuth2Manager (2.1.0):
+  - AFOAuth2Manager (2.2.0):
     - AFNetworking/NSURLConnection (~> 2.2)
   - AlmappCore (0.6.1):
     - AFNetworking (~> 2.5.1)
-    - AFOAuth2Manager (~> 2.1.0)
+    - AFOAuth2Manager (~> 2.2.0)
     - FayeCpp (~> 0.1.9)
     - Google-API-Client/Gmail (~> 1.0.422)
     - PromiseKit (~> 1.3)
@@ -36,6 +36,7 @@ PODS:
   - Colours (5.6.1)
   - DateTools (1.5.0)
   - DIDatepicker (0.1)
+  - Doppelganger (1.3)
   - DZNSegmentedControl (1.2.2)
   - FayeCpp (0.1.9)
   - Google-API-Client/Common (1.0.422):
@@ -154,11 +155,12 @@ PODS:
   - UIColor+BFPaperColors (1.3.1)
 
 DEPENDENCIES:
-  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `5a7c4a5c969905c6085a7c4a1909a4944f85c191`, branch `master`)
+  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `c360f78bd514c6dd37d37b035e66f8b64b66014c`, branch `master`)
   - BFPaperTabBarController (~> 1.4.5)
   - Colours
   - DateTools
   - DIDatepicker (from `https://github.com/mrpatiwi/DIDatepicker.git`, commit `5f3f586ff9250996097c7cefc13662063e45d1cb`, branch `master`)
+  - Doppelganger
   - DZNSegmentedControl
   - Google-Maps-iOS-SDK
   - gtm-oauth2
@@ -185,7 +187,7 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   AlmappCore:
     :branch: master
-    :commit: 5a7c4a5c969905c6085a7c4a1909a4944f85c191
+    :commit: c360f78bd514c6dd37d37b035e66f8b64b66014c
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -205,7 +207,7 @@ EXTERNAL SOURCES:
 CHECKOUT OPTIONS:
   AlmappCore:
     :branch: master
-    :commit: 5a7c4a5c969905c6085a7c4a1909a4944f85c191
+    :commit: c360f78bd514c6dd37d37b035e66f8b64b66014c
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -224,13 +226,14 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  AFOAuth2Manager: 3b15750b04a1349a30f82c8ca21828ba90a96771
-  AlmappCore: 00de5e385ab74d3e7f856b46f7a1a68d1392d0ce
+  AFOAuth2Manager: 5e05a890dbe51d3e84091a01560f0534eb1dd7d2
+  AlmappCore: fae9b1cb20c8bf558826b55d5c0beb8589299f02
   ARChromeActivity: 437b3e0c4cc43c19d7dd1af55bea98e008335151
   BFPaperTabBarController: 3a2c1ae4ba0ca297009558658bd103f3c4f0b579
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
   DateTools: 7df78f0c4719eb28cfd2d58a90fafd036e73156c
   DIDatepicker: 5937543e2ad8c72d49b4ddd0c3a6d5f4fb087133
+  Doppelganger: 5f8ece005622fdcb01fe3e56e0ed7cad2fc4d5cb
   DZNSegmentedControl: daa91d107904f7433e73852477f08450575be331
   FayeCpp: 77eac47338e90ed9c7099faa75458042f459eb3c
   Google-API-Client: 94e15390b2f5507e81a9a8c0edd58a02d2ab464b

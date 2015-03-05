@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1665B09EF27AB6467FE42287"
+               BlueprintIdentifier = "C0A51971EBA10A5ED5F1C610"
                BuildableName = "libPods-AlmappUC-KINWebBrowser.a"
                BlueprintName = "Pods-AlmappUC-KINWebBrowser"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1665B09EF27AB6467FE42287"
+            BlueprintIdentifier = "C0A51971EBA10A5ED5F1C610"
             BuildableName = "libPods-AlmappUC-KINWebBrowser.a"
             BlueprintName = "Pods-AlmappUC-KINWebBrowser"
             ReferencedContainer = "container:Pods.xcodeproj">

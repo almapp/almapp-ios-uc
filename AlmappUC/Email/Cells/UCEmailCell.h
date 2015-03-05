@@ -18,6 +18,14 @@ typedef NS_ENUM(NSInteger, UCEmailCellState) {
     UCEmailCellStateStaring
 };
 
+
+@interface ALMEmailThread (Show)
+
+- (ALMEmail *)displayEmail;
+
+@end
+
+
 @interface UCEmailCell : SWTableViewCell
 
 + (NSString *)nibName;
@@ -35,9 +43,12 @@ typedef NS_ENUM(NSInteger, UCEmailCellState) {
 @property (assign, nonatomic) BOOL isEven;
 @property (assign, nonatomic) UCEmailCellState state;
 @property (strong, nonatomic) ALMEmailThread *thread;
+@property (strong, nonatomic) ALMEmail *primaryEmail;
 
 @property (assign, nonatomic) BOOL isTasking;
 
+- (void)setThread:(ALMEmailThread *)thread emailAtIndex:(NSInteger)emailIndex state:(UCEmailCellState)state;
+- (void)setThread:(ALMEmailThread *)thread email:(ALMEmail *)email state:(UCEmailCellState)state;
 - (void)setThread:(ALMEmailThread *)thread state:(UCEmailCellState)state;
 
 - (void)willUpdateFromServer:(BOOL)willDelete;

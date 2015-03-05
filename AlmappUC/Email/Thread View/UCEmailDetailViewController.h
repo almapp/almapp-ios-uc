@@ -14,10 +14,11 @@
 
 @interface UCEmailDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UCEmailViewTitleDelegate, UCEmailViewBodyDelegate>
 
-@property (weak, nonatomic) NSArray *threadList;
+@property (weak, nonatomic) NSMutableArray *threadList;
 
-@property (assign, nonatomic) NSUInteger selectedThreadIndex;
-@property (strong, nonatomic) ALMEmailThread *thread;
-@property (strong, nonatomic) RLMResults *emails;
+@property (strong, nonatomic) ALMEmail *previousEmail;
+@property (strong, nonatomic) ALMEmail *email;
+@property (strong, nonatomic) ALMEmail *nextEmail;
+
 
 @end

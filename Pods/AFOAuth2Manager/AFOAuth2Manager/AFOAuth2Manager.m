@@ -85,6 +85,7 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
 @property (readwrite, nonatomic, copy) NSString *serviceProviderIdentifier;
 @property (readwrite, nonatomic, copy) NSString *clientID;
 @property (readwrite, nonatomic, copy) NSString *secret;
+@property (readonly, nonatomic)  BOOL basicAuth;
 @end
 
 @implementation AFOAuth2Manager
@@ -106,14 +107,36 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
     if (!self) {
         return nil;
     }
-
+    
     self.serviceProviderIdentifier = [self.baseURL host];
     self.clientID = clientID;
     self.secret = secret;
 
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    self.useHTTPBasicAuthentication = YES;
 
+    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
     return self;
+}
+
+#pragma mark -
+
+- (void)setUseHTTPBasicAuthentication:(BOOL)useHTTPBasicAuthentication {
+    _useHTTPBasicAuthentication = useHTTPBasicAuthentication;
+
+    if (self.useHTTPBasicAuthentication) {
+        [self.requestSerializer setAuthorizationHeaderFieldWithUsername:self.clientID password:self.secret];
+    } else {
+        [self.requestSerializer setValue:nil forHTTPHeaderField:@"Authorization"];
+    }
+}
+
+- (void)setSecret:(NSString *)secret {
+    if (!secret) {
+        secret = @"";
+    }
+
+    _secret = secret;
 }
 
 #pragma mark -
@@ -193,8 +216,10 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
                                     failure:(void (^)(NSError *error))failure
 {
     NSMutableDictionary *mutableParameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
-    mutableParameters[@"client_id"] = self.clientID;
-    mutableParameters[@"client_secret"] = self.secret;
+    if (!self.useHTTPBasicAuthentication) {
+        mutableParameters[@"client_id"] = self.clientID;
+        mutableParameters[@"client_secret"] = self.secret;
+    }
     parameters = [NSDictionary dictionaryWithDictionary:mutableParameters];
 
     AFHTTPRequestOperation *requestOperation = [self POST:URLString parameters:parameters success:^(__unused AFHTTPRequestOperation *operation, id responseObject) {
@@ -221,14 +246,20 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
 
         AFOAuthCredential *credential = [AFOAuthCredential credentialWithOAuthToken:[responseObject valueForKey:@"access_token"] tokenType:[responseObject valueForKey:@"token_type"]];
 
+
+        if (refreshToken) { // refreshToken is optional in the OAuth2 spec
+            [credential setRefreshToken:refreshToken];
+        }
+
+        // Expiration is optional, but recommended in the OAuth2 spec. It not provide, assume distantFuture === never expires
         NSDate *expireDate = [NSDate distantFuture];
         id expiresIn = [responseObject valueForKey:@"expires_in"];
         if (expiresIn && ![expiresIn isEqual:[NSNull null]]) {
             expireDate = [NSDate dateWithTimeIntervalSinceNow:[expiresIn doubleValue]];
         }
 
-        if (refreshToken && expireDate) {
-            [credential setRefreshToken:refreshToken expiration:expireDate];
+        if (expireDate) {
+            [credential setExpiration:expireDate];
         }
 
         if (success) {
@@ -284,8 +315,19 @@ static NSError * AFErrorFromRFC6749Section5_2Error(id object) {
 }
 
 - (void)setRefreshToken:(NSString *)refreshToken
+{
+    _refreshToken = refreshToken;
+}
+
+- (void)setExpiration:(NSDate *)expiration
+{
+    _expiration = expiration;
+}
+
+- (void)setRefreshToken:(NSString *)refreshToken
              expiration:(NSDate *)expiration
 {
+    NSParameterAssert(refreshToken);
     NSParameterAssert(expiration);
 
     self.refreshToken = refreshToken;

@@ -6,7 +6,7 @@ target 'AlmappUC' do
 	pod 'AlmappCore',
         :git => 'https://github.com/almapp/AlmappCore-ios.git',
         :branch => 'master',
-        :commit => '5a7c4a5c969905c6085a7c4a1909a4944f85c191'
+        :commit => 'c360f78bd514c6dd37d37b035e66f8b64b66014c'
     pod 'Realm+JSON',
         :git => 'https://github.com/mrpatiwi/Realm-JSON.git',
         :commit => '6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab'
@@ -25,6 +25,7 @@ target 'AlmappUC' do
     pod 'JSQMessagesViewController'
     
     # Collections
+    pod 'Doppelganger'
     pod 'QMBParallaxScrollViewController', :head
     pod 'SKTagView', :head
     pod 'INSPullToRefresh'

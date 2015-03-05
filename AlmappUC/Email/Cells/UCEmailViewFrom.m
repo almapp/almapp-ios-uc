@@ -30,7 +30,7 @@
     NSString *senderEmail = [from allKeys].firstObject;
     if ([from[senderEmail] isKindOfClass:[NSNull class]]) {
         self.senderName.text = senderEmail;
-        self.senderEmail.text = @"";
+        self.senderEmail.text = senderEmail;
     }
     else {
         self.senderName.text = from[senderEmail];

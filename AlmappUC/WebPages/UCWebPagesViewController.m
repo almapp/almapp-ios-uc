@@ -21,6 +21,7 @@ static float const kWebPageCellMargin = 3.0f;
 
 @interface UCWebPagesViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *navBarBackgroundImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
@@ -38,6 +39,8 @@ static float const kWebPageCellMargin = 3.0f;
     [super viewDidLoad];
     
     //[self.navigationController setClearNavigationBar];
+    
+    [self.navBarBackgroundImageView setImage:[UCStyle bannerBackgroundImage]];
     
     _initialSelectedSegment = kWebPagesDefaultSegment;
     [self loadWebPagesForSegmentIndex:_initialSelectedSegment];
