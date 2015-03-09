@@ -56,6 +56,17 @@ static UIViewAnimationOptions kTransitionAnimation = UIViewAnimationOptionTransi
 - (IBAction)segmentedControlValueChange:(UISegmentedControl *)sender {
     UIViewController *vc = [self viewControllerForSegmentIndex:sender.selectedSegmentIndex];
     [self addChildViewController:vc];
+    
+    // if it's the first time we load a child VC
+    if (!self.currentViewController) {
+        [self.contentView addSubview:vc.view];
+        vc.view.frame = self.contentView.bounds;
+        [vc didMoveToParentViewController:self];
+        self.currentViewController = vc;
+        return;
+    }
+    
+    // if we're switching child VCs
     [self transitionFromViewController:self.currentViewController toViewController:vc duration:0.5 options:kTransitionAnimation animations:^{
         [self.currentViewController.view removeFromSuperview];
         vc.view.frame = self.contentView.bounds;
