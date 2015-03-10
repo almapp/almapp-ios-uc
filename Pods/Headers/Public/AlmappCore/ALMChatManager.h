@@ -1,1 +1,0 @@
-../../../AlmappCore/AlmappCore/Chat/ALMChatManager.h

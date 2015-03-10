@@ -1,1 +1,0 @@
-../../../AlmappCore/AlmappCore/Delegates/ALMChatListenerDelegate.h

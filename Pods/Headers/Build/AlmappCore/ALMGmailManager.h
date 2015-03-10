@@ -1,1 +1,0 @@
-../../../AlmappCore/AlmappCore/Email/Managers/ALMGmailManager.h

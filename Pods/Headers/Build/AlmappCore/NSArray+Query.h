@@ -1,1 +1,0 @@
-../../../AlmappCore/AlmappCore/Models/Base/NSArray+Query.h
