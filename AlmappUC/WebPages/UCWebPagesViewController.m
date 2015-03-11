@@ -48,7 +48,6 @@ static float const kWebPageCellMargin = 3.0f;
     _segmentedControl.selectedSegmentIndex = _initialSelectedSegment;
     //_segmentedControl.tintColor = [UIColor navbarAccent];
     
-    self.collectionView.alwaysBounceHorizontal = YES;
     self.collectionView.alwaysBounceVertical = YES;
     
     [self fetch];
