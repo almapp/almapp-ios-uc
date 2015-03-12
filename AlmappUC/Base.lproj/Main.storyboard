@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LnQ-EP-3yf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LnQ-EP-3yf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -839,7 +839,7 @@
                                         <variation key="widthClass=compact" constant="240"/>
                                     </constraint>
                                 </constraints>
-                                <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" searchBarStyle="minimal" text="" placeholder="Search" showsBookmarkButton="YES" id="RoM-jB-0YU">
+                                <searchBar key="tableHeaderView" hidden="YES" contentMode="redraw" barStyle="black" searchBarStyle="minimal" text="" placeholder="Search" showsBookmarkButton="YES" id="RoM-jB-0YU">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="search"/>
@@ -938,6 +938,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Nl3-i3-ySG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="izo-2U-37Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ae4-Rj-YnN">
@@ -961,10 +962,10 @@
                                 <exclude reference="ae4-Rj-YnN"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="kid-Ka-LR8"/>
                                 <exclude reference="aXm-gB-Kt1"/>
                                 <exclude reference="oDJ-p5-EEI"/>
                                 <exclude reference="xrd-4G-RDM"/>
-                                <exclude reference="kid-Ka-LR8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -972,10 +973,10 @@
                                 <include reference="ae4-Rj-YnN"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="kid-Ka-LR8"/>
                                 <include reference="aXm-gB-Kt1"/>
                                 <include reference="oDJ-p5-EEI"/>
                                 <include reference="xrd-4G-RDM"/>
-                                <include reference="kid-Ka-LR8"/>
                             </mask>
                         </variation>
                     </view>
@@ -1161,7 +1162,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-HB-dO3">

@@ -17,7 +17,7 @@
 #import "UCMenuCell.h"
 #import "UCMenuHeaderCell.h"
 
-static int const kDefaultViewIndex = 4;
+static int const kDefaultViewIndex = 2;
 static NSString *const kControllerStoryboardIDForProfile = @"";
 static NSString *const kControllerStoryboardIDForMaps = @"mapsNavigation";
 static NSString *const kControllerStoryboardIDForOrganizer = @"organizerNavigation";
@@ -56,13 +56,13 @@ static NSString *const kControllerStoryboardIDForUtilities = @"";
                                              imageString:@"Maps"
                                                 viewName:kControllerStoryboardIDForMaps],
                        
-                       [[UCMenuItem alloc] initWithTitle:@"Chat"
-                                             imageString:@"Chat"
-                                                viewName:kControllerStoryboardIDForChat],
+//                       [[UCMenuItem alloc] initWithTitle:@"Chat"
+//                                             imageString:@"Chat"
+//                                                viewName:kControllerStoryboardIDForChat],
                        
-                       [[UCMenuItem alloc] initWithTitle:@"Comunidad y eventos"
-                                             imageString:@"Community"
-                                                viewName:kControllerStoryboardIDForCommunity],
+//                       [[UCMenuItem alloc] initWithTitle:@"Comunidad y eventos"
+//                                             imageString:@"Community"
+//                                                viewName:kControllerStoryboardIDForCommunity],
                        
                        [[UCMenuItem alloc] initWithTitle:@"Email"
                                              imageString:@"Email"
@@ -72,9 +72,9 @@ static NSString *const kControllerStoryboardIDForUtilities = @"";
                                              imageString:@"WebServices"
                                                 viewName:kControllerStoryboardIDForWebServices],
                        
-                       [[UCMenuItem alloc] initWithTitle:@"Utilidades"
-                                             imageString:@"Settings"
-                                                viewName:kControllerStoryboardIDForUtilities]
+//                       [[UCMenuItem alloc] initWithTitle:@"Utilidades"
+//                                             imageString:@"Settings"
+//                                                viewName:kControllerStoryboardIDForUtilities]
                        ];
     }
     return _menuItems;
