@@ -11,7 +11,9 @@
 #import <gtm-oauth2/GTMOAuth2ViewControllerTouch.h>
 #import <gtm-oauth2/GTMOAuth2SignIn.h>
 
-#import <PromiseKit/PromiseKit+UIKit.h>
+#import <UIActionSheet+PromiseKit.h>
+#import <UIAlertView+PromiseKit.h>
+#import <UIViewController+PromiseKit.h>
 #import <UIActionSheet+PromiseKit.h>
 
 #import <Doppelganger/Doppelganger.h>
