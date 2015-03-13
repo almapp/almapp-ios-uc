@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIView *scrollViewContentView;
 
+- (IBAction)privacyButtonClick:(id)sender;
+
 @end
 
 
@@ -84,6 +86,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Privacy
+
+- (IBAction)privacyButtonClick:(id)sender {
+    NSURL *url = [ [ NSURL alloc ] initWithString: @"http://almapp.me/uc/privacidad" ];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 
