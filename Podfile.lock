@@ -38,7 +38,7 @@ PODS:
   - DIDatepicker (0.1)
   - Doppelganger (1.3)
   - DZNSegmentedControl (1.2.2)
-  - FayeCpp (0.1.9)
+  - FayeCpp (0.1.10)
   - Google-API-Client/Common (1.0.422):
     - gtm-http-fetcher (~> 1.0.141)
     - gtm-oauth2 (~> 1.0.125)
@@ -135,11 +135,11 @@ PODS:
   - PromiseKit/When (1.3.0):
     - PromiseKit/Promise
   - QMBParallaxScrollViewController (HEAD based on 0.1)
-  - Realm (0.90.6):
-    - Realm/Headers (= 0.90.6)
-  - Realm+JSON (0.2.5):
-    - Realm (~> 0.90)
-  - Realm/Headers (0.90.6)
+  - Realm (0.91.0):
+    - Realm/Headers (= 0.91.0)
+  - Realm+JSON (0.2.6):
+    - Realm (~> 0.91)
+  - Realm/Headers (0.91.0)
   - REMenu (1.10)
   - RESideMenu (4.0.7)
   - RKNotificationHub (1.0.4)
@@ -155,7 +155,7 @@ PODS:
   - UIColor+BFPaperColors (1.3.1)
 
 DEPENDENCIES:
-  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `c360f78bd514c6dd37d37b035e66f8b64b66014c`, branch `master`)
+  - AlmappCore (from `https://github.com/almapp/AlmappCore-ios.git`, commit `944fed7977a712a6483eb16be136907c273ef5f3`, branch `master`)
   - BFPaperTabBarController (~> 1.4.5)
   - Colours
   - DateTools
@@ -173,7 +173,7 @@ DEPENDENCIES:
   - Ono
   - pop (~> 1.0)
   - QMBParallaxScrollViewController (HEAD)
-  - Realm+JSON (from `https://github.com/mrpatiwi/Realm-JSON.git`, commit `6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab`)
+  - Realm+JSON (from `https://github.com/mrpatiwi/Realm-JSON.git`, commit `6bcd653252015b5f496aacc2490d6b0ab62da01e`)
   - REMenu (~> 1.10)
   - RESideMenu (~> 4.0.7)
   - RKNotificationHub
@@ -187,7 +187,7 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   AlmappCore:
     :branch: master
-    :commit: c360f78bd514c6dd37d37b035e66f8b64b66014c
+    :commit: 944fed7977a712a6483eb16be136907c273ef5f3
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -201,13 +201,13 @@ EXTERNAL SOURCES:
     :commit: 3cabf1e255a93ee9db77475971304e6480865e08
     :git: https://github.com/mrpatiwi/MRoundedButton.git
   Realm+JSON:
-    :commit: 6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab
+    :commit: 6bcd653252015b5f496aacc2490d6b0ab62da01e
     :git: https://github.com/mrpatiwi/Realm-JSON.git
 
 CHECKOUT OPTIONS:
   AlmappCore:
     :branch: master
-    :commit: c360f78bd514c6dd37d37b035e66f8b64b66014c
+    :commit: 944fed7977a712a6483eb16be136907c273ef5f3
     :git: https://github.com/almapp/AlmappCore-ios.git
   DIDatepicker:
     :branch: master
@@ -221,7 +221,7 @@ CHECKOUT OPTIONS:
     :commit: 3cabf1e255a93ee9db77475971304e6480865e08
     :git: https://github.com/mrpatiwi/MRoundedButton.git
   Realm+JSON:
-    :commit: 6e2b4ed0a08edcfc7a98dc6318ca0bd9372377ab
+    :commit: 6bcd653252015b5f496aacc2490d6b0ab62da01e
     :git: https://github.com/mrpatiwi/Realm-JSON.git
 
 SPEC CHECKSUMS:
@@ -235,7 +235,7 @@ SPEC CHECKSUMS:
   DIDatepicker: 5937543e2ad8c72d49b4ddd0c3a6d5f4fb087133
   Doppelganger: 5f8ece005622fdcb01fe3e56e0ed7cad2fc4d5cb
   DZNSegmentedControl: daa91d107904f7433e73852477f08450575be331
-  FayeCpp: 77eac47338e90ed9c7099faa75458042f459eb3c
+  FayeCpp: 945c55a11a7e545d8e5a9d42613204a8f0c26929
   Google-API-Client: 94e15390b2f5507e81a9a8c0edd58a02d2ab464b
   Google-Maps-iOS-SDK: 4c008abdb68e03ae125c7f674be841d369e2b3de
   gtm-http-fetcher: 6d4617e7d343b6e4c082b777541c334eb6f5d81e
@@ -254,8 +254,8 @@ SPEC CHECKSUMS:
   PromiseKit: 4844db4448b4e387845e702b738cd87433fc02fd
   PromiseKit-AFNetworking: 16db750b394dcd12aa8527eb1bb9f209a36a49f7
   QMBParallaxScrollViewController: 81bb3a89d36f908712fe7c870cc0ebeb96a06edc
-  Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
-  Realm+JSON: 0d26baf985e03db0c9e9d102887be5b9b4491e8a
+  Realm: 42c178744c5a7f610b8dae3ca5f0995d46c4ac01
+  Realm+JSON: 4076fb2365919e3a489420758e352d28a5224a0b
   REMenu: e3988747d83f9e8f49f244bd3f1fb8b0900e8741
   RESideMenu: a9c1cd2e64e60e1d3166ddac01a83e215a0e4d30
   RKNotificationHub: 04a08446faa30b801b7f227392e0ade6d4b9b9d0
