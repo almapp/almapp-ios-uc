@@ -41,6 +41,14 @@
 
 @end
 
+@interface UIImageView (Circle)
+
+- (void)circle;
+- (void)circleWithBorderColor:(UIColor *)color;
+- (void)circleWithBorderColor:(UIColor *)color width:(CGFloat)width;
+
+@end
+
 @interface UCStyle : NSObject
 
 + (UIImage *)mainBackgroundImage;

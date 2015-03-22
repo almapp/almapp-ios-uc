@@ -43,6 +43,7 @@ target 'AlmappUC' do
     
     # Label and text
     # pod 'JVFloatLabeledTextField'
+    pod 'CLTokenInputView', :head
     pod 'THLabel', '~> 1.4.6'
     
 	# Google
@@ -50,6 +51,10 @@ target 'AlmappUC' do
 	pod 'Google-Maps-iOS-SDK'
     
 	# Other
+    pod 'APAddressBook',
+        :git => 'https://github.com/rahuljiresal/APAddressBook.git',
+        :commit => '4d342cbb542f1354595694c5a5c29d683d7c09eb'
+        
     # pod 'ILTranslucentView'
     pod 'SKPanoramaView'
     pod 'NGAParallaxMotion'

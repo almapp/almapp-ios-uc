@@ -29,8 +29,10 @@
 #import "UCEMailViewController.h"
 #import "UCEmailDetailViewController.h"
 #import "UCThreadViewController.h"
-#import "UCAppDelegate.h"
 #import "UCGoogleOAuthViewController.h"
+#import "UCEmailComposeViewController.h"
+
+#import "UCAppDelegate.h"
 #import "UITableView+Nib.h"
 #import "UCEmailCell.h"
 #import "UCStyle.h"
@@ -137,7 +139,7 @@ static ALMEmailLabel const kDefaultLabel = ALMEmailLabelInbox;
 }
 
 - (IBAction)composeButtonClick:(id)sender {
-    
+    __unused UCEmailComposeViewController *composeView = [UCEmailComposeViewController presentEmailComposeViewOn:self];
 }
 
 - (NSArray *)toolBarEditingButtons {

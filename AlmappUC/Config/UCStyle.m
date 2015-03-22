@@ -131,6 +131,27 @@
 @end
 
 
+@implementation UIImageView (Circle)
+
+- (void)circle {
+    [self circleWithBorderColor:[UIColor accentColor]];
+}
+
+- (void)circleWithBorderColor:(UIColor *)color {
+    [self circleWithBorderColor:color width: 2.0f]; //self.frame.size.width/20];
+}
+
+- (void)circleWithBorderColor:(UIColor *)color width:(CGFloat)width {
+    self.contentMode = UIViewContentModeScaleAspectFill;
+    
+    self.layer.cornerRadius = self.frame.size.width / 2;
+    self.clipsToBounds = YES;
+    self.layer.borderWidth = width;
+    self.layer.borderColor = color.CGColor;
+}
+
+@end
+
 
 @implementation UCStyle
 

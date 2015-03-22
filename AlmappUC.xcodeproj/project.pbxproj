@@ -10,8 +10,13 @@
 		699DA18D8B8F5D2515B48DCC /* libPods-AlmappUC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D4E3D61623163A2E23398A /* libPods-AlmappUC.a */; };
 		F60356771A6354BC00E25731 /* UCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60356761A6354BC00E25731 /* UCRootViewController.m */; };
 		F603567B1A63766800E25731 /* UCWebPagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F603567A1A63766800E25731 /* UCWebPagesViewController.m */; };
+		F60608271AB27F8500307080 /* UCPostLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60608261AB27F8500307080 /* UCPostLoginViewController.m */; };
 		F609D1B81A559BFE008417FA /* UCApiKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F609D1B71A559BFE008417FA /* UCApiKey.m */; };
 		F609D1BE1A55A0BC008417FA /* UCExternalApiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F609D1BD1A55A0BC008417FA /* UCExternalApiTests.m */; };
+		F620E3E31AB5AADD006BC1FD /* UCEmailComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F620E3E21AB5AADD006BC1FD /* UCEmailComposeViewController.m */; };
+		F620E3E81AB5BAD1006BC1FD /* UCContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F620E3E61AB5BAD1006BC1FD /* UCContactCell.m */; };
+		F620E3E91AB5BAD1006BC1FD /* UCContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F620E3E71AB5BAD1006BC1FD /* UCContactCell.xib */; };
+		F620E3EC1AB5D3E1006BC1FD /* UCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F620E3EB1AB5D3E1006BC1FD /* UCContact.m */; };
 		F62B94A21A69A5B800C1F534 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F62B94A11A69A5B800C1F534 /* ApiKeys.plist */; };
 		F62B94B11A69FDE300C1F534 /* UCPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62B94AC1A69FDE300C1F534 /* UCPostCell.xib */; };
 		F62B94B21A69FDE300C1F534 /* UCPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F62B94AE1A69FDE300C1F534 /* UCPostsTableViewController.m */; };
@@ -121,6 +126,7 @@
 		F6D947071A7F20A30070B18B /* UCScheduleEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D947061A7F20A30070B18B /* UCScheduleEventCell.xib */; };
 		F6D947091A7F20B10070B18B /* UCScheduleAllDayEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D947081A7F20B10070B18B /* UCScheduleAllDayEventCell.xib */; };
 		F6D9470C1A7F21060070B18B /* UCScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D9470B1A7F21060070B18B /* UCScheduleCell.m */; };
+		F6ED4F591ABF08A0008915B8 /* UCContactMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED4F581ABF08A0008915B8 /* UCContactMutableArray.m */; };
 		F6F23FED1AA6B9F400C2E9AA /* UCThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F23FEC1AA6B9F400C2E9AA /* UCThreadViewController.m */; };
 		F6FEEDD11A9F75BB0033464A /* UCEmailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FEEDCF1A9F75BB0033464A /* UCEmailCell.m */; };
 		F6FEEDD21A9F75BB0033464A /* UCEmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6FEEDD01A9F75BB0033464A /* UCEmailCell.xib */; };
@@ -157,9 +163,18 @@
 		F60356761A6354BC00E25731 /* UCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCRootViewController.m; sourceTree = "<group>"; };
 		F60356791A63766800E25731 /* UCWebPagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCWebPagesViewController.h; sourceTree = "<group>"; };
 		F603567A1A63766800E25731 /* UCWebPagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCWebPagesViewController.m; sourceTree = "<group>"; };
+		F60608251AB27F8500307080 /* UCPostLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCPostLoginViewController.h; sourceTree = "<group>"; };
+		F60608261AB27F8500307080 /* UCPostLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCPostLoginViewController.m; sourceTree = "<group>"; };
 		F609D1B61A559BFE008417FA /* UCApiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCApiKey.h; sourceTree = "<group>"; };
 		F609D1B71A559BFE008417FA /* UCApiKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCApiKey.m; sourceTree = "<group>"; };
 		F609D1BD1A55A0BC008417FA /* UCExternalApiTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCExternalApiTests.m; sourceTree = "<group>"; };
+		F620E3E11AB5AADD006BC1FD /* UCEmailComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCEmailComposeViewController.h; sourceTree = "<group>"; };
+		F620E3E21AB5AADD006BC1FD /* UCEmailComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCEmailComposeViewController.m; sourceTree = "<group>"; };
+		F620E3E51AB5BAD1006BC1FD /* UCContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCContactCell.h; sourceTree = "<group>"; };
+		F620E3E61AB5BAD1006BC1FD /* UCContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCContactCell.m; sourceTree = "<group>"; };
+		F620E3E71AB5BAD1006BC1FD /* UCContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCContactCell.xib; sourceTree = "<group>"; };
+		F620E3EA1AB5D3E1006BC1FD /* UCContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCContact.h; sourceTree = "<group>"; };
+		F620E3EB1AB5D3E1006BC1FD /* UCContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCContact.m; sourceTree = "<group>"; };
 		F62B94A11A69A5B800C1F534 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		F62B94AC1A69FDE300C1F534 /* UCPostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCPostCell.xib; sourceTree = "<group>"; };
 		F62B94AD1A69FDE300C1F534 /* UCPostsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCPostsTableViewController.h; sourceTree = "<group>"; };
@@ -341,6 +356,8 @@
 		F6D9470A1A7F21060070B18B /* UCScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleCell.h; sourceTree = "<group>"; };
 		F6D9470B1A7F21060070B18B /* UCScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCScheduleCell.m; sourceTree = "<group>"; };
 		F6D9470D1A7F21690070B18B /* UCScheduleCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCScheduleCellProtocol.h; sourceTree = "<group>"; };
+		F6ED4F571ABF08A0008915B8 /* UCContactMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCContactMutableArray.h; sourceTree = "<group>"; };
+		F6ED4F581ABF08A0008915B8 /* UCContactMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCContactMutableArray.m; sourceTree = "<group>"; };
 		F6F23FEB1AA6B9F400C2E9AA /* UCThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCThreadViewController.h; sourceTree = "<group>"; };
 		F6F23FEC1AA6B9F400C2E9AA /* UCThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCThreadViewController.m; sourceTree = "<group>"; };
 		F6FEEDCE1A9F75BB0033464A /* UCEmailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCEmailCell.h; sourceTree = "<group>"; };
@@ -439,6 +456,26 @@
 				F6C463AE1A6B396300BFBFD1 /* UCMapHeaderViewController.m */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		F620E3E01AB5AACF006BC1FD /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				F620E3E11AB5AADD006BC1FD /* UCEmailComposeViewController.h */,
+				F620E3E21AB5AADD006BC1FD /* UCEmailComposeViewController.m */,
+				F620E3E41AB5BAB1006BC1FD /* Cells */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		F620E3E41AB5BAB1006BC1FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F620E3E51AB5BAD1006BC1FD /* UCContactCell.h */,
+				F620E3E61AB5BAD1006BC1FD /* UCContactCell.m */,
+				F620E3E71AB5BAD1006BC1FD /* UCContactCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F62B94AB1A69FDE300C1F534 /* Posts */ = {
@@ -558,6 +595,8 @@
 				F6807E791A94CE8700099C29 /* UCLoginNavigationController.m */,
 				F6568C3D1A8580CF00BB7415 /* UCLoginViewController.h */,
 				F6568C3E1A8580CF00BB7415 /* UCLoginViewController.m */,
+				F60608251AB27F8500307080 /* UCPostLoginViewController.h */,
+				F60608261AB27F8500307080 /* UCPostLoginViewController.m */,
 				F696C6631A95537100916F6B /* UCLoginMapViewController.h */,
 				F696C6641A95537100916F6B /* UCLoginMapViewController.m */,
 				F6B726B11A9E5C34009A339C /* UCLoginEmailViewController.h */,
@@ -908,7 +947,12 @@
 				F6F23FEC1AA6B9F400C2E9AA /* UCThreadViewController.m */,
 				F6B4FA5C1AA2401C004B0242 /* Thread View */,
 				F6B726AD1A9E4FE4009A339C /* Auth */,
+				F620E3E01AB5AACF006BC1FD /* Compose */,
 				F6FEEDCD1A9F75970033464A /* Cells */,
+				F620E3EA1AB5D3E1006BC1FD /* UCContact.h */,
+				F620E3EB1AB5D3E1006BC1FD /* UCContact.m */,
+				F6ED4F571ABF08A0008915B8 /* UCContactMutableArray.h */,
+				F6ED4F581ABF08A0008915B8 /* UCContactMutableArray.m */,
 			);
 			path = Email;
 			sourceTree = "<group>";
@@ -1184,6 +1228,7 @@
 				F65B24E11A9A58BD00BD1813 /* UCCampusCell.xib in Resources */,
 				F6ACD5C61A83BF6E007B7D2D /* campus_placeholder.jpg in Resources */,
 				F66E66551A865928002E06D5 /* UCBigLikeCell.xib in Resources */,
+				F620E3E91AB5BAD1006BC1FD /* UCContactCell.xib in Resources */,
 				F6D19C721A51F04700FD4715 /* LaunchScreen.xib in Resources */,
 				F68C9C481A5273DF006BEA56 /* HelveticaNeueLTW1G-Lt.otf in Resources */,
 				F64865921A53965E000E5A4F /* Montserrat-Bold.ttf in Resources */,
@@ -1303,18 +1348,23 @@
 				F6568C4A1A85B1EF00BB7415 /* UCMapBottomManager.m in Sources */,
 				F6B726B31A9E5C34009A339C /* UCLoginEmailViewController.m in Sources */,
 				F6B752261AA2BCCB00D68D86 /* UCEmailViewBody.m in Sources */,
+				F60608271AB27F8500307080 /* UCPostLoginViewController.m in Sources */,
 				F6FEEDF81A9FA6570033464A /* UIViewController+BackButtonHandler.m in Sources */,
 				F6A0F46B1A8006A700380EE1 /* UCScheduleEndCell.m in Sources */,
+				F6ED4F591ABF08A0008915B8 /* UCContactMutableArray.m in Sources */,
 				F6571FFD1A53465E0008E991 /* UCButtonHelper.m in Sources */,
 				F66B934D1A6419840048DACD /* UCWebPagesCollectionViewCell.m in Sources */,
 				F6B752111AA29A4D00D68D86 /* UCEmailViewFrom.m in Sources */,
+				F620E3E31AB5AADD006BC1FD /* UCEmailComposeViewController.m in Sources */,
 				F6568C3B1A85804100BB7415 /* UCPresentationManager.m in Sources */,
 				F6FEEDF51A9FA6570033464A /* UITableView+DUExtensions.m in Sources */,
 				F6FEEDF61A9FA6570033464A /* UITableView+Nib.m in Sources */,
 				F6A0F4631A7FFA3500380EE1 /* UCScheduleConstants.m in Sources */,
 				F6568C4D1A85B6B500BB7415 /* UCCampusManager.m in Sources */,
+				F620E3EC1AB5D3E1006BC1FD /* UCContact.m in Sources */,
 				F66E66541A865928002E06D5 /* UCBigLikeCell.m in Sources */,
 				F63485A81A524C60004A0122 /* UCTableViewController.m in Sources */,
+				F620E3E81AB5BAD1006BC1FD /* UCContactCell.m in Sources */,
 				F6F23FED1AA6B9F400C2E9AA /* UCThreadViewController.m in Sources */,
 				F65B24EE1A9A592600BD1813 /* UCFacultyCell.m in Sources */,
 				F6B7521D1AA2A37200D68D86 /* UCEmailViewCell.m in Sources */,

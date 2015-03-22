@@ -26,8 +26,8 @@ static NSString * const kStoryboardName = @"Main";
 static NSString * const kLoginNavigationControllerName = @"LoginNavigationController";
 
 int const kAPIVersion = 1;
-NSString * const kAPIBaseUrl = @"http://patiwi-mcburger-pro.local:5000";
-// NSString * const kAPIBaseUrl = @"https://almapp.me";
+// NSString * const kAPIBaseUrl = @"http://patiwi-mcburger-pro.local:5000";
+NSString * const kAPIBaseUrl = @"https://almapp.me";
 NSString * const KOrganization = @"UC";
 
 #pragma mark - Interface
